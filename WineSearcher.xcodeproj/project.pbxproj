@@ -12,6 +12,8 @@
 		47D929332207984400B7DAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D929322207984400B7DAF5 /* Assets.xcassets */; };
 		47D929362207984400B7DAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D929342207984400B7DAF5 /* LaunchScreen.storyboard */; };
 		47D9294F2207993300B7DAF5 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9294E2207993300B7DAF5 /* ViewControllerTests.swift */; };
+		6494C2372E78FFC3FC1E836C /* Pods_WineSearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */; };
+		B883BC79369B9D04EC1C63E6 /* Pods_WineSearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineSearcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2252CC5508DD0010601B493F /* Pods-WineSearcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests.release.xcconfig"; sourceTree = "<group>"; };
 		47D929282207984300B7DAF5 /* WineSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9292B2207984300B7DAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9292D2207984300B7DAF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +38,10 @@
 		47D9293C2207984400B7DAF5 /* WineSearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WineSearcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D929422207984400B7DAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47D9294E2207993300B7DAF5 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		BD34E3011AD58AB07D284C2A /* Pods-WineSearcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineSearcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9E560BB0AD938330742DC87 /* Pods-WineSearcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcher/Pods-WineSearcher.release.xcconfig"; sourceTree = "<group>"; };
+		F6766EE61E1613FE37A38890 /* Pods-WineSearcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcher/Pods-WineSearcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B883BC79369B9D04EC1C63E6 /* Pods_WineSearcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,18 +57,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6494C2372E78FFC3FC1E836C /* Pods_WineSearcherTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B437946937E17E223FAAF78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */,
+				0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		47D9291F2207984300B7DAF5 = {
 			isa = PBXGroup;
 			children = (
 				47D9292A2207984300B7DAF5 /* WineSearcher */,
 				47D9293F2207984400B7DAF5 /* WineSearcherTests */,
 				47D929292207984300B7DAF5 /* Products */,
+				B75D6E1C156C0DEE59C3B0C0 /* Pods */,
+				1B437946937E17E223FAAF78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +146,17 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		B75D6E1C156C0DEE59C3B0C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6766EE61E1613FE37A38890 /* Pods-WineSearcher.debug.xcconfig */,
+				E9E560BB0AD938330742DC87 /* Pods-WineSearcher.release.xcconfig */,
+				BD34E3011AD58AB07D284C2A /* Pods-WineSearcherTests.debug.xcconfig */,
+				2252CC5508DD0010601B493F /* Pods-WineSearcherTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +164,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47D929452207984400B7DAF5 /* Build configuration list for PBXNativeTarget "WineSearcher" */;
 			buildPhases = (
+				817AA21816BF0C1EB32BE04D /* [CP] Check Pods Manifest.lock */,
 				47D929242207984300B7DAF5 /* Sources */,
 				47D929252207984300B7DAF5 /* Frameworks */,
 				47D929262207984300B7DAF5 /* Resources */,
@@ -149,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47D929482207984400B7DAF5 /* Build configuration list for PBXNativeTarget "WineSearcherTests" */;
 			buildPhases = (
+				F03C082137803CBA1F4A53F7 /* [CP] Check Pods Manifest.lock */,
 				47D929382207984400B7DAF5 /* Sources */,
 				47D929392207984400B7DAF5 /* Frameworks */,
 				47D9293A2207984400B7DAF5 /* Resources */,
+				90D01114855798EF368E8782 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +254,79 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		817AA21816BF0C1EB32BE04D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WineSearcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90D01114855798EF368E8782 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F03C082137803CBA1F4A53F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WineSearcherTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		47D929242207984300B7DAF5 /* Sources */ = {
@@ -310,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -376,7 +484,9 @@
 		};
 		47D929462207984400B7DAF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6766EE61E1613FE37A38890 /* Pods-WineSearcher.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/WineSearcher/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -392,7 +502,9 @@
 		};
 		47D929472207984400B7DAF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9E560BB0AD938330742DC87 /* Pods-WineSearcher.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/WineSearcher/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,8 +520,9 @@
 		};
 		47D929492207984400B7DAF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD34E3011AD58AB07D284C2A /* Pods-WineSearcherTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WineSearcherTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,8 +540,9 @@
 		};
 		47D9294A2207984400B7DAF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2252CC5508DD0010601B493F /* Pods-WineSearcherTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WineSearcherTests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
