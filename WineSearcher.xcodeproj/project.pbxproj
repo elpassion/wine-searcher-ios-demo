@@ -165,6 +165,7 @@
 			buildConfigurationList = 47D929452207984400B7DAF5 /* Build configuration list for PBXNativeTarget "WineSearcher" */;
 			buildPhases = (
 				817AA21816BF0C1EB32BE04D /* [CP] Check Pods Manifest.lock */,
+				4716BE902207A9340047CE3F /* Swiftlint */,
 				47D929242207984300B7DAF5 /* Sources */,
 				47D929252207984300B7DAF5 /* Frameworks */,
 				47D929262207984300B7DAF5 /* Resources */,
@@ -183,6 +184,7 @@
 			buildConfigurationList = 47D929482207984400B7DAF5 /* Build configuration list for PBXNativeTarget "WineSearcherTests" */;
 			buildPhases = (
 				F03C082137803CBA1F4A53F7 /* [CP] Check Pods Manifest.lock */,
+				4733DDF22207A985003EE4B8 /* Swiftlint */,
 				47D929382207984400B7DAF5 /* Sources */,
 				47D929392207984400B7DAF5 /* Frameworks */,
 				47D9293A2207984400B7DAF5 /* Resources */,
@@ -256,6 +258,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4716BE902207A9340047CE3F /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CI\" = \"true\" ]; then\n    echo \"Skipping SwiftLint on CI\"\n    exit 0\nfi\necho \"Running SwiftLint on app code\"\ncd WineSearcher; ${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		4733DDF22207A985003EE4B8 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CI\" = \"true\" ]; then\n    echo \"Skipping SwiftLint on CI\"\n    exit 0\nfi\necho \"Running SwiftLint on app code\"\ncd WineSearcherTests; ${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		817AA21816BF0C1EB32BE04D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
