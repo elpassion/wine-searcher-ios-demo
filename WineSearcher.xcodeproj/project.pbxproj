@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		470943FF22099B67008FECFA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470943FE22099B67008FECFA /* SearchView.swift */; };
+		470944042209B78B008FECFA /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470944032209B78B008FECFA /* CardsViewController.swift */; };
+		470944062209B7A7008FECFA /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470944052209B7A7008FECFA /* CardsView.swift */; };
+		4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470944092209BAA6008FECFA /* UIViewController+Embeding.swift */; };
+		4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */; };
+		477E6A812209D8B900EDB2AB /* CardsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */; };
 		47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292B2207984300B7DAF5 /* AppDelegate.swift */; };
 		47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292D2207984300B7DAF5 /* SearchViewController.swift */; };
 		47D929332207984400B7DAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D929322207984400B7DAF5 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 		0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineSearcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2252CC5508DD0010601B493F /* Pods-WineSearcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests.release.xcconfig"; sourceTree = "<group>"; };
 		470943FE22099B67008FECFA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		470944032209B78B008FECFA /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		470944052209B7A7008FECFA /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		470944092209BAA6008FECFA /* UIViewController+Embeding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embeding.swift"; sourceTree = "<group>"; };
+		4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EmbedingSpec.swift"; sourceTree = "<group>"; };
+		477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewControllerSpec.swift; sourceTree = "<group>"; };
 		47D929282207984300B7DAF5 /* WineSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9292B2207984300B7DAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9292D2207984300B7DAF5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +88,7 @@
 		470943FC22099B47008FECFA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				470944022209B779008FECFA /* Cards */,
 				470943FD22099B58008FECFA /* Search */,
 			);
 			path = Screens;
@@ -95,6 +106,7 @@
 		4709440022099B6C008FECFA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				477E6A7F2209D8A800EDB2AB /* Cards */,
 				4709440122099B73008FECFA /* Search */,
 			);
 			path = Screens;
@@ -106,6 +118,48 @@
 				47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		470944022209B779008FECFA /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				470944032209B78B008FECFA /* CardsViewController.swift */,
+				470944052209B7A7008FECFA /* CardsView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		470944082209BA6A008FECFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				470944092209BAA6008FECFA /* UIViewController+Embeding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4709440B2209BC9F008FECFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4709440C2209BCAB008FECFA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				47D9294D2207992600B7DAF5 /* UI */,
+				4709440B2209BC9F008FECFA /* Extensions */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		477E6A7F2209D8A800EDB2AB /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		47D9291F2207984300B7DAF5 = {
@@ -131,6 +185,7 @@
 		47D9292A2207984300B7DAF5 /* WineSearcher */ = {
 			isa = PBXGroup;
 			children = (
+				470944082209BA6A008FECFA /* Extensions */,
 				47D9294C2207991C00B7DAF5 /* UI */,
 				47D9294B220798D500B7DAF5 /* SupportingFiles */,
 			);
@@ -141,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				47D92950220799A000B7DAF5 /* SupportingFiles */,
-				47D9294D2207992600B7DAF5 /* UI */,
+				4709440C2209BCAB008FECFA /* Tests */,
 			);
 			path = WineSearcherTests;
 			sourceTree = "<group>";
@@ -406,6 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				470944042209B78B008FECFA /* CardsViewController.swift in Sources */,
+				4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */,
+				470944062209B7A7008FECFA /* CardsView.swift in Sources */,
 				47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */,
 				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
 				47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */,
@@ -416,6 +474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */,
+				477E6A812209D8B900EDB2AB /* CardsViewControllerSpec.swift in Sources */,
 				47D9294F2207993300B7DAF5 /* SearchViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
