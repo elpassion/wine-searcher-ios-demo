@@ -8,7 +8,6 @@ opt_in_rules:
   - empty_count
   - empty_string
   - explicit_init
-  - explicit_type_interface
   - fatal_error_message
   - file_name
   - first_where
