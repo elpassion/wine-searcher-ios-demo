@@ -52,7 +52,6 @@ opt_in_rules:
   - yoda_condition
 file_length:
   warning: 140
-  error: 150
 type_name:
   min_length: 2
   max_length:

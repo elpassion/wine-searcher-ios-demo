@@ -28,6 +28,8 @@ class SearchView: UIView {
         ])
     }
 
+    // MARK: - Required
+
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
