@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470943FF22099B67008FECFA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470943FE22099B67008FECFA /* SearchView.swift */; };
 		47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292B2207984300B7DAF5 /* AppDelegate.swift */; };
-		47D9292E2207984300B7DAF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292D2207984300B7DAF5 /* ViewController.swift */; };
+		47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292D2207984300B7DAF5 /* SearchViewController.swift */; };
 		47D929332207984400B7DAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D929322207984400B7DAF5 /* Assets.xcassets */; };
 		47D929362207984400B7DAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D929342207984400B7DAF5 /* LaunchScreen.storyboard */; };
-		47D9294F2207993300B7DAF5 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9294E2207993300B7DAF5 /* ViewControllerTests.swift */; };
+		47D9294F2207993300B7DAF5 /* SearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */; };
 		6494C2372E78FFC3FC1E836C /* Pods_WineSearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */; };
 		B883BC79369B9D04EC1C63E6 /* Pods_WineSearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */; };
 /* End PBXBuildFile section */
@@ -29,15 +30,16 @@
 /* Begin PBXFileReference section */
 		0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineSearcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2252CC5508DD0010601B493F /* Pods-WineSearcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests.release.xcconfig"; sourceTree = "<group>"; };
+		470943FE22099B67008FECFA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		47D929282207984300B7DAF5 /* WineSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9292B2207984300B7DAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		47D9292D2207984300B7DAF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47D9292D2207984300B7DAF5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		47D929322207984400B7DAF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D929352207984400B7DAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47D929372207984400B7DAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47D9293C2207984400B7DAF5 /* WineSearcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WineSearcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D929422207984400B7DAF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47D9294E2207993300B7DAF5 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerSpec.swift; sourceTree = "<group>"; };
 		BD34E3011AD58AB07D284C2A /* Pods-WineSearcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineSearcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E560BB0AD938330742DC87 /* Pods-WineSearcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcher/Pods-WineSearcher.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +73,39 @@
 				0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		470943FC22099B47008FECFA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				470943FD22099B58008FECFA /* Search */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		470943FD22099B58008FECFA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				47D9292D2207984300B7DAF5 /* SearchViewController.swift */,
+				470943FE22099B67008FECFA /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4709440022099B6C008FECFA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4709440122099B73008FECFA /* Search */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4709440122099B73008FECFA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		47D9291F2207984300B7DAF5 = {
@@ -125,7 +160,7 @@
 		47D9294C2207991C00B7DAF5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				47D9292D2207984300B7DAF5 /* ViewController.swift */,
+				470943FC22099B47008FECFA /* Screens */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -133,7 +168,7 @@
 		47D9294D2207992600B7DAF5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				47D9294E2207993300B7DAF5 /* ViewControllerTests.swift */,
+				4709440022099B6C008FECFA /* Screens */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -371,7 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47D9292E2207984300B7DAF5 /* ViewController.swift in Sources */,
+				47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */,
+				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
 				47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47D9294F2207993300B7DAF5 /* ViewControllerTests.swift in Sources */,
+				47D9294F2207993300B7DAF5 /* SearchViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,6 @@ opt_in_rules:
   - force_unwrapping
   - implicit_getter
   - implicit_return
-  - implicitly_unwrapped_optional
   - joined_default_parameter
   - legacy_constructor
   - let_var_whitespace
