@@ -10,7 +10,7 @@ class CardsView: UIView {
 
     // MARK: - Subviews
 
-    private let scrollView = UIScrollView(frame: .zero)
+    let scrollView = Factory.scrollView
 
     private func addSubviews() {
         addSubview(scrollView)
@@ -32,6 +32,18 @@ class CardsView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+}
+
+extension CardsView {
+
+    enum Factory {
+        static var scrollView: UIScrollView {
+            let scrollView = UIScrollView(frame: .zero)
+            scrollView.showsHorizontalScrollIndicator = false
+            return scrollView
+        }
     }
 
 }

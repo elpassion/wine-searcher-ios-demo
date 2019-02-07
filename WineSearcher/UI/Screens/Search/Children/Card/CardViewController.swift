@@ -1,17 +1,13 @@
 import UIKit
 
-class CardsViewController: UIViewController {
+class CardViewController: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
     }
 
-    var cardsView: CardsView! {
-        return view as? CardsView
-    }
-
     override func loadView() {
-        view = CardsView()
+        view = CardView()
     }
 
     // MARK: - Required

@@ -4,6 +4,7 @@ class SearchView: UIView {
 
     init() {
         super.init(frame: .zero)
+        backgroundColor = .white
         addSubviews()
         setupLayout()
     }

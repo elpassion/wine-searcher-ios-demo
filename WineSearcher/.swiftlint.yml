@@ -2,7 +2,6 @@ opt_in_rules:
   - attributes
   - closure_end_indentation
   - closure_spacing
-  - conditional_returns_on_newline
   - contains_over_first_not_nil
   - discouraged_optional_boolean
   - empty_count
@@ -63,6 +62,8 @@ identifier_name:
     warning: 40
     error: 50
   excluded:
+    - x
+    - y
     - ui
     - cg
     - id
