@@ -2,11 +2,14 @@ import UIKit
 
 class CardsView: UIView {
 
-    init() {
+    init(horizontalInset: CGFloat) {
+        self.horizontalInset = horizontalInset
         super.init(frame: .zero)
         addSubviews()
         setupLayout()
     }
+
+    private let horizontalInset: CGFloat
 
     // MARK: - Subviews
 
@@ -33,8 +36,8 @@ class CardsView: UIView {
         NSLayoutConstraint.activate([
             contentStackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 15),
-            contentStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -15),
+            contentStackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: horizontalInset),
+            contentStackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -horizontalInset),
             contentStackView.widthAnchor.constraint(greaterThanOrEqualTo: scrollView.widthAnchor)
         ])
     }

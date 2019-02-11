@@ -13,10 +13,21 @@
 		4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470944092209BAA6008FECFA /* UIViewController+Embeding.swift */; };
 		4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */; };
 		47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47115252220C51E5006FA2C4 /* CardViewController.swift */; };
+		473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */; };
+		473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */; };
+		473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */; };
 		47447624220B9D9400DEDBBB /* CardsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47447623220B9D9400DEDBBB /* CardsDataSource.swift */; };
 		47447626220B9DA700DEDBBB /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47447625220B9DA700DEDBBB /* CardViewModel.swift */; };
 		477E6A812209D8B900EDB2AB /* CardsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */; };
 		477E6A832209DCC100EDB2AB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E6A822209DCC100EDB2AB /* CardView.swift */; };
+		478D596F22118B7500D86292 /* CardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DF4AF22118617005B82AF /* CardViewControllerTests.swift */; };
+		478D597322118C0900D86292 /* CardViewController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597222118C0900D86292 /* CardViewController+SnapshotFixture.swift */; };
+		478D597522118EEF00D86292 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597422118EEF00D86292 /* SearchViewControllerTests.swift */; };
+		478D597722118F7B00D86292 /* SearchViewController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597622118F7B00D86292 /* SearchViewController+SnapshotFixture.swift */; };
+		478D597922118FDF00D86292 /* CardsViewController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597822118FDF00D86292 /* CardsViewController+SnapshotFixture.swift */; };
+		478D597B2211903600D86292 /* CardsDataSource+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597A2211903600D86292 /* CardsDataSource+SnapshotFixture.swift */; };
+		478D597D221192E200D86292 /* Sequence+NearestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597C221192E200D86292 /* Sequence+NearestSpec.swift */; };
+		478D597F2211A06700D86292 /* SnapshotsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */; };
 		47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292B2207984300B7DAF5 /* AppDelegate.swift */; };
 		47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292D2207984300B7DAF5 /* SearchViewController.swift */; };
 		47D929332207984400B7DAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D929322207984400B7DAF5 /* Assets.xcassets */; };
@@ -45,10 +56,21 @@
 		470944092209BAA6008FECFA /* UIViewController+Embeding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embeding.swift"; sourceTree = "<group>"; };
 		4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EmbedingSpec.swift"; sourceTree = "<group>"; };
 		47115252220C51E5006FA2C4 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsConfiguration.swift; sourceTree = "<group>"; };
+		473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+TransformToCenter.swift"; sourceTree = "<group>"; };
+		473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Nearest.swift"; sourceTree = "<group>"; };
 		47447623220B9D9400DEDBBB /* CardsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataSource.swift; sourceTree = "<group>"; };
 		47447625220B9DA700DEDBBB /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		476DF4AF22118617005B82AF /* CardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTests.swift; sourceTree = "<group>"; };
 		477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewControllerSpec.swift; sourceTree = "<group>"; };
 		477E6A822209DCC100EDB2AB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		478D597222118C0900D86292 /* CardViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
+		478D597422118EEF00D86292 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
+		478D597622118F7B00D86292 /* SearchViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
+		478D597822118FDF00D86292 /* CardsViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
+		478D597A2211903600D86292 /* CardsDataSource+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsDataSource+SnapshotFixture.swift"; sourceTree = "<group>"; };
+		478D597C221192E200D86292 /* Sequence+NearestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+NearestSpec.swift"; sourceTree = "<group>"; };
+		478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsConfiguration.swift; sourceTree = "<group>"; };
 		47D929282207984300B7DAF5 /* WineSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9292B2207984300B7DAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9292D2207984300B7DAF5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +156,7 @@
 				47447623220B9D9400DEDBBB /* CardsDataSource.swift */,
 				470944052209B7A7008FECFA /* CardsView.swift */,
 				470944032209B78B008FECFA /* CardsViewController.swift */,
+				473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -142,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				470944092209BAA6008FECFA /* UIViewController+Embeding.swift */,
+				473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */,
+				473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */,
+				478D597C221192E200D86292 /* Sequence+NearestSpec.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,8 +183,9 @@
 		4709440C2209BCAB008FECFA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4709440B2209BC9F008FECFA /* Extensions */,
-				47D9294D2207992600B7DAF5 /* UI */,
+				478D597022118BEA00D86292 /* Doubles */,
+				476DF4A9221185D2005B82AF /* SnapshotTests */,
+				476DF4A8221185CC005B82AF /* UnitTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -182,12 +209,90 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		476DF4A8221185CC005B82AF /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				47D9294D2207992600B7DAF5 /* UI */,
+				4709440B2209BC9F008FECFA /* Extensions */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		476DF4A9221185D2005B82AF /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				476DF4AA221185EA005B82AF /* UI */,
+				478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */,
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		476DF4AA221185EA005B82AF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				476DF4AB221185F3005B82AF /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		476DF4AB221185F3005B82AF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				476DF4AC221185F8005B82AF /* Search */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		476DF4AC221185F8005B82AF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				476DF4AD22118600005B82AF /* Children */,
+				478D597422118EEF00D86292 /* SearchViewControllerTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		476DF4AD22118600005B82AF /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				476DF4AE22118608005B82AF /* Card */,
+			);
+			path = Children;
+			sourceTree = "<group>";
+		};
+		476DF4AE22118608005B82AF /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				476DF4AF22118617005B82AF /* CardViewControllerTests.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		477E6A7F2209D8A800EDB2AB /* Cards */ = {
 			isa = PBXGroup;
 			children = (
 				477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		478D597022118BEA00D86292 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				478D597122118BF400D86292 /* Fixtures */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		478D597122118BF400D86292 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				478D597222118C0900D86292 /* CardViewController+SnapshotFixture.swift */,
+				478D597622118F7B00D86292 /* SearchViewController+SnapshotFixture.swift */,
+				478D597822118FDF00D86292 /* CardsViewController+SnapshotFixture.swift */,
+				478D597A2211903600D86292 /* CardsDataSource+SnapshotFixture.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		47D9291F2207984300B7DAF5 = {
@@ -442,7 +547,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
@@ -457,7 +562,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F03C082137803CBA1F4A53F7 /* [CP] Check Pods Manifest.lock */ = {
@@ -489,11 +594,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */,
 				477E6A832209DCC100EDB2AB /* CardView.swift in Sources */,
 				470944042209B78B008FECFA /* CardsViewController.swift in Sources */,
 				4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */,
 				470944062209B7A7008FECFA /* CardsView.swift in Sources */,
 				47447626220B9DA700DEDBBB /* CardViewModel.swift in Sources */,
+				473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */,
+				473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */,
 				47447624220B9D9400DEDBBB /* CardsDataSource.swift in Sources */,
 				47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */,
 				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
@@ -506,8 +614,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478D596F22118B7500D86292 /* CardViewControllerTests.swift in Sources */,
 				4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */,
+				478D597922118FDF00D86292 /* CardsViewController+SnapshotFixture.swift in Sources */,
+				478D597F2211A06700D86292 /* SnapshotsConfiguration.swift in Sources */,
+				478D597522118EEF00D86292 /* SearchViewControllerTests.swift in Sources */,
+				478D597322118C0900D86292 /* CardViewController+SnapshotFixture.swift in Sources */,
+				478D597B2211903600D86292 /* CardsDataSource+SnapshotFixture.swift in Sources */,
 				477E6A812209D8B900EDB2AB /* CardsViewControllerSpec.swift in Sources */,
+				478D597722118F7B00D86292 /* SearchViewController+SnapshotFixture.swift in Sources */,
+				478D597D221192E200D86292 /* Sequence+NearestSpec.swift in Sources */,
 				47D9294F2207993300B7DAF5 /* SearchViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
