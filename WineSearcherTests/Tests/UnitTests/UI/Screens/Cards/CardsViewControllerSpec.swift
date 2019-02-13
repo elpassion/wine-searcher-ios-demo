@@ -7,12 +7,21 @@ class CardsViewControllerSpec: QuickSpec {
     override func spec() {
         describe("CardsViewController") {
             var sut: CardsViewController!
+            var cardsDataSourceStub: CardsDataSourceStub!
+            var cardsSizesProviderStub: CardsSizesProviderStub!
 
             beforeEach {
-                sut = CardsViewController()
+                cardsDataSourceStub = CardsDataSourceStub()
+                cardsSizesProviderStub = CardsSizesProviderStub()
+                sut = CardsViewController(
+                    dataSource: cardsDataSourceStub,
+                    sizesProvider: cardsSizesProviderStub
+                )
             }
 
             afterEach {
+                cardsDataSourceStub = nil
+                cardsSizesProviderStub = nil
                 sut = nil
             }
 

@@ -8,7 +8,7 @@ class SearchViewControllerTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
 
-        recordMode = SnapshotsConfiguration.recordModel
+        recordMode = SnapshotsConfiguration.recordMode
 
         sut = .snapshotFixture
         sut.view.frame = UIScreen.main.bounds

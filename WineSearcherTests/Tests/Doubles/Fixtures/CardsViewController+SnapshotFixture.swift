@@ -4,8 +4,8 @@ extension CardsViewController {
 
     static var snapshotFixture: CardsViewController {
         return CardsViewController(
-            dataSource: .snapshotFixture,
-            configuration: CardsConfiguration()
+            dataSource: CardsDataSource.snapshotFixture,
+            sizesProvider: CardsSizesProvider()
         )
     }
 

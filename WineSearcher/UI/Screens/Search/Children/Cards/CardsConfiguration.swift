@@ -1,16 +1,15 @@
 import UIKit
 
 struct CardsConfiguration {
-    let size: CGSize
-    let horizontalInset: CGFloat
+    let cardAspectRatio: CGFloat
+    let cardWidthRatio: CGFloat
     let spacing: CGFloat
 
-    init(size: CGSize = CGSize(width: 325, height: 520),
-         horizontalInset: CGFloat = 15,
+    init(cardAspectRatio: CGFloat = 1.615,
+         cardWidthRatio: CGFloat = 0.859,
          spacing: CGFloat = 15) {
-        self.size = size
-        self.horizontalInset = horizontalInset
+        self.cardAspectRatio = cardAspectRatio
+        self.cardWidthRatio = cardWidthRatio
         self.spacing = spacing
     }
-
 }
