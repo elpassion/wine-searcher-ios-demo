@@ -35,10 +35,8 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView,
                                    withVelocity velocity: CGPoint,
                                    targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let targetContentOffsetCetner = scrollView.transformToCenter(offset: targetContentOffset.pointee.x)
-        guard let nearestPageCenter = viewsCenters.nearest(value: targetContentOffsetCetner) else { return }
-        let targetOffset = nearestPageCenter - sizesProvider.spacing - sizesProvider.cardSize.width / 2
-        targetContentOffset.pointee.x = targetOffset
+        guard let nearestPage = pagesOffsets.nearest(value: targetContentOffset.pointee.x) else { return }
+        targetContentOffset.pointee.x = nearestPage
     }
 
     // MARK: - Private
@@ -50,8 +48,8 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
         dataSource.items.map(CardViewController.init)
     }()
 
-    private var viewsCenters: [CGFloat] {
-        return viewControllers.map { $0.view.center.x + sizesProvider.spacing }
+    private var pagesOffsets: [CGFloat] {
+        return viewControllers.map { $0.view.frame.minX }
     }
 
     private func setupDataSource() {
