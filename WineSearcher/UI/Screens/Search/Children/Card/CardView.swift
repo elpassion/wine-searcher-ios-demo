@@ -14,11 +14,15 @@ class CardView: UIView {
     let backgroundImageView = Factory.backgroundImageView
     let learnMoreButton = Factory.learnMoreButton
     let otherInSeriesButton = Factory.otherInSeriesButton
+    let titleLabel = Factory.titleLabel
+    let subtitleLabel = Factory.subtitleLabel
 
     private func addSubviews() {
         addSubview(backgroundImageView)
         addSubview(learnMoreButton)
         addSubview(otherInSeriesButton)
+        addSubview(titleLabel)
+        addSubview(subtitleLabel)
     }
 
     // MARK: - Layout
@@ -45,6 +49,20 @@ class CardView: UIView {
             otherInSeriesButton.leftAnchor.constraint(equalTo: learnMoreButton.rightAnchor, constant: 8),
             otherInSeriesButton.widthAnchor.constraint(equalToConstant: 124),
             otherInSeriesButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.bottomAnchor.constraint(equalTo: subtitleLabel.topAnchor, constant: -22),
+            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
+            titleLabel.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -15)
+        ])
+
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            subtitleLabel.bottomAnchor.constraint(equalTo: learnMoreButton.topAnchor, constant: -15),
+            subtitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
+            subtitleLabel.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -15)
         ])
     }
 
@@ -91,6 +109,20 @@ extension CardView {
             button.layer.borderColor = UIColor(hex: "D0B58A")?.cgColor
             button.layer.borderWidth = 2
             return button
+        }
+
+        static var titleLabel: UILabel {
+            let label = UILabel(frame: .zero)
+            label.textColor = .white
+            label.font = UIFont(font: Font.nocturnSerifExtraBold, size: 30)
+            label.numberOfLines = 0
+            return label
+        }
+
+        static var subtitleLabel: UILabel {
+            let label = UILabel(frame: .zero)
+            label.numberOfLines = 0
+            return label
         }
     }
 

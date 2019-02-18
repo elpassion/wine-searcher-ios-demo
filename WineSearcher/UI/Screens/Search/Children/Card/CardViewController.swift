@@ -55,6 +55,8 @@ class CardViewController: UIViewController, CardViewControlling {
 
     private func setupView() {
         cardView.backgroundImageView.image = viewModel.backgroundImage
+        cardView.titleLabel.text = viewModel.title
+        cardView.subtitleLabel.attributedText = viewModel.subtitle
     }
 
     // MARK: - Required

@@ -27,6 +27,7 @@
 		47109B4B221AE05500B31774 /* NocturneSerif-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47109B46221AD8CC00B31774 /* NocturneSerif-Bold.otf */; };
 		47109B4C221AE05800B31774 /* Tungsten-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47109B44221AD89D00B31774 /* Tungsten-Medium.ttf */; };
 		47109B4D221AE05B00B31774 /* Tungsten-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47109B45221AD8AB00B31774 /* Tungsten-Semibold.ttf */; };
+		47109B4F221AF53E00B31774 /* CardViewModel+Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47109B4E221AF53E00B31774 /* CardViewModel+Cards.swift */; };
 		47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47115252220C51E5006FA2C4 /* CardViewController.swift */; };
 		473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */; };
 		473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */; };
@@ -88,6 +89,7 @@
 		47109B46221AD8CC00B31774 /* NocturneSerif-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NocturneSerif-Bold.otf"; sourceTree = "<group>"; };
 		47109B47221ADD8000B31774 /* UIFont+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Font.swift"; sourceTree = "<group>"; };
 		47109B49221ADDF400B31774 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		47109B4E221AF53E00B31774 /* CardViewModel+Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewModel+Cards.swift"; sourceTree = "<group>"; };
 		47115252220C51E5006FA2C4 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsConfiguration.swift; sourceTree = "<group>"; };
 		473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+TransformToCenter.swift"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				4752676F22130A46002DDB71 /* UIScreen+ScreenSizeProviding.swift */,
 				47109B47221ADD8000B31774 /* UIFont+Font.swift */,
 				47109B49221ADDF400B31774 /* UIColor+Hex.swift */,
+				47109B4E221AF53E00B31774 /* CardViewModel+Cards.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */,
 				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
 				47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */,
+				47109B4F221AF53E00B31774 /* CardViewModel+Cards.swift in Sources */,
 				47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

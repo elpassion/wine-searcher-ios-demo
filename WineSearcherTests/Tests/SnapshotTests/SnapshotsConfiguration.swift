@@ -1,3 +1,3 @@
 enum SnapshotsConfiguration {
-    static var recordMode = false
+    static var recordMode = true
 }
