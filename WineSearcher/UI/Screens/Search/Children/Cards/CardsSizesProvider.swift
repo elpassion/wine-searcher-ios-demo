@@ -22,7 +22,7 @@ class CardsSizesProvider: CardsSizesProviding {
     var insets: UIEdgeInsets {
         return UIEdgeInsets(
             top: 0,
-            left: 15,
+            left: configuration.spacing,
             bottom: 0,
             right: screenSizeProvider.bounds.width - spacing - cardSize.width
         )

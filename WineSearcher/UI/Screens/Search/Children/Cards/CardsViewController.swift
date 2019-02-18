@@ -14,7 +14,7 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
     }
 
     override func loadView() {
-        view = CardsView(insets: sizesProvider.insets)
+        view = CardsView(insets: sizesProvider.insets, spacing: sizesProvider.spacing)
     }
 
     override func viewDidLoad() {
@@ -24,10 +24,10 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
         setupHeight()
     }
 
-    private func setupHeight() {
-        NSLayoutConstraint.activate([
-            view.heightAnchor.constraint(equalToConstant: sizesProvider.cardSize.height)
-        ])
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        cardsView.contentStackView.layoutSubviews()
+        updateChildViewContrllersAnimationProgress()
     }
 
     // MARK: - UIScrollViewDelegate
@@ -39,12 +39,16 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
         targetContentOffset.pointee.x = nearestPage
     }
 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateChildViewContrllersAnimationProgress()
+    }
+
     // MARK: - Private
 
     private let dataSource: CardsDataSourceProtocol
     private let sizesProvider: CardsSizesProviding
 
-    private lazy var viewControllers: [CardViewController] = {
+    private lazy var viewControllers: [UIViewController & CardViewControlling] = {
         dataSource.items.map(CardViewController.init)
     }()
 
@@ -63,10 +67,35 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
+    private func setupHeight() {
+        NSLayoutConstraint.activate([view.heightAnchor.constraint(equalToConstant: sizesProvider.cardSize.height)])
+    }
+
+    private func updateChildViewContrllersAnimationProgress() {
+        viewControllers.forEach {
+            let minPoint = CGPoint(x: $0.view.frame.minX + sizesProvider.insets.left, y: 0)
+            let maxPoint = CGPoint(x: $0.view.frame.maxX + sizesProvider.insets.left, y: 0)
+            let scrollView = cardsView.scrollView
+            guard scrollView.visibleRect.contains(minPoint) || scrollView.visibleRect.contains(maxPoint) else { return }
+            let offset = minPoint.x - scrollView.contentOffset.x - sizesProvider.spacing
+            let animationProgress = offset / (sizesProvider.cardSize.width + sizesProvider.spacing)
+            guard (-1...1).contains(animationProgress) else { return }
+            $0.animationProgress = animationProgress
+        }
+    }
+
     // MARK: - Required
 
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+}
+
+extension UIScrollView {
+
+    var visibleRect: CGRect {
+        return CGRect(x: contentOffset.x, y: contentOffset.y, width: visibleSize.width, height: visibleSize.height)
     }
 
 }

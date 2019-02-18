@@ -2,8 +2,9 @@ import UIKit
 
 class CardsView: UIView {
 
-    init(insets: UIEdgeInsets) {
+    init(insets: UIEdgeInsets, spacing: CGFloat) {
         self.insets = insets
+        contentStackView = Factory.stackView(spacing: spacing)
 
         super.init(frame: .zero)
         backgroundColor = .white
@@ -16,7 +17,7 @@ class CardsView: UIView {
     // MARK: - Subviews
 
     let scrollView = Factory.scrollView
-    let contentStackView = Factory.stackView
+    let contentStackView: UIStackView
 
     private func addSubviews() {
         addSubview(scrollView)
@@ -61,10 +62,10 @@ extension CardsView {
             return scrollView
         }
 
-        static var stackView: UIStackView {
+        static func stackView(spacing: CGFloat) -> UIStackView {
             let stackView = UIStackView(frame: .zero)
             stackView.axis = .horizontal
-            stackView.spacing = 15
+            stackView.spacing = spacing
             stackView.distribution = .equalSpacing
             return stackView
         }
