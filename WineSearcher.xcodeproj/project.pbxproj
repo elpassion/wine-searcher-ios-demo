@@ -47,7 +47,6 @@
 		478D597D221192E200D86292 /* Sequence+NearestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597C221192E200D86292 /* Sequence+NearestSpec.swift */; };
 		478D597F2211A06700D86292 /* SnapshotsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */; };
 		478D59842211A97F00D86292 /* CardsDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */; };
-		47B5FCA6221B3F6100E86784 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B5FCA5221B3F6100E86784 /* ViewControllerTests.swift */; };
 		47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292B2207984300B7DAF5 /* AppDelegate.swift */; };
 		47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292D2207984300B7DAF5 /* SearchViewController.swift */; };
 		47D929332207984400B7DAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D929322207984400B7DAF5 /* Assets.xcassets */; };
@@ -110,7 +109,6 @@
 		478D597C221192E200D86292 /* Sequence+NearestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+NearestSpec.swift"; sourceTree = "<group>"; };
 		478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsConfiguration.swift; sourceTree = "<group>"; };
 		478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataSourceProtocol.swift; sourceTree = "<group>"; };
-		47B5FCA5221B3F6100E86784 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		47D929282207984300B7DAF5 /* WineSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9292B2207984300B7DAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9292D2207984300B7DAF5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -366,7 +364,6 @@
 			isa = PBXGroup;
 			children = (
 				476DF4AF22118617005B82AF /* CardViewControllerTests.swift */,
-				47B5FCA5221B3F6100E86784 /* ViewControllerTests.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -747,7 +744,6 @@
 				478D597B2211903600D86292 /* CardsDataSource+SnapshotFixture.swift in Sources */,
 				470A940622141A6200006564 /* CardsViewControllerTests.swift in Sources */,
 				477E6A812209D8B900EDB2AB /* CardsViewControllerSpec.swift in Sources */,
-				47B5FCA6221B3F6100E86784 /* ViewControllerTests.swift in Sources */,
 				470A940322140F1C00006564 /* CardsSizesProviderStub.swift in Sources */,
 				470A93FA221403F800006564 /* ScreenSizeProviderStub.swift in Sources */,
 				470A93F7221403B300006564 /* CardsSizesProviderSpec.swift in Sources */,
