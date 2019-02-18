@@ -8,7 +8,7 @@ class CardViewControllerTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
 
-        fileNameOptions = [.device, .OS, .screenSize]
+        agnosticOptions = [.device, .OS, .screenSize]
         recordMode = SnapshotsConfiguration.recordMode
 
         sut = .snapshotFixture

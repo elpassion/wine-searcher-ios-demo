@@ -1,9 +1,9 @@
 @testable import WineSearcher
 import FBSnapshotTestCase
 
-class SearchViewControllerTests: FBSnapshotTestCase {
+class ViewControllerTests: FBSnapshotTestCase {
 
-    var sut: SearchViewController!
+    var sut: UIViewController!
 
     override func setUp() {
         super.setUp()
@@ -11,7 +11,8 @@ class SearchViewControllerTests: FBSnapshotTestCase {
         agnosticOptions = [.device, .OS, .screenSize]
         recordMode = SnapshotsConfiguration.recordMode
 
-        sut = .snapshotFixture
+        sut = UIViewController()
+        sut.view.backgroundColor = .red
         sut.view.frame = UIScreen.main.bounds
     }
 
@@ -21,7 +22,7 @@ class SearchViewControllerTests: FBSnapshotTestCase {
         sut = nil
     }
 
-    func testSearchViewControllerMatchesSnapshot() {
+    func testViewControllerMatchesSnapshot() {
         FBSnapshotVerifyView(sut.view)
     }
 

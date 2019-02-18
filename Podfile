@@ -8,7 +8,7 @@ target 'WineSearcher' do
   target 'WineSearcherTests' do
     inherit! :search_paths
     
-    pod 'iOSSnapshotTestCase', '~> 6.0'
+    pod 'iOSSnapshotTestCase', '~> 5.0'
     pod 'Nimble', '~> 7.3'
     pod 'Quick', '~> 1.3'
 
