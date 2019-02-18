@@ -31,7 +31,7 @@ class CardsSizesProviderSpec: QuickSpec {
 
             it("should return correct insets") {
                 expect(sut.insets) == UIEdgeInsets(top: 0,
-                                                   left: 15,
+                                                   left: 0,
                                                    bottom: 0,
                                                    right: 0)
             }
