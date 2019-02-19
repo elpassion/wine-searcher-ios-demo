@@ -24,6 +24,11 @@ class CardViewController: UIViewController, CardViewControlling {
         super.viewDidLayoutSubviews()
 
         initialBackgroundPosition = cardView.backgroundImageView.center
+        initialLearnMoreButtonPosition = cardView.learnMoreButton.center
+        initialOtherInSeriesButtonPosition = cardView.otherInSeriesButton.center
+        initialTitleLabelPosition = cardView.titleLabel.center
+        initialSubtitleLabelPosition = cardView.subtitleLabel.center
+
         updateAnimations()
     }
 
@@ -38,14 +43,29 @@ class CardViewController: UIViewController, CardViewControlling {
     // MARK: - Private
 
     private let viewModel: CardViewModel
-    private var initialBackgroundPosition: CGPoint?
 
-    private var maxBackgroundParalax: CGFloat {
-        return (cardView.backgroundImageView.frame.width - cardView.frame.width) * 0.35
+    private var initialBackgroundPosition: CGPoint?
+    private var initialLearnMoreButtonPosition: CGPoint?
+    private var initialOtherInSeriesButtonPosition: CGPoint?
+    private var initialTitleLabelPosition: CGPoint?
+    private var initialSubtitleLabelPosition: CGPoint?
+
+    private func setupView() {
+        cardView.backgroundImageView.image = viewModel.backgroundImage
+        cardView.titleLabel.text = viewModel.title
+        cardView.subtitleLabel.attributedText = viewModel.subtitle
     }
+
+    // MARK: - Animation
 
     func updateAnimations() {
         animateBackground()
+        animateButtons()
+        animateLabels()
+    }
+
+    private var maxBackgroundParalax: CGFloat {
+        return (cardView.backgroundImageView.frame.width - cardView.frame.width) * 0.35
     }
 
     func animateBackground() {
@@ -53,10 +73,46 @@ class CardViewController: UIViewController, CardViewControlling {
         cardView.backgroundImageView.center.x = initialPosition.x + maxBackgroundParalax * animationProgress
     }
 
-    private func setupView() {
-        cardView.backgroundImageView.image = viewModel.backgroundImage
-        cardView.titleLabel.text = viewModel.title
-        cardView.subtitleLabel.attributedText = viewModel.subtitle
+    func animateButtons() {
+        animateLearnMoreButton()
+        animateOtherInSeriesButton()
+    }
+
+    func animateLabels() {
+        animateTitleLabel()
+        animateSubtitleLabel()
+    }
+
+    func animateLearnMoreButton() {
+        cardView.learnMoreButton.layer.opacity = 1 - Float(abs(animationProgress))
+        guard let initialPosition = initialLearnMoreButtonPosition else { return }
+        cardView.learnMoreButton.center.x = initialPosition.x + animationProgress * 450
+    }
+
+    func animateOtherInSeriesButton() {
+        cardView.otherInSeriesButton.layer.opacity = 1 - Float(abs(animationProgress))
+        guard let initialPosition = initialOtherInSeriesButtonPosition else { return }
+        cardView.otherInSeriesButton.center.x = initialPosition.x + animationProgress * 450
+    }
+
+    func animateTitleLabel() {
+        let startProgress: CGFloat = 0.1
+        guard abs(animationProgress) > startProgress else { return }
+        let progress = animationProgress < 0 ? animationProgress + startProgress : animationProgress - startProgress
+        let opacityProgress = 1 - (abs(progress) / (1 - startProgress))
+        cardView.titleLabel.layer.opacity = Float(opacityProgress)
+        guard let initialPositon = initialTitleLabelPosition else { return }
+        cardView.titleLabel.center.x = initialPositon.x + progress * 600
+    }
+
+    func animateSubtitleLabel() {
+        let startProgress: CGFloat = 0.1
+        guard abs(animationProgress) > startProgress else { return }
+        let progress = animationProgress < 0 ? animationProgress + startProgress : animationProgress - startProgress
+        let opacityProgress = 1 - (abs(progress) / (1 - startProgress))
+        cardView.subtitleLabel.layer.opacity = Float(opacityProgress)
+        guard let initialPositon = initialSubtitleLabelPosition else { return }
+        cardView.subtitleLabel.center.x = initialPositon.x + progress * 600
     }
 
     // MARK: - Required
