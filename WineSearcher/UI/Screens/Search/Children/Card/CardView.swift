@@ -6,11 +6,11 @@ class CardView: UIView {
         super.init(frame: .zero)
         addSubviews()
         setupLayout()
-        setupAppearance()
     }
 
     // MARK: - Subviews
 
+    let contentView = Factory.contentView
     let backgroundImageView = Factory.backgroundImageView
     let learnMoreButton = Factory.learnMoreButton
     let otherInSeriesButton = Factory.otherInSeriesButton
@@ -18,34 +18,43 @@ class CardView: UIView {
     let subtitleLabel = Factory.subtitleLabel
 
     private func addSubviews() {
-        addSubview(backgroundImageView)
-        addSubview(learnMoreButton)
-        addSubview(otherInSeriesButton)
-        addSubview(titleLabel)
-        addSubview(subtitleLabel)
+        addSubview(contentView)
+        contentView.addSubview(backgroundImageView)
+        contentView.addSubview(learnMoreButton)
+        contentView.addSubview(otherInSeriesButton)
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(subtitleLabel)
     }
 
     // MARK: - Layout
 
     private func setupLayout() {
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.leftAnchor.constraint(equalTo: leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: rightAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+
         backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            backgroundImageView.topAnchor.constraint(equalTo: topAnchor),
-            backgroundImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            backgroundImageView.centerXAnchor.constraint(equalTo: centerXAnchor)
+            backgroundImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            backgroundImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
 
         learnMoreButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            learnMoreButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
-            learnMoreButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 14),
+            learnMoreButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+            learnMoreButton.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 14),
             learnMoreButton.widthAnchor.constraint(equalToConstant: 109),
             learnMoreButton.heightAnchor.constraint(equalToConstant: 40)
         ])
 
         otherInSeriesButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            otherInSeriesButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+            otherInSeriesButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
             otherInSeriesButton.leftAnchor.constraint(equalTo: learnMoreButton.rightAnchor, constant: 8),
             otherInSeriesButton.widthAnchor.constraint(equalToConstant: 124),
             otherInSeriesButton.heightAnchor.constraint(equalToConstant: 40)
@@ -54,23 +63,16 @@ class CardView: UIView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleLabel.bottomAnchor.constraint(equalTo: subtitleLabel.topAnchor, constant: -22),
-            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            titleLabel.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -15)
+            titleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15),
+            titleLabel.rightAnchor.constraint(lessThanOrEqualTo: contentView.rightAnchor, constant: -15)
         ])
 
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             subtitleLabel.bottomAnchor.constraint(equalTo: learnMoreButton.topAnchor, constant: -15),
-            subtitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            subtitleLabel.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -15)
+            subtitleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15),
+            subtitleLabel.rightAnchor.constraint(lessThanOrEqualTo: contentView.rightAnchor, constant: -15)
         ])
-    }
-
-    // MARK: - Appearance
-
-    private func setupAppearance() {
-        clipsToBounds = true
-        layer.cornerRadius = 16
     }
 
     // MARK: - Required
@@ -123,6 +125,13 @@ extension CardView {
             let label = UILabel(frame: .zero)
             label.numberOfLines = 0
             return label
+        }
+
+        static var contentView: UIView {
+            let view = UIView(frame: .zero)
+            view.clipsToBounds = true
+            view.layer.cornerRadius = 16
+            return view
         }
     }
 

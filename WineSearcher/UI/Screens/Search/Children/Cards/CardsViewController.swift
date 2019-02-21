@@ -43,6 +43,10 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
         updateChildViewContrllersAnimationProgress()
     }
 
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        updateChildViewContrllersAnimationProgress()
+    }
+
     // MARK: - Private
 
     private let dataSource: CardsDataSourceProtocol

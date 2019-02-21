@@ -32,6 +32,7 @@
 		473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */; };
 		473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */; };
 		473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */; };
+		473FB635221D7976008BF59C /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FB634221D7976008BF59C /* Animator.swift */; };
 		47447624220B9D9400DEDBBB /* CardsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47447623220B9D9400DEDBBB /* CardsDataSource.swift */; };
 		47447626220B9DA700DEDBBB /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47447625220B9DA700DEDBBB /* CardViewModel.swift */; };
 		4752676C2213055F002DDB71 /* CardsSizesProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4752676B2213055F002DDB71 /* CardsSizesProviding.swift */; };
@@ -94,6 +95,7 @@
 		473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsConfiguration.swift; sourceTree = "<group>"; };
 		473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+TransformToCenter.swift"; sourceTree = "<group>"; };
 		473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Nearest.swift"; sourceTree = "<group>"; };
+		473FB634221D7976008BF59C /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		47447623220B9D9400DEDBBB /* CardsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataSource.swift; sourceTree = "<group>"; };
 		47447625220B9DA700DEDBBB /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		4752676B2213055F002DDB71 /* CardsSizesProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsSizesProviding.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		47109B3C221AD73800B31774 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				473FB634221D7976008BF59C /* Animator.swift */,
 				47109B3D221AD79300B31774 /* Fonts */,
 			);
 			path = Utilities;
@@ -724,6 +727,7 @@
 				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
 				47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */,
 				47109B4F221AF53E00B31774 /* CardViewModel+Cards.swift in Sources */,
+				473FB635221D7976008BF59C /* Animator.swift in Sources */,
 				47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
