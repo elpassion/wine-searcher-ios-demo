@@ -52,7 +52,7 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
     private let dataSource: CardsDataSourceProtocol
     private let sizesProvider: CardsSizesProviding
 
-    private lazy var viewControllers: [UIViewController & CardViewControlling] = {
+    private lazy var viewControllers: [CardViewController] = {
         dataSource.items.map(CardViewController.init)
     }()
 
@@ -83,8 +83,13 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
             guard scrollView.visibleRect.contains(minPoint) || scrollView.visibleRect.contains(maxPoint) else { return }
             let offset = minPoint.x - scrollView.contentOffset.x - sizesProvider.spacing
             let animationProgress = offset / (sizesProvider.cardSize.width + sizesProvider.spacing)
-            guard (-1...1).contains(animationProgress) else { return }
-            $0.animationProgress = animationProgress
+            if (-1...1).contains(animationProgress) {
+                $0.animationProgress = animationProgress
+            } else if animationProgress > 1 {
+                $0.animationProgress = 1
+            } else if animationProgress < -1 {
+                $0.animationProgress = 0
+            }
         }
     }
 
@@ -92,14 +97,6 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
 
     required init?(coder aDecoder: NSCoder) {
         return nil
-    }
-
-}
-
-extension UIScrollView {
-
-    var visibleRect: CGRect {
-        return CGRect(x: contentOffset.x, y: contentOffset.y, width: visibleSize.width, height: visibleSize.height)
     }
 
 }

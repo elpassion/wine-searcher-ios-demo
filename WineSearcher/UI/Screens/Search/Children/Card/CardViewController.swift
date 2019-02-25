@@ -22,168 +22,142 @@ class CardViewController: UIViewController, CardViewControlling {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
-        cardView.contentView.layoutSubviews()
-
-        initialBackgroundPosition = cardView.backgroundImageView.center
-        initialLearnMoreButtonPosition = cardView.learnMoreButton.center
-        initialOtherInSeriesButtonPosition = cardView.otherInSeriesButton.center
-        initialTitleLabelPosition = cardView.titleLabel.center
-        initialSubtitleLabelPosition = cardView.subtitleLabel.center
-        cardInitialPosition = cardView.contentView.center
-
-        didLayoutSubviews = true
-        updateAnimations()
+        animate()
     }
-
-    private var didLayoutSubviews = false
 
     // MARK: - CardViewControlling
 
     var animationProgress: CGFloat = 0 {
-        didSet {
-            guard didLayoutSubviews else { return }
-            updateAnimations()
-        }
+        didSet { view.setNeedsLayout() }
     }
 
     // MARK: - Private
 
     private let viewModel: CardViewModel
 
-    private var initialBackgroundPosition: CGPoint?
-    private var initialLearnMoreButtonPosition: CGPoint?
-    private var initialOtherInSeriesButtonPosition: CGPoint?
-    private var initialTitleLabelPosition: CGPoint?
-    private var initialSubtitleLabelPosition: CGPoint?
-    private var cardInitialPosition: CGPoint?
-
     private func setupView() {
         cardView.backgroundImageView.image = viewModel.backgroundImage
+        cardView.contentView.layoutSubviews()
         cardView.titleLabel.text = viewModel.title
         cardView.subtitleLabel.attributedText = viewModel.subtitle
     }
 
-    // MARK: - Animation
-
-    func updateAnimations() {
-        animateBackground()
-        animateButtons()
-        animateLabels()
-        animateCardPostion()
-    }
+    // MARK: - Animations
 
     private var maxBackgroundParalax: CGFloat {
         return (cardView.backgroundImageView.frame.width - cardView.frame.width) * 0.35
     }
 
-    private lazy var backgroundAnimation: () -> Void = {
-        let initialPosition = cardView.backgroundImageView.center
-        return { [weak self, maxBackgroundParalax, animationProgress] in
-            self?.cardView.backgroundImageView.center.x = initialPosition.x + maxBackgroundParalax * animationProgress
-        }
-    }()
+    private func animate() {
+        animateButtonsRightSwipe()
+        animateButtonsLeftSwipe()
+        animateLabelsRightSwipe()
+        animateLabelsLeftSwipe()
+        animateCard()
+        animateBackground()
+    }
 
     private func animateBackground() {
-        guard let initialPosition = initialBackgroundPosition else { return }
-        cardView.backgroundImageView.center.x = initialPosition.x + maxBackgroundParalax * animationProgress
+        let backgroundTransform = CGAffineTransform(translationX: maxBackgroundParalax * animationProgress, y: 0)
+        cardView.backgroundImageView.transform = backgroundTransform
     }
 
-    private func animateButtons() {
-        learnMoreButtonLeftSwipeAnimation.animate(progress: animationProgress)
-        learnMoreButtonRightSwipeAnimation.animate(progress: animationProgress)
-        otherInSeriesButtonLeftSwipeAnimation.animate(progress: animationProgress)
-        otherInSeriesButtonRightSwipeAnimation.animate(progress: animationProgress)
+    private func animateButtonsRightSwipe() {
+        let startProgress: CGFloat = 0
+        let endProgress: CGFloat = -0.27
+        if animationProgress <= startProgress && animationProgress > endProgress {
+            let normalized = abs(animationProgress).normalizeToOne(minValue: abs(startProgress),
+                                                                   maxValue: abs(endProgress))
+            cardView.learnMoreButton.layer.opacity = Float(1 - normalized)
+            cardView.otherInSeriesButton.layer.opacity = Float(1 - normalized)
+            let buttonTransform = CGAffineTransform(translationX: -200 * normalized, y: 0)
+            cardView.learnMoreButton.transform = buttonTransform
+            cardView.otherInSeriesButton.transform = buttonTransform
+        } else if animationProgress < endProgress {
+            hideButtons()
+        }
     }
 
-    private func animateLabels() {
-        titleLeftSwipeAnimation.animate(progress: animationProgress)
-        titleRightSwipeAnimation.animate(progress: animationProgress)
-        subtitleLeftSwipeAnimation.animate(progress: animationProgress)
-        subtitleRightSwipeAnimation.animate(progress: animationProgress)
+    private func animateButtonsLeftSwipe() {
+        let startProgress: CGFloat = 0
+        let endProgress: CGFloat = 0.73
+        let isAfterAnimation = animationProgress > endProgress
+        if animationProgress > startProgress && animationProgress < endProgress {
+            let normalized = animationProgress.normalizeToOne(minValue: startProgress, maxValue: endProgress)
+            cardView.learnMoreButton.layer.opacity = Float(1 - normalized)
+            cardView.otherInSeriesButton.layer.opacity = Float(1 - normalized)
+            let buttonTransform = CGAffineTransform(translationX: 200 * normalized, y: 0)
+            cardView.learnMoreButton.transform = buttonTransform
+            cardView.otherInSeriesButton.transform = buttonTransform
+        } else if isAfterAnimation {
+            hideButtons()
+        }
     }
 
-    private lazy var learnMoreButtonLeftSwipeAnimation: Animator = {
-        let initialPosition = cardView.learnMoreButton.center
-        let animation: (CGFloat) -> Void = { [view = cardView.learnMoreButton] progress in
-            view.layer.opacity = 1 - Float(progress)
-            view.center.x = initialPosition.x - progress * 200
+    private func animateLabelsRightSwipe() {
+        let startProgress: CGFloat = -0.16
+        let endProgress: CGFloat = -0.89
+        let isAfterAnimation = animationProgress < endProgress
+        let isBeforeAnimation = animationProgress > startProgress
+        if animationProgress <= startProgress && animationProgress > endProgress {
+            let normalized = abs(animationProgress).normalizeToOne(minValue: abs(startProgress),
+                                                                   maxValue: abs(endProgress))
+            cardView.titleLabel.layer.opacity = Float(1 - normalized)
+            cardView.subtitleLabel.layer.opacity = Float(1 - normalized)
+            let labelsTransform = CGAffineTransform(translationX: -150 * normalized, y: 0)
+            cardView.titleLabel.transform = labelsTransform
+            cardView.subtitleLabel.transform = labelsTransform
+        } else if isAfterAnimation {
+            hideLabels()
+        } else if isBeforeAnimation {
+            showLabels()
         }
-        return Animator(startProgress: 0, endProgress: -0.27, animation: animation)
-    }()
+    }
 
-    private lazy var otherInSeriesButtonLeftSwipeAnimation: Animator = {
-        let initialPosition = cardView.otherInSeriesButton.center
-        let animation: (CGFloat) -> Void = { [view = cardView.otherInSeriesButton] progress in
-            view.layer.opacity = 1 - Float(progress)
-            view.center.x = initialPosition.x - progress * 200
+    private func animateLabelsLeftSwipe() {
+        let startProgress: CGFloat = 0.1
+        let endProgress: CGFloat = 0.36
+        let isBeforeAnimation = animationProgress > 0 && animationProgress < startProgress
+        let isAfterAnimation = animationProgress > endProgress
+        if animationProgress > startProgress && animationProgress < endProgress {
+            let normalized = animationProgress.normalizeToOne(minValue: startProgress, maxValue: endProgress)
+            cardView.titleLabel.layer.opacity = Float(1 - normalized)
+            cardView.subtitleLabel.layer.opacity = Float(1 - normalized)
+            let labelsTransform = CGAffineTransform(translationX: 150 * normalized, y: 0)
+            cardView.titleLabel.transform = labelsTransform
+            cardView.subtitleLabel.transform = labelsTransform
+        } else if isAfterAnimation {
+            hideLabels()
+        } else if isBeforeAnimation {
+            showLabels()
         }
-        return Animator(startProgress: 0, endProgress: -0.27, animation: animation)
-    }()
+    }
 
-    private lazy var learnMoreButtonRightSwipeAnimation: Animator = {
-        let initialPosition = cardView.learnMoreButton.center
-        let animation: (CGFloat) -> Void = { [view = cardView.learnMoreButton] progress in
-            view.layer.opacity = 1 - Float(progress)
-            view.center.x = initialPosition.x + progress * 150
-        }
-        return Animator(startProgress: 0.73, endProgress: 0, animation: animation)
-    }()
-
-    private lazy var otherInSeriesButtonRightSwipeAnimation: Animator = {
-        let initialPosition = cardView.otherInSeriesButton.center
-        let animation: (CGFloat) -> Void = { [view = cardView.otherInSeriesButton] progress in
-            view.layer.opacity = 1 - Float(progress)
-            view.center.x = initialPosition.x + progress * 150
-        }
-        return Animator(startProgress: 0.73, endProgress: 0, animation: animation)
-    }()
-
-    private lazy var titleLeftSwipeAnimation: Animator = {
-        let initialPosition = cardView.titleLabel.center
-        let animation: (CGFloat) -> Void = { [view = cardView.titleLabel] progress in
-            view.layer.opacity = Float(1 - progress)
-            view.center.x = initialPosition.x + progress * 150
-        }
-        return Animator(startProgress: 0.1, endProgress: 0.36, animation: animation)
-    }()
-
-    private lazy var titleRightSwipeAnimation: Animator = {
-        let initialPosition = cardView.titleLabel.center
-        let animation: (CGFloat) -> Void = { [view = cardView.titleLabel] progress in
-            view.layer.opacity = Float(1 - progress)
-            view.center.x = initialPosition.x - progress * 150
-        }
-        return Animator(startProgress: -0.89, endProgress: -0.16, animation: animation)
-    }()
-
-    private lazy var subtitleLeftSwipeAnimation: Animator = {
-        let initialPosition = cardView.subtitleLabel.center
-        let animation: (CGFloat) -> Void = { [view = cardView.subtitleLabel] progress in
-            view.layer.opacity = Float(1 - progress)
-            view.center.x = initialPosition.x + progress * 150
-        }
-        return Animator(startProgress: 0.1, endProgress: 0.36, animation: animation)
-    }()
-
-    private lazy var subtitleRightSwipeAnimation: Animator = {
-        let initialPosition = cardView.subtitleLabel.center
-        let animation: (CGFloat) -> Void = { [view = cardView.subtitleLabel] progress in
-            view.layer.opacity = Float(1 - progress)
-            view.center.x = initialPosition.x - progress * 150
-        }
-        return Animator(startProgress: -0.89, endProgress: -0.16, animation: animation)
-    }()
-
-    private func animateCardPostion() {
-        guard let initialPosition = cardInitialPosition else { return }
-        if (0.99...1).contains(animationProgress) || (-1...(-0.99)).contains(animationProgress) {
-            cardView.contentView.center = initialPosition
-        } else if animationProgress > 0.5 && animationProgress < 1 {
-            cardView.contentView.center.x = initialPosition.x + (1 - abs(animationProgress)) * 70
+    private func animateCard() {
+        var transform = CGAffineTransform.identity
+        if animationProgress > 0.5 && animationProgress < 1 {
+            transform = CGAffineTransform(translationX: (1 - abs(animationProgress)) * 70, y: 0)
         } else if animationProgress > 0 && animationProgress < 0.5 {
-            cardView.contentView.center.x = initialPosition.x + animationProgress * 70
+            transform = CGAffineTransform(translationX: animationProgress * 70, y: 0)
         }
+        cardView.contentView.transform = transform
+    }
+
+    private func showLabels() {
+        cardView.titleLabel.layer.opacity = 1
+        cardView.subtitleLabel.layer.opacity = 1
+        cardView.titleLabel.transform = CGAffineTransform.identity
+        cardView.subtitleLabel.transform = CGAffineTransform.identity
+    }
+
+    private func hideLabels() {
+        cardView.titleLabel.layer.opacity = 0
+        cardView.subtitleLabel.layer.opacity = 0
+    }
+
+    private func hideButtons() {
+        cardView.learnMoreButton.layer.opacity = 0
+        cardView.otherInSeriesButton.layer.opacity = 0
     }
 
     // MARK: - Required
