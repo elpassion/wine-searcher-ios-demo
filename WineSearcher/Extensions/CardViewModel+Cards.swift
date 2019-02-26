@@ -31,7 +31,7 @@ extension CardViewModel {
         subtitle.append(secondPhase)
 
         return CardViewModel(title: "Tuscany: a Pearl in the Crown",
-                             subtitle: subtitle as NSAttributedString,
+                             subtitle: subtitle,
                              backgroundImage: #imageLiteral(resourceName: "tusc"))
     }
 
