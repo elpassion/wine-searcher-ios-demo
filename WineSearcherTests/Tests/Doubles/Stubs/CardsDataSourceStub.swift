@@ -4,12 +4,6 @@ class CardsDataSourceStub: CardsDataSourceProtocol {
 
     // MARK: - CardsDataSourceProtocol
 
-    var items: [CardViewModel] {
-        return [
-            .firstCard,
-            .secondCard,
-            .firstCard
-        ]
-    }
+    let items: [CardViewModel] = [.firstCard, .secondCard, .firstCard]
 
 }

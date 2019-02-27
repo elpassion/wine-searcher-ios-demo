@@ -127,11 +127,11 @@ extension CardView {
             return label
         }
 
-        static var contentView: UIView {
-            let view = UIView(frame: .zero)
-            view.clipsToBounds = true
-            view.layer.cornerRadius = 16
-            return view
+        static var contentView: UIControl {
+            let control = UIControl(frame: .zero)
+            control.clipsToBounds = true
+            control.layer.cornerRadius = 16
+            return control
         }
     }
 

@@ -4,6 +4,6 @@ class CardsDataSource: CardsDataSourceProtocol {
 
     // MARK: - CardsDataSourceProtocol
 
-    let items: [CardViewModel] = [.firstCard, .secondCard, .firstCard]
+    let items: [CardViewModel] = [.firstCard, .secondCard]
 
 }

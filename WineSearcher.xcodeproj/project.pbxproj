@@ -36,6 +36,14 @@
 		47198706222584AA00BDF30C /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47198705222584AA00BDF30C /* CardDetailsView.swift */; };
 		471987092225853A00BDF30C /* CardDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471987082225853A00BDF30C /* CardDetailsViewControllerTests.swift */; };
 		4719870B2225883100BDF30C /* CardDetailsViewController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719870A2225883100BDF30C /* CardDetailsViewController+SnapshotFixture.swift */; };
+		4719871422258D6800BDF30C /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719871322258D6800BDF30C /* ViewControllerPresenter.swift */; };
+		4719871622258D7700BDF30C /* ViewControllerPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719871522258D7700BDF30C /* ViewControllerPresenting.swift */; };
+		4719871822258E1000BDF30C /* ViewControllerPresnterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719871722258E1000BDF30C /* ViewControllerPresnterSpy.swift */; };
+		4719871C2225910B00BDF30C /* CardsViewControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719871B2225910B00BDF30C /* CardsViewControllerFactoryProtocol.swift */; };
+		4719871E2225912800BDF30C /* CardsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719871D2225912800BDF30C /* CardsViewControllerFactory.swift */; };
+		471987202225926000BDF30C /* CardsViewControllerFactorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719871F2225926000BDF30C /* CardsViewControllerFactorySpy.swift */; };
+		471987222226A43800BDF30C /* CardViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471987212226A43800BDF30C /* CardViewController+Animations.swift */; };
+		471987262226A63500BDF30C /* CardViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471987252226A63500BDF30C /* CardViewControllerSpec.swift */; };
 		473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */; };
 		473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */; };
 		473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */; };
@@ -107,6 +115,14 @@
 		47198705222584AA00BDF30C /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		471987082225853A00BDF30C /* CardDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		4719870A2225883100BDF30C /* CardDetailsViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailsViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
+		4719871322258D6800BDF30C /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
+		4719871522258D7700BDF30C /* ViewControllerPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenting.swift; sourceTree = "<group>"; };
+		4719871722258E1000BDF30C /* ViewControllerPresnterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresnterSpy.swift; sourceTree = "<group>"; };
+		4719871B2225910B00BDF30C /* CardsViewControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewControllerFactoryProtocol.swift; sourceTree = "<group>"; };
+		4719871D2225912800BDF30C /* CardsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewControllerFactory.swift; sourceTree = "<group>"; };
+		4719871F2225926000BDF30C /* CardsViewControllerFactorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewControllerFactorySpy.swift; sourceTree = "<group>"; };
+		471987212226A43800BDF30C /* CardViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+Animations.swift"; sourceTree = "<group>"; };
+		471987252226A63500BDF30C /* CardViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerSpec.swift; sourceTree = "<group>"; };
 		473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsConfiguration.swift; sourceTree = "<group>"; };
 		473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+TransformToCenter.swift"; sourceTree = "<group>"; };
 		473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Nearest.swift"; sourceTree = "<group>"; };
@@ -194,7 +210,6 @@
 		4709440022099B6C008FECFA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				477E6A7F2209D8A800EDB2AB /* Cards */,
 				4709440122099B73008FECFA /* Search */,
 			);
 			path = Screens;
@@ -203,6 +218,7 @@
 		4709440122099B73008FECFA /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				471987242226A62100BDF30C /* Children */,
 				47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */,
 			);
 			path = Search;
@@ -211,6 +227,7 @@
 		470944022209B779008FECFA /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				4719871A222590FC00BDF30C /* Factories */,
 				47447623220B9D9400DEDBBB /* CardsDataSource.swift */,
 				470944052209B7A7008FECFA /* CardsView.swift */,
 				470944032209B78B008FECFA /* CardsViewController.swift */,
@@ -286,6 +303,7 @@
 		47109B3C221AD73800B31774 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4719871222258D5A00BDF30C /* Presenters */,
 				47109B3D221AD79300B31774 /* Fonts */,
 			);
 			path = Utilities;
@@ -326,6 +344,7 @@
 				47115252220C51E5006FA2C4 /* CardViewController.swift */,
 				47447625220B9DA700DEDBBB /* CardViewModel.swift */,
 				470A940722141FC000006564 /* CardViewControlling.swift */,
+				471987212226A43800BDF30C /* CardViewController+Animations.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -355,6 +374,50 @@
 				471987082225853A00BDF30C /* CardDetailsViewControllerTests.swift */,
 			);
 			path = CardDetails;
+			sourceTree = "<group>";
+		};
+		4719870C22258B4F00BDF30C /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				4719871722258E1000BDF30C /* ViewControllerPresnterSpy.swift */,
+				4719871F2225926000BDF30C /* CardsViewControllerFactorySpy.swift */,
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		4719871222258D5A00BDF30C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4719871322258D6800BDF30C /* ViewControllerPresenter.swift */,
+				4719871522258D7700BDF30C /* ViewControllerPresenting.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		4719871A222590FC00BDF30C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				4719871B2225910B00BDF30C /* CardsViewControllerFactoryProtocol.swift */,
+				4719871D2225912800BDF30C /* CardsViewControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		471987232226A61D00BDF30C /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				471987252226A63500BDF30C /* CardViewControllerSpec.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		471987242226A62100BDF30C /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				471987232226A61D00BDF30C /* Card */,
+				477E6A7F2209D8A800EDB2AB /* Cards */,
+			);
+			path = Children;
 			sourceTree = "<group>";
 		};
 		476DF4A8221185CC005B82AF /* UnitTests */ = {
@@ -430,6 +493,7 @@
 		478D597022118BEA00D86292 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				4719870C22258B4F00BDF30C /* Spies */,
 				470A93FB2214049400006564 /* TestData */,
 				470A93F8221403DA00006564 /* Stubs */,
 				478D597122118BF400D86292 /* Fixtures */,
@@ -763,6 +827,7 @@
 				4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */,
 				47109B3F221AD79F00B31774 /* Font.swift in Sources */,
 				4752677022130A46002DDB71 /* UIScreen+ScreenSizeProviding.swift in Sources */,
+				4719871422258D6800BDF30C /* ViewControllerPresenter.swift in Sources */,
 				478D59842211A97F00D86292 /* CardsDataSourceProtocol.swift in Sources */,
 				470944062209B7A7008FECFA /* CardsView.swift in Sources */,
 				47447626220B9DA700DEDBBB /* CardViewModel.swift in Sources */,
@@ -771,12 +836,16 @@
 				473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */,
 				47109B48221ADD8000B31774 /* UIFont+Font.swift in Sources */,
 				473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */,
+				4719871622258D7700BDF30C /* ViewControllerPresenting.swift in Sources */,
+				4719871E2225912800BDF30C /* CardsViewControllerFactory.swift in Sources */,
 				47198706222584AA00BDF30C /* CardDetailsView.swift in Sources */,
 				4752676E221305D1002DDB71 /* CardsSizesProvider.swift in Sources */,
 				4752676C2213055F002DDB71 /* CardsSizesProviding.swift in Sources */,
 				47D993672224381400B45F00 /* CGFloat+Normalization.swift in Sources */,
 				47447624220B9D9400DEDBBB /* CardsDataSource.swift in Sources */,
 				471987042225848200BDF30C /* CardDetailsViewController.swift in Sources */,
+				4719871C2225910B00BDF30C /* CardsViewControllerFactoryProtocol.swift in Sources */,
+				471987222226A43800BDF30C /* CardViewController+Animations.swift in Sources */,
 				47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */,
 				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
 				47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */,
@@ -792,8 +861,10 @@
 			files = (
 				470A940122140DCA00006564 /* CardsDataSourceStub.swift in Sources */,
 				470A93FF22140C3B00006564 /* SearchViewController+SnapshotFixture.swift in Sources */,
+				471987202225926000BDF30C /* CardsViewControllerFactorySpy.swift in Sources */,
 				478D596F22118B7500D86292 /* CardViewControllerTests.swift in Sources */,
 				4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */,
+				4719871822258E1000BDF30C /* ViewControllerPresnterSpy.swift in Sources */,
 				478D597922118FDF00D86292 /* CardsViewController+SnapshotFixture.swift in Sources */,
 				478D597F2211A06700D86292 /* SnapshotsConfiguration.swift in Sources */,
 				478D597522118EEF00D86292 /* SearchViewControllerTests.swift in Sources */,
@@ -801,6 +872,7 @@
 				470A93FD221404A200006564 /* CardsConfiguration+TestData.swift in Sources */,
 				478D597B2211903600D86292 /* CardsDataSource+SnapshotFixture.swift in Sources */,
 				470A940622141A6200006564 /* CardsViewControllerTests.swift in Sources */,
+				471987262226A63500BDF30C /* CardViewControllerSpec.swift in Sources */,
 				477E6A812209D8B900EDB2AB /* CardsViewControllerSpec.swift in Sources */,
 				470A940322140F1C00006564 /* CardsSizesProviderStub.swift in Sources */,
 				471987092225853A00BDF30C /* CardDetailsViewControllerTests.swift in Sources */,
