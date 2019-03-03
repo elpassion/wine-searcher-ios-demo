@@ -13,15 +13,8 @@ extension CardViewController {
         animateBackground()
     }
 
-//    private var maxBackgroundParalax: CGFloat {
-//        return (cardView.backgroundImageView.frame.width - cardView.frame.width) * 0.35
-//    }
-
     private func animateBackground() {
-        
         cardView.contentView.animationProgress = animationProgress
-//        let backgroundTransform = CGAffineTransform(translationX: maxBackgroundParalax * animationProgress, y: 0)
-//        cardView.backgroundImageView.transform = backgroundTransform
     }
 
     private func animateButtonsRightSwipe() {

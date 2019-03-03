@@ -63,6 +63,16 @@
 		478D597D221192E200D86292 /* Sequence+NearestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597C221192E200D86292 /* Sequence+NearestSpec.swift */; };
 		478D597F2211A06700D86292 /* SnapshotsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */; };
 		478D59842211A97F00D86292 /* CardsDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */; };
+		47CA9046222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9045222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift */; };
+		47CA9048222C65C400A5C4F4 /* UIView+ColoredViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9047222C65C400A5C4F4 /* UIView+ColoredViews.swift */; };
+		47CA904A222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */; };
+		47CA904C222C66F500A5C4F4 /* UIView+NavTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA904B222C66F500A5C4F4 /* UIView+NavTitleLabel.swift */; };
+		47CA904F222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA904E222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift */; };
+		47CA9051222C674A00A5C4F4 /* CardDetailsPresentTransitionInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9050222C674A00A5C4F4 /* CardDetailsPresentTransitionInputs.swift */; };
+		47CA9053222C677A00A5C4F4 /* CardDetailsPresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */; };
+		47CA9055222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9054222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift */; };
+		47CA9057222C680D00A5C4F4 /* CardViewModel+CardDetailsPresnetTransitionInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9056222C680D00A5C4F4 /* CardViewModel+CardDetailsPresnetTransitionInputs.swift */; };
+		47CA9059222C684C00A5C4F4 /* CardViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9058222C684C00A5C4F4 /* CardViewModelProtocol.swift */; };
 		47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292B2207984300B7DAF5 /* AppDelegate.swift */; };
 		47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9292D2207984300B7DAF5 /* SearchViewController.swift */; };
 		47D929332207984400B7DAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D929322207984400B7DAF5 /* Assets.xcassets */; };
@@ -143,6 +153,16 @@
 		478D597C221192E200D86292 /* Sequence+NearestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+NearestSpec.swift"; sourceTree = "<group>"; };
 		478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsConfiguration.swift; sourceTree = "<group>"; };
 		478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataSourceProtocol.swift; sourceTree = "<group>"; };
+		47CA9045222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewControllerInputs.swift; sourceTree = "<group>"; };
+		47CA9047222C65C400A5C4F4 /* UIView+ColoredViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ColoredViews.swift"; sourceTree = "<group>"; };
+		47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewControllerFactoryProtocol.swift; sourceTree = "<group>"; };
+		47CA904B222C66F500A5C4F4 /* UIView+NavTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NavTitleLabel.swift"; sourceTree = "<group>"; };
+		47CA904E222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsPresentTransitionView.swift; sourceTree = "<group>"; };
+		47CA9050222C674A00A5C4F4 /* CardDetailsPresentTransitionInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsPresentTransitionInputs.swift; sourceTree = "<group>"; };
+		47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsPresentTransition.swift; sourceTree = "<group>"; };
+		47CA9054222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewModel+CardDetailsInputs.swift"; sourceTree = "<group>"; };
+		47CA9056222C680D00A5C4F4 /* CardViewModel+CardDetailsPresnetTransitionInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewModel+CardDetailsPresnetTransitionInputs.swift"; sourceTree = "<group>"; };
+		47CA9058222C684C00A5C4F4 /* CardViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelProtocol.swift; sourceTree = "<group>"; };
 		47D929282207984300B7DAF5 /* WineSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9292B2207984300B7DAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9292D2207984300B7DAF5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +221,7 @@
 		470943FD22099B58008FECFA /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				47CA904D222C671D00A5C4F4 /* Transition */,
 				471986FB222550C000BDF30C /* Views */,
 				47115250220C5162006FA2C4 /* Children */,
 				470943FE22099B67008FECFA /* SearchView.swift */,
@@ -253,6 +274,7 @@
 				47109B4E221AF53E00B31774 /* CardViewModel+Cards.swift */,
 				47D993662224381400B45F00 /* CGFloat+Normalization.swift */,
 				47D993682224425100B45F00 /* UIScrollView+VisibleRect.swift */,
+				47CA9047222C65C400A5C4F4 /* UIView+ColoredViews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +369,9 @@
 				47447625220B9DA700DEDBBB /* CardViewModel.swift */,
 				470A940722141FC000006564 /* CardViewControlling.swift */,
 				471987212226A43800BDF30C /* CardViewController+Animations.swift */,
+				47CA9054222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift */,
+				47CA9056222C680D00A5C4F4 /* CardViewModel+CardDetailsPresnetTransitionInputs.swift */,
+				47CA9058222C684C00A5C4F4 /* CardViewModelProtocol.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -357,6 +382,7 @@
 				471986FC222550CE00BDF30C /* SearchTopHeaderView.swift */,
 				471986FE22255C3400BDF30C /* SearchBottomSectionView.swift */,
 				4719870022255CF700BDF30C /* SearchBottomSectionRowView.swift */,
+				47CA904B222C66F500A5C4F4 /* UIView+NavTitleLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +393,8 @@
 				471987032225848200BDF30C /* CardDetailsViewController.swift */,
 				47198705222584AA00BDF30C /* CardDetailsView.swift */,
 				470C07752227D34600055F6F /* CardDetailsViewControllerFactory.swift */,
+				47CA9045222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift */,
+				47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -514,6 +542,16 @@
 				4719870A2225883100BDF30C /* CardDetailsViewController+SnapshotFixture.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		47CA904D222C671D00A5C4F4 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				47CA904E222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift */,
+				47CA9050222C674A00A5C4F4 /* CardDetailsPresentTransitionInputs.swift */,
+				47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		47D9291F2207984300B7DAF5 = {
@@ -822,6 +860,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D993692224425100B45F00 /* UIScrollView+VisibleRect.swift in Sources */,
+				47CA9059222C684C00A5C4F4 /* CardViewModelProtocol.swift in Sources */,
+				47CA9053222C677A00A5C4F4 /* CardDetailsPresentTransition.swift in Sources */,
 				4719870122255CF700BDF30C /* SearchBottomSectionRowView.swift in Sources */,
 				47109B4A221ADDF400B31774 /* UIColor+Hex.swift in Sources */,
 				470C07762227D34600055F6F /* CardDetailsViewControllerFactory.swift in Sources */,
@@ -837,11 +877,18 @@
 				47447626220B9DA700DEDBBB /* CardViewModel.swift in Sources */,
 				470A940822141FC000006564 /* CardViewControlling.swift in Sources */,
 				471986FD222550CE00BDF30C /* SearchTopHeaderView.swift in Sources */,
+				47CA9057222C680D00A5C4F4 /* CardViewModel+CardDetailsPresnetTransitionInputs.swift in Sources */,
+				47CA9055222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift in Sources */,
+				47CA9048222C65C400A5C4F4 /* UIView+ColoredViews.swift in Sources */,
 				473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */,
+				47CA904A222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift in Sources */,
 				47109B48221ADD8000B31774 /* UIFont+Font.swift in Sources */,
 				473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */,
+				47CA9051222C674A00A5C4F4 /* CardDetailsPresentTransitionInputs.swift in Sources */,
 				4719871622258D7700BDF30C /* ViewControllerPresenting.swift in Sources */,
+				47CA904C222C66F500A5C4F4 /* UIView+NavTitleLabel.swift in Sources */,
 				4719871E2225912800BDF30C /* CardsViewControllerFactory.swift in Sources */,
+				47CA904F222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift in Sources */,
 				47198706222584AA00BDF30C /* CardDetailsView.swift in Sources */,
 				4752676E221305D1002DDB71 /* CardsSizesProvider.swift in Sources */,
 				4752676C2213055F002DDB71 /* CardsSizesProviding.swift in Sources */,
@@ -855,6 +902,7 @@
 				47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */,
 				47109B4F221AF53E00B31774 /* CardViewModel+Cards.swift in Sources */,
 				471986FF22255C3400BDF30C /* SearchBottomSectionView.swift in Sources */,
+				47CA9046222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift in Sources */,
 				47D9292C2207984300B7DAF5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
