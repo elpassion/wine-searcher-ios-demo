@@ -1,6 +1,6 @@
 import UIKit
 
-class CardsViewController: UIViewController, UIScrollViewDelegate {
+class CardsViewController: UIViewController, UIScrollViewDelegate, CardsViewControlling {
 
     init(dataSource: CardsDataSourceProtocol = CardsDataSource(),
          sizesProvider: CardsSizesProviding = CardsSizesProvider()) {
@@ -30,11 +30,17 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
         updateChildViewContrllersAnimationProgress()
     }
 
-    var currentViewController: CardViewController? {
+    // MARK: - CardsViewControlling
+
+    var currentViewController: (UIViewController & CardViewControlling)? {
         return viewControllers.first {
             let frame = $0.view.frame.applying(CGAffineTransform(translationX: sizesProvider.insets.left, y: 0))
             return cardsView.scrollView.visibleRect.contains(frame)
         }
+    }
+
+    var firstItemRect: CGRect? {
+        return cardsView.contentStackView.arrangedSubviews.first?.frame
     }
 
     // MARK: - UIScrollViewDelegate

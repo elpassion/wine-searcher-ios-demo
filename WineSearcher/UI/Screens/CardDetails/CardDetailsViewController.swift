@@ -26,9 +26,9 @@ class CardDetailsViewController: UIViewController {
     private let inputs: CardDetailsViewControllerInputs
 
     private func setupView() {
-        cardDetailsView.topImageView.image = inputs.topImage
-        cardDetailsView.topTitleLabel.text = inputs.title
-        cardDetailsView.topSubtitleLabel.attributedText = inputs.subtitle
+        cardDetailsView.headerView.topImageView.image = inputs.topImage
+        cardDetailsView.headerView.topTitleLabel.text = inputs.title
+        cardDetailsView.headerView.topSubtitleLabel.attributedText = inputs.subtitle
     }
 
     // MARK: - Required

@@ -16,7 +16,7 @@ class CardDetailsPresentTransitionView: UIView {
     let fromNavTopTitleLabel = UILabel.navTitleLable(title: "Learn Wine")
     let toNavTopTitleLabel = UILabel.navTitleLable(title: "Europe, Italy")
     let ratingImageView = UIImageView(image: #imageLiteral(resourceName: "rating"))
-    let cardDetailsIconImageView = UIImageView(image: #imageLiteral(resourceName: "card_details_icon"))
+    let flagImageView = UIImageView(image: #imageLiteral(resourceName: "card_details_icon"))
     let separator = UIView.coloredView(color: .white)
 
     // MARK: - Subviews
@@ -30,7 +30,7 @@ class CardDetailsPresentTransitionView: UIView {
         addSubview(fromNavTopTitleLabel)
         addSubview(toNavTopTitleLabel)
         addSubview(ratingImageView)
-        addSubview(cardDetailsIconImageView)
+        addSubview(flagImageView)
         addSubview(separator)
     }
 

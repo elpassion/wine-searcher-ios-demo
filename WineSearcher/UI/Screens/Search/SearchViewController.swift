@@ -36,7 +36,7 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
         setupActions()
     }
 
-    let cardsViewController: CardsViewController
+    let cardsViewController: UIViewController & CardsViewControlling
 
     // MARK: - Private
 
@@ -69,22 +69,6 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
 
     required init?(coder aDecoder: NSCoder) {
         return nil
-    }
-
-}
-
-extension CardsViewController {
-
-    var firstItemRect: CGRect? {
-        return cardsView.contentStackView.arrangedSubviews.first?.frame
-    }
-
-}
-
-extension UIView {
-
-    static func keyframeAnimation(duration: TimeInterval, animations: @escaping () -> Void) {
-        animateKeyframes(withDuration: duration, delay: 0, animations: animations)
     }
 
 }

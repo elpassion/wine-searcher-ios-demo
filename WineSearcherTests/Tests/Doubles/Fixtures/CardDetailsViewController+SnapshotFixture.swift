@@ -3,7 +3,8 @@
 extension CardDetailsViewController {
 
     static var snapshotFixture: CardDetailsViewController {
-        return CardDetailsViewController()
+        let inputs = CardViewModel.secondCard.cardDetailsInput
+        return CardDetailsViewController(inputs: inputs)
     }
 
 }

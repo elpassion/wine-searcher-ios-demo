@@ -4,7 +4,7 @@ extension SearchViewController {
 
     static var snapshotFixture: SearchViewController {
         let cardsViewControllerFactorySpy = CardsViewControllerFactorySpy()
-        cardsViewControllerFactorySpy.viewControllerResult = CardsViewController.snapshotFixture
+        cardsViewControllerFactorySpy.viewControllerStub = CardsViewController.snapshotFixture
         return SearchViewController(
             cardsViewControllerFactory: cardsViewControllerFactorySpy,
             viewControllerPresnter: ViewControllerPresnterSpy(),
