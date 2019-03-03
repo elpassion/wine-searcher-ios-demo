@@ -20,6 +20,7 @@
 		470A940322140F1C00006564 /* CardsSizesProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A940222140F1C00006564 /* CardsSizesProviderStub.swift */; };
 		470A940622141A6200006564 /* CardsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A940522141A6200006564 /* CardsViewControllerTests.swift */; };
 		470A940822141FC000006564 /* CardViewControlling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A940722141FC000006564 /* CardViewControlling.swift */; };
+		470C07762227D34600055F6F /* CardDetailsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470C07752227D34600055F6F /* CardDetailsViewControllerFactory.swift */; };
 		47109B3F221AD79F00B31774 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47109B3E221AD79F00B31774 /* Font.swift */; };
 		47109B43221AD87A00B31774 /* NocturneSerif-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47109B42221AD87A00B31774 /* NocturneSerif-ExtraBold.otf */; };
 		47109B48221ADD8000B31774 /* UIFont+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47109B47221ADD8000B31774 /* UIFont+Font.swift */; };
@@ -99,6 +100,7 @@
 		470A940222140F1C00006564 /* CardsSizesProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsSizesProviderStub.swift; sourceTree = "<group>"; };
 		470A940522141A6200006564 /* CardsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewControllerTests.swift; sourceTree = "<group>"; };
 		470A940722141FC000006564 /* CardViewControlling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControlling.swift; sourceTree = "<group>"; };
+		470C07752227D34600055F6F /* CardDetailsViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewControllerFactory.swift; sourceTree = "<group>"; };
 		47109B3E221AD79F00B31774 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		47109B42221AD87A00B31774 /* NocturneSerif-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NocturneSerif-ExtraBold.otf"; sourceTree = "<group>"; };
 		47109B44221AD89D00B31774 /* Tungsten-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tungsten-Medium.ttf"; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 			children = (
 				471987032225848200BDF30C /* CardDetailsViewController.swift */,
 				47198705222584AA00BDF30C /* CardDetailsView.swift */,
+				470C07752227D34600055F6F /* CardDetailsViewControllerFactory.swift */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -821,6 +824,7 @@
 				47D993692224425100B45F00 /* UIScrollView+VisibleRect.swift in Sources */,
 				4719870122255CF700BDF30C /* SearchBottomSectionRowView.swift in Sources */,
 				47109B4A221ADDF400B31774 /* UIColor+Hex.swift in Sources */,
+				470C07762227D34600055F6F /* CardDetailsViewControllerFactory.swift in Sources */,
 				473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */,
 				477E6A832209DCC100EDB2AB /* CardView.swift in Sources */,
 				470944042209B78B008FECFA /* CardsViewController.swift in Sources */,

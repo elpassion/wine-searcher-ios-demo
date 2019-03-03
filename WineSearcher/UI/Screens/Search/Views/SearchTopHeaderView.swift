@@ -10,7 +10,7 @@ class SearchTopHeaderView: UIView {
 
     // MARK: - Subviews
 
-    let titleLabel = Subviews.titleLabel
+    let titleLabel = UILabel.navTitleLable(title: "Learn Wine")
     let navImageView = UIImageView(image: #imageLiteral(resourceName: "nav_image"))
 
     private func addSubviews() {
@@ -47,15 +47,13 @@ class SearchTopHeaderView: UIView {
 
 }
 
-private extension SearchTopHeaderView {
+extension UIView {
 
-    struct Subviews {
-        static var titleLabel: UILabel {
-            let label = UILabel(frame: .zero)
-            label.font = UIFont(font: .tungstenMedium, size: 20)
-            label.text = "Learn Wine"
-            return label
-        }
+    static func navTitleLable(title: String) -> UILabel {
+        let label = UILabel(frame: .zero)
+        label.text = title
+        label.font = UIFont(font: .tungstenMedium, size: 20)
+        return label
     }
 
 }

@@ -30,6 +30,13 @@ class CardsViewController: UIViewController, UIScrollViewDelegate {
         updateChildViewContrllersAnimationProgress()
     }
 
+    var currentViewController: CardViewController? {
+        return viewControllers.first {
+            let frame = $0.view.frame.applying(CGAffineTransform(translationX: sizesProvider.insets.left, y: 0))
+            return cardsView.scrollView.visibleRect.contains(frame)
+        }
+    }
+
     // MARK: - UIScrollViewDelegate
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView,
