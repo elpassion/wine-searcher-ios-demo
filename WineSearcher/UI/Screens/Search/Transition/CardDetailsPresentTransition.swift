@@ -152,35 +152,22 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
     private func createTransitionView(toViewController: CardDetailsViewController,
                                       fromViewController: SearchViewController) -> CardDetailsPresentTransitionView? {
         let transitionView = CardDetailsPresentTransitionView()
-        guard let firstCardRect = fromViewController.cardsViewController.firstItemRect,
-            let card = fromViewController.cardsViewController.currentViewController?.cardView else { return nil }
+
         transitionView.firstCardView.backgroundImageView.image = inputs.cardImage
-        transitionView.firstCardView.frame = card.convert(firstCardRect, to: fromViewController.view)
+        transitionView.firstCardView.frame = fromViewController.firstCardFrame
         transitionView.firstCardView.layoutIfNeeded()
 
         transitionView.titleLabel.text = inputs.cardTitle
-        transitionView.titleLabel.frame = card.convert(card.titleLabel.frame, to: fromViewController.view)
+        transitionView.titleLabel.frame = fromViewController.titleLabelFrame
 
         transitionView.subtitleLabel.attributedText = inputs.cardSubtitle
-        transitionView.subtitleLabel.frame = card.convert(card.subtitleLabel.frame, to: fromViewController.view)
+        transitionView.subtitleLabel.frame = fromViewController.subtitleLabelFrame
 
-        let topFromIconImageView = fromViewController.searchView.headerView.navImageView
-        let topToIconImageView = toViewController.cardDetailsView.topIconImageView
-        let topFromIconPosition = fromViewController.searchView.headerView.convert(topFromIconImageView.frame,
-                                                                                   to: toViewController.view)
-        let topToIconPosition = toViewController.cardDetailsView.convert(topToIconImageView.frame,
-                                                                         to: toViewController.view)
-        transitionView.fromTopIconView.frame = topFromIconPosition
-        transitionView.toTopIconView.frame = topToIconPosition
+        transitionView.fromTopIconView.frame = fromViewController.topNavIconFrame
+        transitionView.toTopIconView.frame = toViewController.topNavIconFrame
 
-        let fromNavTitleLabel = fromViewController.searchView.headerView.titleLabel
-        let toNavTitleLabel = toViewController.cardDetailsView.topNavLabel
-        let fromNavTitleLabelPosition = fromViewController.searchView.headerView.convert(fromNavTitleLabel.frame,
-                                                                                         to: fromViewController.view)
-        let toNavTitleLabelPosition = toViewController.cardDetailsView.convert(toNavTitleLabel.frame,
-                                                                               to: toViewController.view)
-        transitionView.fromNavTopTitleLabel.frame = fromNavTitleLabelPosition
-        transitionView.toNavTopTitleLabel.frame = toNavTitleLabelPosition
+        transitionView.fromNavTopTitleLabel.frame = fromViewController.navTitleLabelFrame
+        transitionView.toNavTopTitleLabel.frame = toViewController.navTitleLabelFrame
 
         transitionView.ratingImageView.frame = toViewController.cardDetailsView.ratingImageView.frame
 
@@ -189,6 +176,51 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         transitionView.separator.frame = toViewController.cardDetailsView.separator.frame
 
         return transitionView
+    }
+
+}
+
+extension SearchViewController {
+
+    var titleLabelFrame: CGRect {
+        guard let titleLabel = cardsViewController.currentViewController?.cardView.titleLabel else { return .zero }
+        return titleLabel.superview?.convert(titleLabel.frame, to: view) ?? .zero
+    }
+
+    var subtitleLabelFrame: CGRect {
+        guard let subtitleLabel = cardsViewController.currentViewController?.cardView.subtitleLabel else {
+            return .zero
+        }
+        return subtitleLabel.superview?.convert(subtitleLabel.frame, to: view) ?? .zero
+    }
+
+    var firstCardFrame: CGRect {
+        guard let card = cardsViewController.currentViewController?.cardView else { return .zero }
+        return card.convert(cardsViewController.firstItemRect ?? .zero, to: view)
+    }
+
+    var topNavIconFrame: CGRect {
+        let navImageView = searchView.headerView.navImageView
+        return navImageView.superview?.convert(navImageView.frame, to: view) ?? .zero
+    }
+
+    var navTitleLabelFrame: CGRect {
+        let navTitleLabel = searchView.headerView.titleLabel
+        return navTitleLabel.superview?.convert(navTitleLabel.frame, to: view) ?? .zero
+    }
+
+}
+
+extension CardDetailsViewController {
+
+    var topNavIconFrame: CGRect {
+        let topIconImageView = cardDetailsView.topIconImageView
+        return topIconImageView.superview?.convert(topIconImageView.frame, to: view) ?? .zero
+    }
+
+    var navTitleLabelFrame: CGRect {
+        let navTitleLabel = cardDetailsView.topNavLabel
+        return navTitleLabel.superview?.convert(navTitleLabel.frame, to: view) ?? .zero
     }
 
 }
