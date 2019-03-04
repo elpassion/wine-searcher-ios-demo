@@ -33,6 +33,8 @@ class CardDetailsHeaderView: UIView {
     // MARK: - Layout
 
     private func setupLayout() {
+        setupNavControlLayout()
+
         topImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             topImageView.topAnchor.constraint(equalTo: topAnchor),
@@ -52,20 +54,6 @@ class CardDetailsHeaderView: UIView {
             topTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19),
             topTitleLabel.bottomAnchor.constraint(equalTo: topSubtitleLabel.topAnchor, constant: -6),
             topTitleLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -15)
-        ])
-
-        navControl.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            navControl.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            navControl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19)
-        ])
-
-        navIconImageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            navIconImageView.topAnchor.constraint(equalTo: navControl.topAnchor),
-            navIconImageView.leadingAnchor.constraint(equalTo: navControl.leadingAnchor),
-            navIconImageView.trailingAnchor.constraint(equalTo: navControl.trailingAnchor),
-            navIconImageView.bottomAnchor.constraint(equalTo: navControl.bottomAnchor)
         ])
 
         topNavLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -89,6 +77,22 @@ class CardDetailsHeaderView: UIView {
             separator.widthAnchor.constraint(equalToConstant: 30),
             separator.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             separator.bottomAnchor.constraint(equalTo: topTitleLabel.topAnchor, constant: -11)
+        ])
+    }
+
+    private func setupNavControlLayout() {
+        navControl.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            navControl.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+            navControl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19)
+        ])
+
+        navIconImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            navIconImageView.topAnchor.constraint(equalTo: navControl.topAnchor),
+            navIconImageView.leadingAnchor.constraint(equalTo: navControl.leadingAnchor),
+            navIconImageView.trailingAnchor.constraint(equalTo: navControl.trailingAnchor),
+            navIconImageView.bottomAnchor.constraint(equalTo: navControl.bottomAnchor)
         ])
     }
 

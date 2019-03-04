@@ -274,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				47115250220C5162006FA2C4 /* Children */,
-				47CA904D222C671D00A5C4F4 /* Transition */,
+				47CA904D222C671D00A5C4F4 /* Transitions */,
 				471986FB222550C000BDF30C /* Views */,
 				470943FE22099B67008FECFA /* SearchView.swift */,
 				47D9292D2207984300B7DAF5 /* SearchViewController.swift */,
@@ -318,6 +318,7 @@
 		470944082209BA6A008FECFA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */,
 				47D993662224381400B45F00 /* CGFloat+Normalization.swift */,
 				47109B4E221AF53E00B31774 /* CardViewModel+Cards.swift */,
 				473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */,
@@ -448,19 +449,14 @@
 		471987022225836300BDF30C /* CardDetails */ = {
 			isa = PBXGroup;
 			children = (
-				47CA906B222C8E4F00A5C4F4 /* CardDetailsHeaderView.swift */,
-				47B66598222D26F1002D9151 /* CardDetailsRegionOverviewView.swift */,
-				47198705222584AA00BDF30C /* CardDetailsView.swift */,
+				47895E5B222D726800CEE909 /* Views */,
 				471987032225848200BDF30C /* CardDetailsViewController.swift */,
 				470C07752227D34600055F6F /* CardDetailsViewControllerFactory.swift */,
 				47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */,
 				47CA9045222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift */,
-				47895E47222D377600CEE909 /* CardDetailsWineView.swift */,
-				47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */,
 				47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */,
 				47895E4F222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift */,
 				47895E51222D4DBC00CEE909 /* CardDetailsWinesConfiguring.swift */,
-				47B6659C222D3436002D9151 /* CardDetailsWinesView.swift */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -588,6 +584,34 @@
 			path = Cards;
 			sourceTree = "<group>";
 		};
+		47895E5B222D726800CEE909 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47CA906B222C8E4F00A5C4F4 /* CardDetailsHeaderView.swift */,
+				47B66598222D26F1002D9151 /* CardDetailsRegionOverviewView.swift */,
+				47895E47222D377600CEE909 /* CardDetailsWineView.swift */,
+				47198705222584AA00BDF30C /* CardDetailsView.swift */,
+				47B6659C222D3436002D9151 /* CardDetailsWinesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47895E5C222D72CC00CEE909 /* PresentCardDetails */ = {
+			isa = PBXGroup;
+			children = (
+				47CA905A222C89BA00A5C4F4 /* CardDetailsPresentTransition+Animators.swift */,
+				47895E55222D6EA900CEE909 /* CardDetailsPresentTransition+CardDetailsScreenAnimators.swift */,
+				47895E57222D6EB700CEE909 /* CardDetailsPresentTransition+CommonAnimators.swift */,
+				47895E53222D6E7C00CEE909 /* CardDetailsPresentTransition+SearchScreenAnimators.swift */,
+				47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */,
+				47CA9050222C674A00A5C4F4 /* CardDetailsPresentTransitionInputs.swift */,
+				47CA904E222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift */,
+				47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */,
+				47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */,
+			);
+			path = PresentCardDetails;
+			sourceTree = "<group>";
+		};
 		478D597022118BEA00D86292 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,20 +635,12 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
-		47CA904D222C671D00A5C4F4 /* Transition */ = {
+		47CA904D222C671D00A5C4F4 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				47CA905A222C89BA00A5C4F4 /* CardDetailsPresentTransition+Animators.swift */,
-				47895E55222D6EA900CEE909 /* CardDetailsPresentTransition+CardDetailsScreenAnimators.swift */,
-				47895E57222D6EB700CEE909 /* CardDetailsPresentTransition+CommonAnimators.swift */,
-				47895E53222D6E7C00CEE909 /* CardDetailsPresentTransition+SearchScreenAnimators.swift */,
-				47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */,
-				47CA9050222C674A00A5C4F4 /* CardDetailsPresentTransitionInputs.swift */,
-				47CA904E222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift */,
-				47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */,
-				47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */,
+				47895E5C222D72CC00CEE909 /* PresentCardDetails */,
 			);
-			path = Transition;
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 		47CA9062222C8B6100A5C4F4 /* Views */ = {
