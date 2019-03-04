@@ -4,6 +4,7 @@ class CardDetailsView: UIView {
 
     init() {
         super.init(frame: .zero)
+        backgroundColor = UIColor(hex: "FFFDFA")
         addSubviews()
         setupLayout()
     }
@@ -14,12 +15,16 @@ class CardDetailsView: UIView {
     let contentView = UIView(frame: .zero)
     let headerView = CardDetailsHeaderView()
     let flagImageView = UIImageView(image: #imageLiteral(resourceName: "card_details_icon"))
+    let regionOverviewView = CardDetailsRegionOverviewView()
+    let winesView = CardDetailsWinesView()
 
     private func addSubviews() {
         addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(headerView)
         contentView.addSubview(flagImageView)
+        contentView.addSubview(regionOverviewView)
+        contentView.addSubview(winesView)
     }
 
     // MARK: - Layout
@@ -56,6 +61,21 @@ class CardDetailsView: UIView {
         NSLayoutConstraint.activate([
             flagImageView.centerYAnchor.constraint(equalTo: headerView.bottomAnchor),
             flagImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -19)
+        ])
+
+        regionOverviewView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            regionOverviewView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 26),
+            regionOverviewView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            regionOverviewView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
+        ])
+
+        winesView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            winesView.topAnchor.constraint(lessThanOrEqualTo: regionOverviewView.bottomAnchor, constant: 24.5),
+            winesView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            winesView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            winesView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor)
         ])
     }
 

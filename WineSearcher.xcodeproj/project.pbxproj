@@ -55,6 +55,10 @@
 		4752677022130A46002DDB71 /* UIScreen+ScreenSizeProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4752676F22130A46002DDB71 /* UIScreen+ScreenSizeProviding.swift */; };
 		477E6A812209D8B900EDB2AB /* CardsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */; };
 		477E6A832209DCC100EDB2AB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477E6A822209DCC100EDB2AB /* CardView.swift */; };
+		47895E48222D377600CEE909 /* CardDetailsWineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E47222D377600CEE909 /* CardDetailsWineView.swift */; };
+		47895E4A222D3BDB00CEE909 /* CardDetailsWineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */; };
+		47895E4C222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */; };
+		47895E4E222D4A3700CEE909 /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E4D222D4A3700CEE909 /* SketchShadow.swift */; };
 		478D596F22118B7500D86292 /* CardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DF4AF22118617005B82AF /* CardViewControllerTests.swift */; };
 		478D597322118C0900D86292 /* CardViewController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597222118C0900D86292 /* CardViewController+SnapshotFixture.swift */; };
 		478D597522118EEF00D86292 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597422118EEF00D86292 /* SearchViewControllerTests.swift */; };
@@ -63,6 +67,9 @@
 		478D597D221192E200D86292 /* Sequence+NearestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597C221192E200D86292 /* Sequence+NearestSpec.swift */; };
 		478D597F2211A06700D86292 /* SnapshotsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */; };
 		478D59842211A97F00D86292 /* CardsDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */; };
+		47B66599222D26F1002D9151 /* CardDetailsRegionOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B66598222D26F1002D9151 /* CardDetailsRegionOverviewView.swift */; };
+		47B6659B222D2DA4002D9151 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B6659A222D2DA4002D9151 /* Montserrat-Light.ttf */; };
+		47B6659D222D3436002D9151 /* CardDetailsWinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B6659C222D3436002D9151 /* CardDetailsWinesView.swift */; };
 		47CA9046222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9045222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift */; };
 		47CA9048222C65C400A5C4F4 /* UIView+ColoredViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9047222C65C400A5C4F4 /* UIView+ColoredViews.swift */; };
 		47CA904A222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */; };
@@ -159,6 +166,10 @@
 		476DF4AF22118617005B82AF /* CardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerTests.swift; sourceTree = "<group>"; };
 		477E6A802209D8B900EDB2AB /* CardsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewControllerSpec.swift; sourceTree = "<group>"; };
 		477E6A822209DCC100EDB2AB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		47895E47222D377600CEE909 /* CardDetailsWineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsWineView.swift; sourceTree = "<group>"; };
+		47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsWineViewModel.swift; sourceTree = "<group>"; };
+		47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailsWineViewModel+Wines.swift"; sourceTree = "<group>"; };
+		47895E4D222D4A3700CEE909 /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
 		478D597222118C0900D86292 /* CardViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
 		478D597422118EEF00D86292 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		478D597822118FDF00D86292 /* CardsViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
@@ -166,6 +177,9 @@
 		478D597C221192E200D86292 /* Sequence+NearestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+NearestSpec.swift"; sourceTree = "<group>"; };
 		478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsConfiguration.swift; sourceTree = "<group>"; };
 		478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataSourceProtocol.swift; sourceTree = "<group>"; };
+		47B66598222D26F1002D9151 /* CardDetailsRegionOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsRegionOverviewView.swift; sourceTree = "<group>"; };
+		47B6659A222D2DA4002D9151 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		47B6659C222D3436002D9151 /* CardDetailsWinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsWinesView.swift; sourceTree = "<group>"; };
 		47CA9045222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewControllerInputs.swift; sourceTree = "<group>"; };
 		47CA9047222C65C400A5C4F4 /* UIView+ColoredViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ColoredViews.swift"; sourceTree = "<group>"; };
 		47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewControllerFactoryProtocol.swift; sourceTree = "<group>"; };
@@ -358,6 +372,7 @@
 			children = (
 				4719871222258D5A00BDF30C /* Presenters */,
 				47109B3D221AD79300B31774 /* Fonts */,
+				47895E4D222D4A3700CEE909 /* SketchShadow.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -373,6 +388,7 @@
 		47109B40221AD81F00B31774 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				47B6659A222D2DA4002D9151 /* Montserrat-Light.ttf */,
 				47109B46221AD8CC00B31774 /* NocturneSerif-Bold.otf */,
 				47109B42221AD87A00B31774 /* NocturneSerif-ExtraBold.otf */,
 				47109B44221AD89D00B31774 /* Tungsten-Medium.ttf */,
@@ -425,6 +441,11 @@
 				47CA9045222C658E00A5C4F4 /* CardDetailsViewControllerInputs.swift */,
 				47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */,
 				47CA906B222C8E4F00A5C4F4 /* CardDetailsHeaderView.swift */,
+				47B66598222D26F1002D9151 /* CardDetailsRegionOverviewView.swift */,
+				47B6659C222D3436002D9151 /* CardDetailsWinesView.swift */,
+				47895E47222D377600CEE909 /* CardDetailsWineView.swift */,
+				47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */,
+				47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -774,6 +795,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47B6659B222D2DA4002D9151 /* Montserrat-Light.ttf in Resources */,
 				47D929362207984400B7DAF5 /* LaunchScreen.storyboard in Resources */,
 				47109B43221AD87A00B31774 /* NocturneSerif-ExtraBold.otf in Resources */,
 				47109B4B221AE05500B31774 /* NocturneSerif-Bold.otf in Resources */,
@@ -909,9 +931,11 @@
 				47D993692224425100B45F00 /* UIScrollView+VisibleRect.swift in Sources */,
 				47CA9074222C967E00A5C4F4 /* UIView+KeyframeAnimation.swift in Sources */,
 				47CA9059222C684C00A5C4F4 /* CardViewModelProtocol.swift in Sources */,
+				47895E4E222D4A3700CEE909 /* SketchShadow.swift in Sources */,
 				47CA9053222C677A00A5C4F4 /* CardDetailsPresentTransition.swift in Sources */,
 				4719870122255CF700BDF30C /* SearchBottomSectionRowView.swift in Sources */,
 				47109B4A221ADDF400B31774 /* UIColor+Hex.swift in Sources */,
+				47B66599222D26F1002D9151 /* CardDetailsRegionOverviewView.swift in Sources */,
 				470C07762227D34600055F6F /* CardDetailsViewControllerFactory.swift in Sources */,
 				473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */,
 				477E6A832209DCC100EDB2AB /* CardView.swift in Sources */,
@@ -945,6 +969,7 @@
 				4719871E2225912800BDF30C /* CardsViewControllerFactory.swift in Sources */,
 				47CA904F222C672800A5C4F4 /* CardDetailsPresentTransitionView.swift in Sources */,
 				47CA905D222C8AB100A5C4F4 /* SearchViewController+Frames.swift in Sources */,
+				47895E4A222D3BDB00CEE909 /* CardDetailsWineViewModel.swift in Sources */,
 				47198706222584AA00BDF30C /* CardDetailsView.swift in Sources */,
 				47CA906C222C8E4F00A5C4F4 /* CardDetailsHeaderView.swift in Sources */,
 				4752676E221305D1002DDB71 /* CardsSizesProvider.swift in Sources */,
@@ -953,8 +978,11 @@
 				47447624220B9D9400DEDBBB /* CardsDataSource.swift in Sources */,
 				471987042225848200BDF30C /* CardDetailsViewController.swift in Sources */,
 				4719871C2225910B00BDF30C /* CardsViewControllerFactoryProtocol.swift in Sources */,
+				47895E4C222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift in Sources */,
+				47895E48222D377600CEE909 /* CardDetailsWineView.swift in Sources */,
 				471987222226A43800BDF30C /* CardViewController+Animations.swift in Sources */,
 				47D9292E2207984300B7DAF5 /* SearchViewController.swift in Sources */,
+				47B6659D222D3436002D9151 /* CardDetailsWinesView.swift in Sources */,
 				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
 				47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */,
 				47109B4F221AF53E00B31774 /* CardViewModel+Cards.swift in Sources */,

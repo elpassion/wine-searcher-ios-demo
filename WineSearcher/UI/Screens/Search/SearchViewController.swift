@@ -2,15 +2,6 @@ import UIKit
 
 class SearchViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
-    var cardDetailsPresentTransition: CardDetailsPresentTransition?
-
-    func animationController(forPresented presented: UIViewController,
-                             presenting: UIViewController,
-                             source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let transition = cardDetailsPresentTransition else { return nil }
-        return transition
-    }
-
     init(cardsViewControllerFactory: CardsViewControllerFactoryProtocol = CardsViewControllerFactory(),
          viewControllerPresnter: ViewControllerPresenting = ViewControllerPresenter(),
          cardsDataSource: CardsDataSourceProtocol = CardsDataSource(),
@@ -37,6 +28,16 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
 
     let cardsViewController: UIViewController & CardsViewControlling
+    var cardDetailsPresentTransition: CardDetailsPresentTransition?
+
+    // MARK: - UIViewControllerTransitioningDelegate
+
+    func animationController(forPresented presented: UIViewController,
+                             presenting: UIViewController,
+                             source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard let transition = cardDetailsPresentTransition else { return nil }
+        return transition
+    }
 
     // MARK: - Private
 

@@ -37,4 +37,9 @@ extension CardDetailsViewController {
         return flagImageView.superview?.convert(flagImageView.frame, to: view) ?? .zero
     }
 
+    var regionOverviewFrame: CGRect {
+        let regionOverview = cardDetailsView.regionOverviewView
+        return regionOverview.superview?.convert(regionOverview.frame, to: view) ?? .zero
+    }
+
 }

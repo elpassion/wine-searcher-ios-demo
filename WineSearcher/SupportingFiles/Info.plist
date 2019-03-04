@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Montserrat-Light.ttf</string>
 		<string>Tungsten-Semibold.ttf</string>
 		<string>Tungsten-Medium.ttf</string>
 		<string>NocturneSerif-ExtraBold.otf</string>

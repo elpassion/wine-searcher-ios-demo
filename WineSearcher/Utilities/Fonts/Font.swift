@@ -3,4 +3,5 @@ enum Font: String {
     case tungstenSemiBold = "Tungsten-Semibold"
     case nocturnSerifExtraBold = "NocturneSerif-ExtraBold"
     case nocturneSerifBold = "NocturneSerif-Bold"
+    case montserratLight = "Montserrat-Light"
 }

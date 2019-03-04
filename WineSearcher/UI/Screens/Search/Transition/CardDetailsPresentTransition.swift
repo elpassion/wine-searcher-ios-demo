@@ -6,7 +6,7 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         self.inputs = inputs
     }
 
-    let duration = 1.0
+    let duration = 0.0
 
     private let inputs: CardDetailsPresentTransitionInputs
 
@@ -53,7 +53,6 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
 
         transitionView.firstCardView.backgroundImageView.image = inputs.cardImage
         transitionView.firstCardView.frame = fromViewController.firstCardFrame
-        transitionView.firstCardView.layoutIfNeeded()
 
         transitionView.titleLabel.text = inputs.cardTitle
         transitionView.titleLabel.frame = fromViewController.titleLabelFrame
@@ -72,6 +71,16 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         transitionView.separator.frame = toViewController.separatorViewFrame
 
         transitionView.flagImageView.frame = toViewController.flagImageViewFrame
+
+        transitionView.bottomSection.frame = fromViewController.bottomSectionFrame
+
+        transitionView.learnMoreButton.frame = fromViewController.learnMoreButtonFrame
+
+        transitionView.otherInSeriesButton.frame = fromViewController.otherInSeriesButtonFrame
+
+        transitionView.regionOverviewView.frame = toViewController.regionOverviewFrame
+
+        transitionView.layoutIfNeeded()
 
         return transitionView
     }

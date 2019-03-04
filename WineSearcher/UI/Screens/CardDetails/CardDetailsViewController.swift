@@ -19,6 +19,7 @@ class CardDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         setupView()
+        setupWines()
     }
 
     // MARK: - Private
@@ -29,6 +30,21 @@ class CardDetailsViewController: UIViewController {
         cardDetailsView.headerView.topImageView.image = inputs.topImage
         cardDetailsView.headerView.topTitleLabel.text = inputs.title
         cardDetailsView.headerView.topSubtitleLabel.attributedText = inputs.subtitle
+    }
+
+    private func setupWines() {
+        let wines = CardDetailsWineViewModel.wines
+        wines.forEach {
+            let view = CardDetailsWineView()
+            view.wineImageView.image = $0.wineImage
+            view.titleLabel.text = $0.title
+            view.subtitleLabel.text = $0.subtitle
+            view.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                view.widthAnchor.constraint(equalToConstant: 140)
+            ])
+            cardDetailsView.winesView.contentStackView.addArrangedSubview(view)
+        }
     }
 
     // MARK: - Required

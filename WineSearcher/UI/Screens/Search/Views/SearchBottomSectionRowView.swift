@@ -28,7 +28,7 @@ class SearchBottomSectionRowView: UIView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 14.5),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -14.5),
+            titleLabel.bottomAnchor.constraint(equalTo: separator.topAnchor, constant: -14.5),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: arrowImageView.leadingAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor)
         ])

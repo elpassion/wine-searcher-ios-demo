@@ -18,6 +18,10 @@ class CardDetailsPresentTransitionView: UIView {
     let ratingImageView = UIImageView(image: #imageLiteral(resourceName: "rating"))
     let flagImageView = UIImageView(image: #imageLiteral(resourceName: "card_details_icon"))
     let separator = UIView.coloredView(color: .white)
+    let bottomSection = SearchBottomSectionView()
+    let learnMoreButton = UIButton.learnMoreButton
+    let otherInSeriesButton = UIButton.otherInSeriesButton
+    let regionOverviewView = CardDetailsRegionOverviewView()
 
     // MARK: - Subviews
 
@@ -32,6 +36,10 @@ class CardDetailsPresentTransitionView: UIView {
         addSubview(ratingImageView)
         addSubview(flagImageView)
         addSubview(separator)
+        addSubview(bottomSection)
+        addSubview(learnMoreButton)
+        addSubview(otherInSeriesButton)
+        addSubview(regionOverviewView)
     }
 
     // MARK: - Required
