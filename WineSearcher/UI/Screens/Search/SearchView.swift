@@ -16,6 +16,7 @@ class SearchView: UIView {
     let scrollView = Subviews.scrollView
     let headerView = SearchTopHeaderView()
     let bottomSection = SearchBottomSectionView()
+    let searchIconImageView = UIImageView(image: #imageLiteral(resourceName: "search_icon"))
 
     private func addSubviews() {
         addSubview(scrollView)
@@ -23,6 +24,7 @@ class SearchView: UIView {
         contentView.addSubview(headerView)
         contentView.addSubview(cardsView)
         contentView.addSubview(bottomSection)
+        contentView.addSubview(searchIconImageView)
     }
 
     // MARK: - Layout
@@ -66,6 +68,12 @@ class SearchView: UIView {
             bottomSection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             bottomSection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             bottomSection.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -11)
+        ])
+
+        searchIconImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            searchIconImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -21),
+            searchIconImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -19)
         ])
     }
 
