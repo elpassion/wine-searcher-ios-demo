@@ -2,8 +2,10 @@ import UIKit
 
 class CardDetailsViewController: UIViewController {
 
-    init(inputs: CardDetailsViewControllerInputs) {
+    init(inputs: CardDetailsViewControllerInputs,
+         winesConfigurator: CardDetailsWinesConfiguring = CardDetailsWinesConfigurator()) {
         self.inputs = inputs
+        self.winesConfigurator = winesConfigurator
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -25,6 +27,7 @@ class CardDetailsViewController: UIViewController {
     // MARK: - Private
 
     private let inputs: CardDetailsViewControllerInputs
+    private let winesConfigurator: CardDetailsWinesConfiguring
 
     private func setupView() {
         cardDetailsView.headerView.topImageView.image = inputs.topImage
@@ -34,17 +37,7 @@ class CardDetailsViewController: UIViewController {
 
     private func setupWines() {
         let wines = CardDetailsWineViewModel.wines
-        wines.forEach {
-            let view = CardDetailsWineView()
-            view.wineImageView.image = $0.wineImage
-            view.titleLabel.text = $0.title
-            view.subtitleLabel.text = $0.subtitle
-            view.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                view.widthAnchor.constraint(equalToConstant: 140)
-            ])
-            cardDetailsView.winesView.contentStackView.addArrangedSubview(view)
-        }
+        winesConfigurator.configure(wines: wines, stackView: cardDetailsView.winesView.contentStackView)
     }
 
     // MARK: - Required

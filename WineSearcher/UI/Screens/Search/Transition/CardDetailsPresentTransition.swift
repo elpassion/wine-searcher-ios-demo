@@ -6,7 +6,7 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         self.inputs = inputs
     }
 
-    let duration = 0.0
+    let duration = 1.0
 
     private let inputs: CardDetailsPresentTransitionInputs
 
@@ -79,6 +79,12 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         transitionView.otherInSeriesButton.frame = fromViewController.otherInSeriesButtonFrame
 
         transitionView.regionOverviewView.frame = toViewController.regionOverviewFrame
+
+        let winesConfigurator = CardDetailsWinesConfigurator()
+        winesConfigurator.configure(wines: CardDetailsWineViewModel.wines,
+                                    stackView: transitionView.winesView.contentStackView)
+
+        transitionView.winesView.frame = toViewController.winesViewFrame
 
         transitionView.layoutIfNeeded()
 

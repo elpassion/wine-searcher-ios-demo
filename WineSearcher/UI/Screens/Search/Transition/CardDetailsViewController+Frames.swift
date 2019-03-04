@@ -42,4 +42,9 @@ extension CardDetailsViewController {
         return regionOverview.superview?.convert(regionOverview.frame, to: view) ?? .zero
     }
 
+    var winesViewFrame: CGRect {
+        let winesView = cardDetailsView.winesView
+        return winesView.superview?.convert(winesView.frame, to: view) ?? .zero
+    }
+
 }

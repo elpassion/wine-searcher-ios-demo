@@ -4,7 +4,7 @@ class CardDetailsPresentTransitionView: UIView {
 
     init() {
         super.init(frame: .zero)
-        backgroundColor = .green
+        backgroundColor = UIColor(hex: "FFFDFA")
         addSubviews()
     }
 
@@ -22,6 +22,7 @@ class CardDetailsPresentTransitionView: UIView {
     let learnMoreButton = UIButton.learnMoreButton
     let otherInSeriesButton = UIButton.otherInSeriesButton
     let regionOverviewView = CardDetailsRegionOverviewView()
+    let winesView = CardDetailsWinesView()
 
     // MARK: - Subviews
 
@@ -40,6 +41,7 @@ class CardDetailsPresentTransitionView: UIView {
         addSubview(learnMoreButton)
         addSubview(otherInSeriesButton)
         addSubview(regionOverviewView)
+        addSubview(winesView)
     }
 
     // MARK: - Required

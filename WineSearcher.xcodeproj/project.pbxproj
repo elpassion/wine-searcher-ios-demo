@@ -59,6 +59,8 @@
 		47895E4A222D3BDB00CEE909 /* CardDetailsWineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */; };
 		47895E4C222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */; };
 		47895E4E222D4A3700CEE909 /* SketchShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E4D222D4A3700CEE909 /* SketchShadow.swift */; };
+		47895E50222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E4F222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift */; };
+		47895E52222D4DBC00CEE909 /* CardDetailsWinesConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47895E51222D4DBC00CEE909 /* CardDetailsWinesConfiguring.swift */; };
 		478D596F22118B7500D86292 /* CardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DF4AF22118617005B82AF /* CardViewControllerTests.swift */; };
 		478D597322118C0900D86292 /* CardViewController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597222118C0900D86292 /* CardViewController+SnapshotFixture.swift */; };
 		478D597522118EEF00D86292 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597422118EEF00D86292 /* SearchViewControllerTests.swift */; };
@@ -170,6 +172,8 @@
 		47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsWineViewModel.swift; sourceTree = "<group>"; };
 		47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailsWineViewModel+Wines.swift"; sourceTree = "<group>"; };
 		47895E4D222D4A3700CEE909 /* SketchShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchShadow.swift; sourceTree = "<group>"; };
+		47895E4F222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsWinesConfigurator.swift; sourceTree = "<group>"; };
+		47895E51222D4DBC00CEE909 /* CardDetailsWinesConfiguring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsWinesConfiguring.swift; sourceTree = "<group>"; };
 		478D597222118C0900D86292 /* CardViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
 		478D597422118EEF00D86292 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		478D597822118FDF00D86292 /* CardsViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
@@ -446,6 +450,8 @@
 				47895E47222D377600CEE909 /* CardDetailsWineView.swift */,
 				47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */,
 				47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */,
+				47895E4F222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift */,
+				47895E51222D4DBC00CEE909 /* CardDetailsWinesConfiguring.swift */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -929,6 +935,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D993692224425100B45F00 /* UIScrollView+VisibleRect.swift in Sources */,
+				47895E50222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift in Sources */,
 				47CA9074222C967E00A5C4F4 /* UIView+KeyframeAnimation.swift in Sources */,
 				47CA9059222C684C00A5C4F4 /* CardViewModelProtocol.swift in Sources */,
 				47895E4E222D4A3700CEE909 /* SketchShadow.swift in Sources */,
@@ -945,6 +952,7 @@
 				4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */,
 				47109B3F221AD79F00B31774 /* Font.swift in Sources */,
 				4752677022130A46002DDB71 /* UIScreen+ScreenSizeProviding.swift in Sources */,
+				47895E52222D4DBC00CEE909 /* CardDetailsWinesConfiguring.swift in Sources */,
 				47CA9068222C8BCF00A5C4F4 /* UIButton+LearnMore.swift in Sources */,
 				47CA9066222C8BA300A5C4F4 /* UILabel+MultilineLabel.swift in Sources */,
 				4719871422258D6800BDF30C /* ViewControllerPresenter.swift in Sources */,

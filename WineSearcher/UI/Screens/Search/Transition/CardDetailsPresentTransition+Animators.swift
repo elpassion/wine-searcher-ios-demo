@@ -14,7 +14,9 @@ extension CardDetailsPresentTransition {
             cardDetailsIconAnimator(transitionView: transitionView),
             separatorAnimator(transitionView: transitionView),
             searchBottomSectionAnimator(transtionView: transitionView),
-            cardButtonsAnimator(transitionView: transitionView)
+            cardButtonsAnimator(transitionView: transitionView),
+            winesViewTitleAnimator(transitionView: transitionView),
+            winesAnimator(transitionView: transitionView)
         ]
     }
 
@@ -143,6 +145,35 @@ extension CardDetailsPresentTransition {
             UIView.keyframeAnimation(duration: self.duration) {
                 UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1) {
                     transitionView.regionOverviewView.alpha = 1
+                }
+            }
+        }
+    }
+
+    private func winesViewTitleAnimator(transitionView: TransitionView) -> UIViewPropertyAnimator {
+        transitionView.winesView.titleLabel.layer.opacity = 0
+        return UIViewPropertyAnimator(duration: duration, curve: .linear) {
+            UIView.keyframeAnimation(duration: self.duration) {
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 1) {
+                    transitionView.winesView.titleLabel.layer.opacity = 1
+                }
+            }
+        }
+    }
+
+    private func winesAnimator(transitionView: TransitionView) -> UIViewPropertyAnimator {
+        let wines = transitionView.winesView.contentStackView.subviews
+        wines.forEach { element in
+            element.layer.opacity = 0
+            element.center.y += 300
+        }
+        return UIViewPropertyAnimator(duration: self.duration, curve: .linear) {
+            UIView.keyframeAnimation(duration: self.duration) {
+                wines.enumerated().forEach { index, element in
+                    UIView.addKeyframe(withRelativeStartTime: 0.3 * Double(index), relativeDuration: 0.3) {
+                        element.layer.opacity = 1
+                        element.center.y -= 300
+                    }
                 }
             }
         }
