@@ -22,6 +22,7 @@ class CardDetailsViewController: UIViewController {
 
         setupView()
         setupWines()
+        setupAction()
     }
 
     // MARK: - Private
@@ -38,6 +39,15 @@ class CardDetailsViewController: UIViewController {
     private func setupWines() {
         let wines = CardDetailsWineViewModel.wines
         winesConfigurator.configure(wines: wines, stackView: cardDetailsView.winesView.contentStackView)
+    }
+
+    private func setupAction() {
+        cardDetailsView.headerView.navControl.addTarget(self, action: #selector(dismissSelf), for: .touchUpInside)
+    }
+
+    @objc
+    func dismissSelf() {
+        self.dismiss(animated: false)
     }
 
     // MARK: - Required

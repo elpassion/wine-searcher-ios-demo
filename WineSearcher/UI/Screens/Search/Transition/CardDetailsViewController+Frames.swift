@@ -2,8 +2,13 @@ import UIKit
 
 extension CardDetailsViewController {
 
+    var headerFrame: CGRect {
+        let header = cardDetailsView.headerView
+        return header.superview?.convert(header.frame, to: view) ?? .zero
+    }
+
     var topNavIconFrame: CGRect {
-        let topIconImageView = cardDetailsView.headerView.topIconImageView
+        let topIconImageView = cardDetailsView.headerView.navIconImageView
         return topIconImageView.superview?.convert(topIconImageView.frame, to: view) ?? .zero
     }
 
