@@ -2,13 +2,13 @@ import UIKit
 
 class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
-    init(inputs: CardDetailsPresentTransitionInputs) {
+    init(inputs: CardDetailsInputs) {
         self.inputs = inputs
     }
 
     let duration = 0.5
 
-    private let inputs: CardDetailsPresentTransitionInputs
+    private let inputs: CardDetailsInputs
 
     // MARK: - UIViewControllerAnimatedTransitioning
 
@@ -28,11 +28,8 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         toViewController.view.frame = fromViewController.view.frame
         toViewController.view.layoutIfNeeded()
 
-        guard let transitionView = createTransitionView(toViewController: toViewController,
-                                                        fromViewController: fromViewController) else {
-                                                            transitionContext.completeTransition(true)
-                                                            return
-        }
+        let transitionView = createTransitionView(toViewController: toViewController,
+                                                  fromViewController: fromViewController)
 
         containerView.addSubview(transitionView)
         transitionView.frame = fromViewController.view.frame
@@ -47,17 +44,19 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         }
     }
 
-    private func createTransitionView(toViewController: CardDetailsViewController,
-                                      fromViewController: SearchViewController) -> CardDetailsPresentTransitionView? {
-        let transitionView = CardDetailsPresentTransitionView()
+    // MARK: - Transiton View
 
-        transitionView.firstCardView.backgroundImageView.image = inputs.cardImage
+    func createTransitionView(toViewController: CardDetailsViewController,
+                              fromViewController: SearchViewController) -> CardDetailsTransitionView {
+        let transitionView = CardDetailsTransitionView()
+
+        transitionView.firstCardView.backgroundImageView.image = inputs.topImage
         transitionView.firstCardView.frame = fromViewController.firstCardFrame
 
-        transitionView.titleLabel.text = inputs.cardTitle
+        transitionView.titleLabel.text = inputs.title
         transitionView.titleLabel.frame = fromViewController.titleLabelFrame
 
-        transitionView.subtitleLabel.attributedText = inputs.cardSubtitle
+        transitionView.subtitleLabel.attributedText = inputs.subtitle
         transitionView.subtitleLabel.frame = fromViewController.subtitleLabelFrame
 
         transitionView.fromTopIconView.frame = fromViewController.topNavIconFrame

@@ -1,5 +1,5 @@
 import UIKit
 
 protocol CardDetailsViewControllerFactoryProtocol {
-    func viewController(inputs: CardDetailsViewControllerInputs) -> UIViewController
+    func viewController(inputs: CardDetailsInputs) -> UIViewController
 }

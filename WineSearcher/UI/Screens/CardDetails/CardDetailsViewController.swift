@@ -2,7 +2,7 @@ import UIKit
 
 class CardDetailsViewController: UIViewController {
 
-    init(inputs: CardDetailsViewControllerInputs,
+    init(inputs: CardDetailsInputs,
          winesConfigurator: CardDetailsWinesConfiguring = CardDetailsWinesConfigurator()) {
         self.inputs = inputs
         self.winesConfigurator = winesConfigurator
@@ -27,7 +27,7 @@ class CardDetailsViewController: UIViewController {
 
     // MARK: - Private
 
-    private let inputs: CardDetailsViewControllerInputs
+    private let inputs: CardDetailsInputs
     private let winesConfigurator: CardDetailsWinesConfiguring
 
     private func setupView() {
@@ -47,7 +47,7 @@ class CardDetailsViewController: UIViewController {
 
     @objc
     func dismissSelf() {
-        self.dismiss(animated: false)
+        self.dismiss(animated: true)
     }
 
     // MARK: - Required

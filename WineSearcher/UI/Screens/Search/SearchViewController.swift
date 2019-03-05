@@ -51,7 +51,7 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
 
     private func setupActions() {
         cardsDataSource.items.forEach { card in
-            let inputs = card.cardDetailsPresnetTransitionInputs
+            let inputs = card.cardDetailsInput
             card.cardTapAction = { [weak self] in
                 self?.cardDetailsPresentTransition = CardDetailsPresentTransition(inputs: inputs)
                 self?.presentCardDetailsViewController(viewModel: card)

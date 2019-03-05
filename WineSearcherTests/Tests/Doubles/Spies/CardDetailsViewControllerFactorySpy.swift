@@ -4,11 +4,11 @@ import UIKit
 class CardDetailsViewControllerFactorySpy: CardDetailsViewControllerFactoryProtocol {
 
     var viewControllerStub = UIViewController()
-    private(set) var inputs: CardDetailsViewControllerInputs?
+    private(set) var inputs: CardDetailsInputs?
 
     // MARK: - CardDetailsViewControllerFactoryProtocol
 
-    func viewController(inputs: CardDetailsViewControllerInputs) -> UIViewController {
+    func viewController(inputs: CardDetailsInputs) -> UIViewController {
         self.inputs = inputs
 
         return viewControllerStub

@@ -2,7 +2,7 @@ import UIKit
 
 extension CardDetailsPresentTransition {
 
-    func animators(transitionView: CardDetailsPresentTransitionView,
+    func animators(transitionView: CardDetailsTransitionView,
                    toViewController: CardDetailsViewController) -> [UIViewPropertyAnimator] {
         return [
             transitionView.fromTopIconView.movementAnimator(duration: duration, movementX: -50, relativeDuration: 0.6),
@@ -40,7 +40,7 @@ extension CardDetailsPresentTransition {
         return UIViewPropertyAnimator.defaultAnimator(duration: duration)
     }
 
-    private func winesAnimator(transitionView: CardDetailsPresentTransitionView) -> UIViewPropertyAnimator {
+    private func winesAnimator(transitionView: CardDetailsTransitionView) -> UIViewPropertyAnimator {
         let wines = transitionView.winesView.contentStackView.subviews
         let movment: CGFloat = 140
 
@@ -63,7 +63,7 @@ extension CardDetailsPresentTransition {
         return animator
     }
 
-    private func cardAnimator(transitionView: CardDetailsPresentTransitionView,
+    private func cardAnimator(transitionView: CardDetailsTransitionView,
                               toViewController: CardDetailsViewController) -> UIViewPropertyAnimator {
         return UIViewPropertyAnimator(duration: duration, dampingRatio: 0.62) {
             let cardView = transitionView.firstCardView

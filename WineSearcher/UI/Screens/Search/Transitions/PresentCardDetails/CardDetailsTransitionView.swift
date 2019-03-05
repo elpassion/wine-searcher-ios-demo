@@ -1,6 +1,6 @@
 import UIKit
 
-class CardDetailsPresentTransitionView: UIView {
+class CardDetailsTransitionView: UIView {
 
     init() {
         super.init(frame: .zero)

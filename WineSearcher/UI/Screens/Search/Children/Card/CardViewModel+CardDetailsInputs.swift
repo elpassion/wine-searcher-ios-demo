@@ -1,7 +1,7 @@
 extension CardViewModel {
 
-    var cardDetailsInput: CardDetailsViewControllerInputs {
-        return CardDetailsViewControllerInputs(title: title, subtitle: subtitle, topImage: backgroundImage)
+    var cardDetailsInput: CardDetailsInputs {
+        return CardDetailsInputs(title: title, subtitle: subtitle, topImage: backgroundImage)
     }
 
 }

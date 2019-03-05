@@ -1,6 +1,6 @@
 import UIKit
 
-struct CardDetailsViewControllerInputs {
+struct CardDetailsInputs {
     let title: String
     let subtitle: NSAttributedString
     let topImage: UIImage
