@@ -83,8 +83,8 @@ class CardDetailsHeaderView: UIView {
     private func setupNavControlLayout() {
         navControl.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            navControl.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            navControl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 19)
+            navControl.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 11),
+            navControl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
         ])
 
         navIconImageView.translatesAutoresizingMaskIntoConstraints = false
