@@ -12,6 +12,7 @@
 		470944062209B7A7008FECFA /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470944052209B7A7008FECFA /* CardsView.swift */; };
 		4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470944092209BAA6008FECFA /* UIViewController+Embeding.swift */; };
 		4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */; };
+		470A5669223008C30002E943 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A5668223008C30002E943 /* Control.swift */; };
 		470A93F7221403B300006564 /* CardsSizesProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A93F6221403B300006564 /* CardsSizesProviderSpec.swift */; };
 		470A93FA221403F800006564 /* ScreenSizeProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A93F9221403F800006564 /* ScreenSizeProviderStub.swift */; };
 		470A93FD221404A200006564 /* CardsConfiguration+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A93FC221404A200006564 /* CardsConfiguration+TestData.swift */; };
@@ -126,6 +127,7 @@
 		470944052209B7A7008FECFA /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 		470944092209BAA6008FECFA /* UIViewController+Embeding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embeding.swift"; sourceTree = "<group>"; };
 		4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EmbedingSpec.swift"; sourceTree = "<group>"; };
+		470A5668223008C30002E943 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
 		470A93F6221403B300006564 /* CardsSizesProviderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsSizesProviderSpec.swift; sourceTree = "<group>"; };
 		470A93F9221403F800006564 /* ScreenSizeProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeProviderStub.swift; sourceTree = "<group>"; };
 		470A93FC221404A200006564 /* CardsConfiguration+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsConfiguration+TestData.swift"; sourceTree = "<group>"; };
@@ -348,6 +350,14 @@
 				476DF4A8221185CC005B82AF /* UnitTests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		470A5667223008B50002E943 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				470A5668223008C30002E943 /* Control.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		470A93F8221403DA00006564 /* Stubs */ = {
@@ -713,6 +723,7 @@
 		47D9294C2207991C00B7DAF5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				470A5667223008B50002E943 /* Components */,
 				470943FC22099B47008FECFA /* Screens */,
 			);
 			path = UI;
@@ -998,6 +1009,7 @@
 				47CA9048222C65C400A5C4F4 /* UIView+ColoredViews.swift in Sources */,
 				473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */,
 				47CA905B222C89BA00A5C4F4 /* CardDetailsPresentTransition+Animators.swift in Sources */,
+				470A5669223008C30002E943 /* Control.swift in Sources */,
 				47CA904A222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift in Sources */,
 				47109B48221ADD8000B31774 /* UIFont+Font.swift in Sources */,
 				473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */,
