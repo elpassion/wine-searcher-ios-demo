@@ -88,7 +88,8 @@ class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransition
 
         let winesConfigurator = CardDetailsWinesConfigurator()
         winesConfigurator.configure(wines: CardDetailsWineViewModel.wines,
-                                    stackView: transitionView.winesView.contentStackView)
+                                    stackView: transitionView.winesView.contentStackView,
+                                    action: nil)
 
         transitionView.winesView.frame = fromViewController.winesViewFrame
 

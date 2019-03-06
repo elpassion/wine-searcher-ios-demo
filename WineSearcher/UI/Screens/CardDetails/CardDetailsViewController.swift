@@ -38,7 +38,10 @@ class CardDetailsViewController: UIViewController {
 
     private func setupWines() {
         let wines = CardDetailsWineViewModel.wines
-        winesConfigurator.configure(wines: wines, stackView: cardDetailsView.winesView.contentStackView)
+        let action: (CardDetailsWineViewModel) -> Void = { [weak self] in self?.presentWineDetails(inputs: $0.inputs) }
+        winesConfigurator.configure(wines: wines,
+                                    stackView: cardDetailsView.winesView.contentStackView,
+                                    action: action)
     }
 
     private func setupAction() {
@@ -50,10 +53,22 @@ class CardDetailsViewController: UIViewController {
         self.dismiss(animated: true)
     }
 
+    private func presentWineDetails(inputs: WineDetailsInputs) {
+
+    }
+
     // MARK: - Required
 
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+}
+
+extension CardDetailsWineViewModel {
+
+    var inputs: WineDetailsInputs {
+        return WineDetailsInputs(wineImage: wineImage, wineName: title)
     }
 
 }

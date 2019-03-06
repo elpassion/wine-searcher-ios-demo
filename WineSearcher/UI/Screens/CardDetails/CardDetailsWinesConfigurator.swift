@@ -4,17 +4,22 @@ class CardDetailsWinesConfigurator: CardDetailsWinesConfiguring {
 
     // MARK: - CardDetailsWineConfiguring
 
-    func configure(wines: [CardDetailsWineViewModel], stackView: UIStackView) {
-        wines.forEach {
+    func configure(wines: [CardDetailsWineViewModel],
+                   stackView: UIStackView,
+                   action: ((CardDetailsWineViewModel) -> Void)?) {
+        wines.forEach { wine in
             let view = CardDetailsWineView()
-            view.wineImageView.image = $0.wineImage
-            view.titleLabel.text = $0.title
-            view.subtitleLabel.text = $0.subtitle
+            view.wineImageView.image = wine.wineImage
+            view.titleLabel.text = wine.title
+            view.subtitleLabel.text = wine.subtitle
             view.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
                 view.widthAnchor.constraint(equalToConstant: 140)
             ])
             stackView.addArrangedSubview(view)
+            view.touchUpInsideAction = {
+                action?(wine)
+            }
         }
     }
 

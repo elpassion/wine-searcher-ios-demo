@@ -1,6 +1,6 @@
 import UIKit
 
-class CardDetailsWineView: UIView {
+class CardDetailsWineView: Control {
 
     init() {
         super.init(frame: .zero)
@@ -93,6 +93,7 @@ private extension CardDetailsWineView {
             titleLabel.font = UIFont(font: .nocturneSerifBold, size: 14)
             titleLabel.textColor = .black
             titleLabel.numberOfLines = 0
+            titleLabel.textAlignment = .center
             return titleLabel
         }
 
