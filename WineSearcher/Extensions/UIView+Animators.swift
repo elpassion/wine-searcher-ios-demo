@@ -4,7 +4,7 @@ extension UIView {
 
     func showAnimator(duration: TimeInterval,
                       relativeStartTime: TimeInterval = 0,
-                      relativeDuration: TimeInterval) -> UIViewPropertyAnimator {
+                      relativeDuration: TimeInterval = 1) -> UIViewPropertyAnimator {
         alpha = 0
 
         let animator = UIViewPropertyAnimator.defaultAnimator(duration: duration)
@@ -20,7 +20,7 @@ extension UIView {
 
     func hideAnimator(duration: TimeInterval,
                       relativeStartTime: TimeInterval = 0,
-                      relativeDuration: TimeInterval) -> UIViewPropertyAnimator {
+                      relativeDuration: TimeInterval = 1) -> UIViewPropertyAnimator {
         alpha = 1
 
         let animator = UIViewPropertyAnimator.defaultAnimator(duration: duration)
@@ -38,7 +38,7 @@ extension UIView {
                        enterX: CGFloat = 0,
                        enterY: CGFloat = 0,
                        relativeStartTime: TimeInterval = 0,
-                       relativeDuration: TimeInterval) -> UIViewPropertyAnimator {
+                       relativeDuration: TimeInterval = 1) -> UIViewPropertyAnimator {
         center.x -= enterX
         center.y -= enterY
 
@@ -58,7 +58,7 @@ extension UIView {
                           movementX: CGFloat = 0,
                           movementY: CGFloat = 0,
                           relativeStartTime: TimeInterval = 0,
-                          relativeDuration: TimeInterval) -> UIViewPropertyAnimator {
+                          relativeDuration: TimeInterval = 1) -> UIViewPropertyAnimator {
         let animator = UIViewPropertyAnimator.defaultAnimator(duration: duration)
         animator.addAnimations { [unowned self] in
             UIView.keyframeAnimation(duration: duration) {
@@ -74,7 +74,7 @@ extension UIView {
     func cornerRadiousAnimator(duration: TimeInterval,
                                toValue: CGFloat = 0,
                                relativeStartTime: TimeInterval = 0,
-                               relativeDuration: TimeInterval) -> UIViewPropertyAnimator {
+                               relativeDuration: TimeInterval = 1) -> UIViewPropertyAnimator {
         let animator = UIViewPropertyAnimator.defaultAnimator(duration: duration)
         animator.addAnimations { [unowned self] in
             UIView.keyframeAnimation(duration: duration) {
@@ -89,7 +89,7 @@ extension UIView {
     func frameAnimator(duration: TimeInterval,
                        toFrame: CGRect,
                        relativeStartTime: TimeInterval = 0,
-                       relativeDuration: TimeInterval) -> UIViewPropertyAnimator {
+                       relativeDuration: TimeInterval = 1) -> UIViewPropertyAnimator {
         let animator = UIViewPropertyAnimator.defaultAnimator(duration: duration)
         animator.addAnimations { [unowned self] in
             UIView.keyframeAnimation(duration: duration) {
