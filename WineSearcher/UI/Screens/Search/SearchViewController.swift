@@ -28,15 +28,20 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
 
     let cardsViewController: UIViewController & CardsViewControlling
-    var cardDetailsPresentTransition: CardDetailsPresentTransition?
+    var inputs: CardDetailsInputs?
 
     // MARK: - UIViewControllerTransitioningDelegate
 
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let transition = cardDetailsPresentTransition else { return nil }
-        return transition
+        guard let inputs = self.inputs else { return nil }
+        return CardDetailsPresentTransition(inputs: inputs)
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard let inputs = self.inputs else { return nil }
+        return CardDetailsDismissTransition(inputs: inputs)
     }
 
     // MARK: - Private
@@ -53,7 +58,7 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
         cardsDataSource.items.forEach { card in
             let inputs = card.cardDetailsInput
             card.cardTapAction = { [weak self] in
-                self?.cardDetailsPresentTransition = CardDetailsPresentTransition(inputs: inputs)
+                self?.inputs = inputs
                 self?.presentCardDetailsViewController(viewModel: card)
             }
         }

@@ -46,6 +46,8 @@
 		471987222226A43800BDF30C /* CardViewController+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471987212226A43800BDF30C /* CardViewController+Animations.swift */; };
 		471987262226A63500BDF30C /* CardViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471987252226A63500BDF30C /* CardViewControllerSpec.swift */; };
 		47284571222E8E830086BB67 /* UIView+Animators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284570222E8E830086BB67 /* UIView+Animators.swift */; };
+		47284577222EA2ED0086BB67 /* CardDetailsDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284576222EA2ED0086BB67 /* CardDetailsDismissTransition.swift */; };
+		47284579222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284578222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift */; };
 		473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */; };
 		473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */; };
 		473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */; };
@@ -158,6 +160,8 @@
 		471987212226A43800BDF30C /* CardViewController+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewController+Animations.swift"; sourceTree = "<group>"; };
 		471987252226A63500BDF30C /* CardViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllerSpec.swift; sourceTree = "<group>"; };
 		47284570222E8E830086BB67 /* UIView+Animators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animators.swift"; sourceTree = "<group>"; };
+		47284576222EA2ED0086BB67 /* CardDetailsDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsDismissTransition.swift; sourceTree = "<group>"; };
+		47284578222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailsDismissTransition+Animators.swift"; sourceTree = "<group>"; };
 		473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsConfiguration.swift; sourceTree = "<group>"; };
 		473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+TransformToCenter.swift"; sourceTree = "<group>"; };
 		473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Nearest.swift"; sourceTree = "<group>"; };
@@ -506,6 +510,15 @@
 			path = Children;
 			sourceTree = "<group>";
 		};
+		47284575222E99AF0086BB67 /* DismissCardDetails */ = {
+			isa = PBXGroup;
+			children = (
+				47284576222EA2ED0086BB67 /* CardDetailsDismissTransition.swift */,
+				47284578222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift */,
+			);
+			path = DismissCardDetails;
+			sourceTree = "<group>";
+		};
 		476DF4A8221185CC005B82AF /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -593,7 +606,6 @@
 			children = (
 				47CA905A222C89BA00A5C4F4 /* CardDetailsPresentTransition+Animators.swift */,
 				47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */,
-				47CA904E222C672800A5C4F4 /* CardDetailsTransitionView.swift */,
 			);
 			path = PresentCardDetails;
 			sourceTree = "<group>";
@@ -624,8 +636,10 @@
 		47CA904D222C671D00A5C4F4 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				47CA904E222C672800A5C4F4 /* CardDetailsTransitionView.swift */,
 				47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */,
 				47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */,
+				47284575222E99AF0086BB67 /* DismissCardDetails */,
 				47895E5C222D72CC00CEE909 /* PresentCardDetails */,
 			);
 			path = Transitions;
@@ -975,6 +989,7 @@
 				478D59842211A97F00D86292 /* CardsDataSourceProtocol.swift in Sources */,
 				47CA9061222C8B2C00A5C4F4 /* CardParalaxView.swift in Sources */,
 				470944062209B7A7008FECFA /* CardsView.swift in Sources */,
+				47284579222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift in Sources */,
 				47284571222E8E830086BB67 /* UIView+Animators.swift in Sources */,
 				47447626220B9DA700DEDBBB /* CardViewModel.swift in Sources */,
 				470A940822141FC000006564 /* CardViewControlling.swift in Sources */,
@@ -996,6 +1011,7 @@
 				47198706222584AA00BDF30C /* CardDetailsView.swift in Sources */,
 				47CA906C222C8E4F00A5C4F4 /* CardDetailsHeaderView.swift in Sources */,
 				4752676E221305D1002DDB71 /* CardsSizesProvider.swift in Sources */,
+				47284577222EA2ED0086BB67 /* CardDetailsDismissTransition.swift in Sources */,
 				4752676C2213055F002DDB71 /* CardsSizesProviding.swift in Sources */,
 				47D993672224381400B45F00 /* CGFloat+Normalization.swift in Sources */,
 				47447624220B9D9400DEDBBB /* CardsDataSource.swift in Sources */,

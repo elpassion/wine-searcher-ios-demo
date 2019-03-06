@@ -1,14 +1,14 @@
 import UIKit
 
-class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransitioning {
+class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransitioning {
+
+    let inputs: CardDetailsInputs
 
     init(inputs: CardDetailsInputs) {
         self.inputs = inputs
     }
 
-    let duration = 0.5
-
-    private let inputs: CardDetailsInputs
+    let duration = 0.3
 
     // MARK: - UIViewControllerAnimatedTransitioning
 
@@ -18,8 +18,9 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
-        guard let toViewController = transitionContext.viewController(forKey: .to) as? CardDetailsViewController,
-            let fromViewController = transitionContext.viewController(forKey: .from) as? SearchViewController else {
+        guard let toViewController = transitionContext.viewController(forKey: .to) as? SearchViewController,
+            let fromViewController = transitionContext.viewController(forKey: .from) as? CardDetailsViewController
+            else {
                 transitionContext.completeTransition(true)
                 return
         }
@@ -44,46 +45,52 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         }
     }
 
-    // MARK: - Transiton View
+    // MARK: - Private
 
-    func createTransitionView(toViewController: CardDetailsViewController,
-                              fromViewController: SearchViewController) -> CardDetailsTransitionView {
+    private func createTransitionView(toViewController: SearchViewController,
+                                      fromViewController: CardDetailsViewController) -> CardDetailsTransitionView {
         let transitionView = CardDetailsTransitionView()
 
         transitionView.firstCardView.backgroundImageView.image = inputs.topImage
-        transitionView.firstCardView.frame = fromViewController.firstCardFrame
+        transitionView.firstCardView.backgroundImageView.contentMode = .scaleAspectFit
+        transitionView.firstCardView.frame = fromViewController.headerFrame
+        transitionView.firstCardView.layer.cornerRadius = 0
 
         transitionView.titleLabel.text = inputs.title
-        transitionView.titleLabel.frame = fromViewController.titleLabelFrame
+        transitionView.titleLabel.frame = fromViewController.topTitleLabelFrame
+        transitionView.titleLabel.sizeToFit()
 
         transitionView.subtitleLabel.attributedText = inputs.subtitle
-        transitionView.subtitleLabel.frame = fromViewController.subtitleLabelFrame
+        transitionView.subtitleLabel.frame = fromViewController.topSubtitleLabelFrame
+        transitionView.subtitleLabel.sizeToFit()
 
         transitionView.searchTopNavIconView.frame = fromViewController.topNavIconFrame
         transitionView.detailsTopNavIconView.frame = toViewController.topNavIconFrame
 
         transitionView.searchTopNavTitleLabel.frame = fromViewController.navTitleLabelFrame
         transitionView.detailsTopNavTitleLabel.frame = toViewController.navTitleLabelFrame
+        transitionView.searchTopNavTitleLabel.sizeToFit()
+        transitionView.detailsTopNavTitleLabel.sizeToFit()
 
-        transitionView.ratingImageView.frame = toViewController.ratingImageViewFrame
+        transitionView.ratingImageView.frame = fromViewController.ratingImageViewFrame
 
-        transitionView.separator.frame = toViewController.separatorViewFrame
+        transitionView.separator.frame = fromViewController.separatorViewFrame
 
-        transitionView.flagImageView.frame = toViewController.flagImageViewFrame
+        transitionView.flagImageView.frame = fromViewController.flagImageViewFrame
 
-        transitionView.bottomSection.frame = fromViewController.bottomSectionFrame
+        transitionView.bottomSection.frame = toViewController.bottomSectionFrame
 
-        transitionView.learnMoreButton.frame = fromViewController.learnMoreButtonFrame
+        transitionView.learnMoreButton.frame = toViewController.learnMoreButtonFrame
 
-        transitionView.otherInSeriesButton.frame = fromViewController.otherInSeriesButtonFrame
+        transitionView.otherInSeriesButton.frame = toViewController.otherInSeriesButtonFrame
 
-        transitionView.regionOverviewView.frame = toViewController.regionOverviewFrame
+        transitionView.regionOverviewView.frame = fromViewController.regionOverviewFrame
 
         let winesConfigurator = CardDetailsWinesConfigurator()
         winesConfigurator.configure(wines: CardDetailsWineViewModel.wines,
                                     stackView: transitionView.winesView.contentStackView)
 
-        transitionView.winesView.frame = toViewController.winesViewFrame
+        transitionView.winesView.frame = fromViewController.winesViewFrame
 
         transitionView.layoutIfNeeded()
 

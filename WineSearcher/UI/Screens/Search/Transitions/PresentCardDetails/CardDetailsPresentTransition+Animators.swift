@@ -5,10 +5,12 @@ extension CardDetailsPresentTransition {
     func animators(transitionView: CardDetailsTransitionView,
                    toViewController: CardDetailsViewController) -> [UIViewPropertyAnimator] {
         return [
-            transitionView.fromTopIconView.movementAnimator(duration: duration, movementX: -50, relativeDuration: 0.6),
-            transitionView.toTopIconView.showAnimator(duration: duration, relativeDuration: 0.6),
-            transitionView.toNavTopTitleLabel.showAnimator(duration: duration, relativeDuration: 0.6),
-            transitionView.fromNavTopTitleLabel.hideAnimator(duration: duration, relativeDuration: 0.6),
+            transitionView.searchTopNavIconView.movementAnimator(duration: duration,
+                                                                 movementX: -50,
+                                                                 relativeDuration: 0.6),
+            transitionView.detailsTopNavIconView.showAnimator(duration: duration, relativeDuration: 0.6),
+            transitionView.detailsTopNavTitleLabel.showAnimator(duration: duration, relativeDuration: 0.6),
+            transitionView.searchTopNavTitleLabel.hideAnimator(duration: duration, relativeDuration: 0.6),
             transitionView.ratingImageView.enterAnimator(duration: duration, enterY: 40, relativeDuration: 0.6),
             transitionView.ratingImageView.showAnimator(duration: duration, relativeDuration: 0.6),
             transitionView.flagImageView.showAnimator(duration: duration,
