@@ -52,7 +52,7 @@ class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransition
         let transitionView = CardDetailsTransitionView()
 
         transitionView.firstCardView.backgroundImageView.image = inputs.topImage
-        transitionView.firstCardView.backgroundImageView.contentMode = .scaleAspectFit
+
         transitionView.firstCardView.frame = fromViewController.headerFrame
         transitionView.firstCardView.layer.cornerRadius = 0
 

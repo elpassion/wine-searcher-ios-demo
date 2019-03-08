@@ -70,8 +70,6 @@ extension CardDetailsPresentTransition {
         return UIViewPropertyAnimator(duration: duration, dampingRatio: 0.62) {
             let cardView = transitionView.firstCardView
             cardView.frame = toViewController.headerFrame
-            cardView.layoutIfNeeded()
-            transitionView.firstCardView.backgroundImageView.contentMode = .scaleAspectFit
         }
     }
 

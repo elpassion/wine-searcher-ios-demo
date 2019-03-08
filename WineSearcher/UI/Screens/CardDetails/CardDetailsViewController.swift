@@ -54,7 +54,8 @@ class CardDetailsViewController: UIViewController {
     }
 
     private func presentWineDetails(inputs: WineDetailsInputs) {
-
+        let viewController = WineDetailsViewController(inputs: inputs)
+        present(viewController, animated: true)
     }
 
     // MARK: - Required

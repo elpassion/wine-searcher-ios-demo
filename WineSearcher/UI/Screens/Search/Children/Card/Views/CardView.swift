@@ -79,7 +79,7 @@ extension CardView {
     struct Factory {
         static var backgroundImageView: UIImageView {
             let imageView = UIImageView(frame: .zero)
-            imageView.contentMode = .scaleToFill
+            imageView.contentMode = .scaleAspectFit
             return imageView
         }
 

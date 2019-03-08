@@ -16,10 +16,12 @@ class CardDetailsWinesConfigurator: CardDetailsWinesConfiguring {
             NSLayoutConstraint.activate([
                 view.widthAnchor.constraint(equalToConstant: 140)
             ])
-            stackView.addArrangedSubview(view)
+
             view.touchUpInsideAction = {
                 action?(wine)
             }
+
+            stackView.addArrangedSubview(view)
         }
     }
 

@@ -93,6 +93,7 @@ private extension CardDetailsView {
         static var scrollView: UIScrollView {
             let scrollView = UIScrollView(frame: .zero)
             scrollView.showsVerticalScrollIndicator = false
+            scrollView.contentInsetAdjustmentBehavior = .never
             return scrollView
         }
     }

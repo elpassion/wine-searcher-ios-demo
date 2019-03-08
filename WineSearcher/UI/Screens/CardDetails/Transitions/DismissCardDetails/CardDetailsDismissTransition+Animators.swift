@@ -57,9 +57,7 @@ extension CardDetailsDismissTransition {
         let animator = defaultAnimator
         animator.addAnimations {
             let cardView = transitionView.firstCardView
-            transitionView.firstCardView.backgroundImageView.contentMode = .scaleToFill
             cardView.frame = toViewController.firstCardFrame
-            cardView.layoutIfNeeded()
         }
         return animator
     }

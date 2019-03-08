@@ -13,6 +13,7 @@
 		4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470944092209BAA6008FECFA /* UIViewController+Embeding.swift */; };
 		4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */; };
 		470A5669223008C30002E943 /* Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A5668223008C30002E943 /* Control.swift */; };
+		470A566B22301A9E0002E943 /* WineDetailsDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A566A22301A9E0002E943 /* WineDetailsDescriptionView.swift */; };
 		470A93F7221403B300006564 /* CardsSizesProviderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A93F6221403B300006564 /* CardsSizesProviderSpec.swift */; };
 		470A93FA221403F800006564 /* ScreenSizeProviderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A93F9221403F800006564 /* ScreenSizeProviderStub.swift */; };
 		470A93FD221404A200006564 /* CardsConfiguration+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A93FC221404A200006564 /* CardsConfiguration+TestData.swift */; };
@@ -74,6 +75,11 @@
 		478D597D221192E200D86292 /* Sequence+NearestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597C221192E200D86292 /* Sequence+NearestSpec.swift */; };
 		478D597F2211A06700D86292 /* SnapshotsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */; };
 		478D59842211A97F00D86292 /* CardsDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */; };
+		47A04504222FF0A600C7C943 /* WineDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A04503222FF0A600C7C943 /* WineDetailsViewController.swift */; };
+		47A04506222FF0CF00C7C943 /* WineDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A04505222FF0CF00C7C943 /* WineDetailsView.swift */; };
+		47A04509222FF20600C7C943 /* WineDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A04508222FF20600C7C943 /* WineDetailsViewControllerTests.swift */; };
+		47A0450B222FF25C00C7C943 /* WineDetailsViewController+SnapshotFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A0450A222FF25C00C7C943 /* WineDetailsViewController+SnapshotFixture.swift */; };
+		47A0450D222FF38A00C7C943 /* WineDetailsInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A0450C222FF38A00C7C943 /* WineDetailsInputs.swift */; };
 		47B66599222D26F1002D9151 /* CardDetailsRegionOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B66598222D26F1002D9151 /* CardDetailsRegionOverviewView.swift */; };
 		47B6659B222D2DA4002D9151 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47B6659A222D2DA4002D9151 /* Montserrat-Light.ttf */; };
 		47B6659D222D3436002D9151 /* CardDetailsWinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B6659C222D3436002D9151 /* CardDetailsWinesView.swift */; };
@@ -105,6 +111,7 @@
 		47D9294F2207993300B7DAF5 /* SearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */; };
 		47D993672224381400B45F00 /* CGFloat+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D993662224381400B45F00 /* CGFloat+Normalization.swift */; };
 		47D993692224425100B45F00 /* UIScrollView+VisibleRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D993682224425100B45F00 /* UIScrollView+VisibleRect.swift */; };
+		47E95EB92231DB9C00418A5E /* WineDetailsScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E95EB82231DB9C00418A5E /* WineDetailsScrollableView.swift */; };
 		6494C2372E78FFC3FC1E836C /* Pods_WineSearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */; };
 		B883BC79369B9D04EC1C63E6 /* Pods_WineSearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */; };
 /* End PBXBuildFile section */
@@ -128,6 +135,7 @@
 		470944092209BAA6008FECFA /* UIViewController+Embeding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embeding.swift"; sourceTree = "<group>"; };
 		4709440D2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+EmbedingSpec.swift"; sourceTree = "<group>"; };
 		470A5668223008C30002E943 /* Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Control.swift; sourceTree = "<group>"; };
+		470A566A22301A9E0002E943 /* WineDetailsDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsDescriptionView.swift; sourceTree = "<group>"; };
 		470A93F6221403B300006564 /* CardsSizesProviderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsSizesProviderSpec.swift; sourceTree = "<group>"; };
 		470A93F9221403F800006564 /* ScreenSizeProviderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeProviderStub.swift; sourceTree = "<group>"; };
 		470A93FC221404A200006564 /* CardsConfiguration+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardsConfiguration+TestData.swift"; sourceTree = "<group>"; };
@@ -189,6 +197,11 @@
 		478D597C221192E200D86292 /* Sequence+NearestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+NearestSpec.swift"; sourceTree = "<group>"; };
 		478D597E2211A06700D86292 /* SnapshotsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsConfiguration.swift; sourceTree = "<group>"; };
 		478D59832211A97F00D86292 /* CardsDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataSourceProtocol.swift; sourceTree = "<group>"; };
+		47A04503222FF0A600C7C943 /* WineDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsViewController.swift; sourceTree = "<group>"; };
+		47A04505222FF0CF00C7C943 /* WineDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsView.swift; sourceTree = "<group>"; };
+		47A04508222FF20600C7C943 /* WineDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		47A0450A222FF25C00C7C943 /* WineDetailsViewController+SnapshotFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WineDetailsViewController+SnapshotFixture.swift"; sourceTree = "<group>"; };
+		47A0450C222FF38A00C7C943 /* WineDetailsInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsInputs.swift; sourceTree = "<group>"; };
 		47B66598222D26F1002D9151 /* CardDetailsRegionOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsRegionOverviewView.swift; sourceTree = "<group>"; };
 		47B6659A222D2DA4002D9151 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		47B6659C222D3436002D9151 /* CardDetailsWinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsWinesView.swift; sourceTree = "<group>"; };
@@ -224,6 +237,7 @@
 		47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerSpec.swift; sourceTree = "<group>"; };
 		47D993662224381400B45F00 /* CGFloat+Normalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Normalization.swift"; sourceTree = "<group>"; };
 		47D993682224425100B45F00 /* UIScrollView+VisibleRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+VisibleRect.swift"; sourceTree = "<group>"; };
+		47E95EB82231DB9C00418A5E /* WineDetailsScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsScrollableView.swift; sourceTree = "<group>"; };
 		BD34E3011AD58AB07D284C2A /* Pods-WineSearcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineSearcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E560BB0AD938330742DC87 /* Pods-WineSearcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcher/Pods-WineSearcher.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +276,7 @@
 		470943FC22099B47008FECFA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				47A04502222FDA2B00C7C943 /* WineDetails */,
 				471987022225836300BDF30C /* CardDetails */,
 				470943FD22099B58008FECFA /* Search */,
 			);
@@ -558,6 +573,7 @@
 		476DF4AB221185F3005B82AF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				47A04507222FF1F900C7C943 /* WineDetails */,
 				471987072225852500BDF30C /* CardDetails */,
 				476DF4AC221185F8005B82AF /* Search */,
 			);
@@ -639,8 +655,29 @@
 				478D597A2211903600D86292 /* CardsDataSource+SnapshotFixture.swift */,
 				478D597822118FDF00D86292 /* CardsViewController+SnapshotFixture.swift */,
 				470A93FE22140C3B00006564 /* SearchViewController+SnapshotFixture.swift */,
+				47A0450A222FF25C00C7C943 /* WineDetailsViewController+SnapshotFixture.swift */,
 			);
 			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		47A04502222FDA2B00C7C943 /* WineDetails */ = {
+			isa = PBXGroup;
+			children = (
+				47A04503222FF0A600C7C943 /* WineDetailsViewController.swift */,
+				47A04505222FF0CF00C7C943 /* WineDetailsView.swift */,
+				47A0450C222FF38A00C7C943 /* WineDetailsInputs.swift */,
+				470A566A22301A9E0002E943 /* WineDetailsDescriptionView.swift */,
+				47E95EB82231DB9C00418A5E /* WineDetailsScrollableView.swift */,
+			);
+			path = WineDetails;
+			sourceTree = "<group>";
+		};
+		47A04507222FF1F900C7C943 /* WineDetails */ = {
+			isa = PBXGroup;
+			children = (
+				47A04508222FF20600C7C943 /* WineDetailsViewControllerTests.swift */,
+			);
+			path = WineDetails;
 			sourceTree = "<group>";
 		};
 		47CA904D222C671D00A5C4F4 /* Transitions */ = {
@@ -976,13 +1013,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				47D993692224425100B45F00 /* UIScrollView+VisibleRect.swift in Sources */,
+				470A566B22301A9E0002E943 /* WineDetailsDescriptionView.swift in Sources */,
 				47895E50222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift in Sources */,
 				47CA9074222C967E00A5C4F4 /* UIView+KeyframeAnimation.swift in Sources */,
 				47CA9059222C684C00A5C4F4 /* CardViewModelProtocol.swift in Sources */,
 				47895E4E222D4A3700CEE909 /* SketchShadow.swift in Sources */,
+				47A0450D222FF38A00C7C943 /* WineDetailsInputs.swift in Sources */,
 				47CA9053222C677A00A5C4F4 /* CardDetailsPresentTransition.swift in Sources */,
 				4719870122255CF700BDF30C /* SearchBottomSectionRowView.swift in Sources */,
 				47109B4A221ADDF400B31774 /* UIColor+Hex.swift in Sources */,
+				47A04504222FF0A600C7C943 /* WineDetailsViewController.swift in Sources */,
 				47B66599222D26F1002D9151 /* CardDetailsRegionOverviewView.swift in Sources */,
 				470C07762227D34600055F6F /* CardDetailsViewControllerFactory.swift in Sources */,
 				473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */,
@@ -990,6 +1030,7 @@
 				470944042209B78B008FECFA /* CardsViewController.swift in Sources */,
 				47CA906A222C8BF700A5C4F4 /* UIButton+OtherInSeriesButton.swift in Sources */,
 				47CA905F222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift in Sources */,
+				47A04506222FF0CF00C7C943 /* WineDetailsView.swift in Sources */,
 				4709440A2209BAA6008FECFA /* UIViewController+Embeding.swift in Sources */,
 				47109B3F221AD79F00B31774 /* Font.swift in Sources */,
 				4752677022130A46002DDB71 /* UIScreen+ScreenSizeProviding.swift in Sources */,
@@ -1036,6 +1077,7 @@
 				47B6659D222D3436002D9151 /* CardDetailsWinesView.swift in Sources */,
 				470943FF22099B67008FECFA /* SearchView.swift in Sources */,
 				47115253220C51E5006FA2C4 /* CardViewController.swift in Sources */,
+				47E95EB92231DB9C00418A5E /* WineDetailsScrollableView.swift in Sources */,
 				47109B4F221AF53E00B31774 /* CardViewModel+Cards.swift in Sources */,
 				47895E5A222D71AB00CEE909 /* UIViewPropertyAnimator+DefaultAnimator.swift in Sources */,
 				47CA9064222C8B8000A5C4F4 /* UILabel+CardTitleLabel.swift in Sources */,
@@ -1053,6 +1095,7 @@
 				470A940122140DCA00006564 /* CardsDataSourceStub.swift in Sources */,
 				47CA9072222C94A200A5C4F4 /* CardsViewControllerStub.swift in Sources */,
 				470A93FF22140C3B00006564 /* SearchViewController+SnapshotFixture.swift in Sources */,
+				47A0450B222FF25C00C7C943 /* WineDetailsViewController+SnapshotFixture.swift in Sources */,
 				471987202225926000BDF30C /* CardsViewControllerFactorySpy.swift in Sources */,
 				478D596F22118B7500D86292 /* CardViewControllerTests.swift in Sources */,
 				4709440E2209BCCC008FECFA /* UIViewController+EmbedingSpec.swift in Sources */,
@@ -1062,6 +1105,7 @@
 				478D597522118EEF00D86292 /* SearchViewControllerTests.swift in Sources */,
 				478D597322118C0900D86292 /* CardViewController+SnapshotFixture.swift in Sources */,
 				470A93FD221404A200006564 /* CardsConfiguration+TestData.swift in Sources */,
+				47A04509222FF20600C7C943 /* WineDetailsViewControllerTests.swift in Sources */,
 				478D597B2211903600D86292 /* CardsDataSource+SnapshotFixture.swift in Sources */,
 				470A940622141A6200006564 /* CardsViewControllerTests.swift in Sources */,
 				471987262226A63500BDF30C /* CardViewControllerSpec.swift in Sources */,
