@@ -27,10 +27,13 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 
     // MARK: - UIViewControllerTransitioningDelegate
 
+    private var presentTransitionAnimator: UIViewControllerAnimatedTransitioning?
+
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return WineDetailsPresentTransition()
+        guard let animator = presentTransitionAnimator else { return nil }
+        return animator
     }
 
     // MARK: - Private
@@ -46,7 +49,9 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 
     private func setupWines() {
         let wines = CardDetailsWineViewModel.wines
-        let action: (CardDetailsWineViewModel) -> Void = { [weak self] in self?.presentWineDetails(inputs: $0.inputs) }
+        let action: (CardDetailsWineViewModel, CardDetailsWineView) -> Void = { [weak self] viewModel, view in
+            self?.presentWineDetails(inputs: viewModel.inputs, view: view)
+        }
         winesConfigurator.configure(wines: wines,
                                     stackView: cardDetailsView.winesView.contentStackView,
                                     action: action)
@@ -61,8 +66,9 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
         self.dismiss(animated: true)
     }
 
-    private func presentWineDetails(inputs: WineDetailsInputs) {
+    private func presentWineDetails(inputs: WineDetailsInputs, view: CardDetailsWineView) {
         let viewController = WineDetailsViewController(inputs: inputs)
+        presentTransitionAnimator = WineDetailsPresentTransition(view: view)
         viewController.transitioningDelegate = self
         present(viewController, animated: true)
     }
@@ -71,41 +77,6 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 
     required init?(coder aDecoder: NSCoder) {
         return nil
-    }
-
-}
-
-extension CardDetailsWineViewModel {
-
-    var inputs: WineDetailsInputs {
-        return WineDetailsInputs(wineImage: wineImage, wineName: title)
-    }
-
-}
-
-class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransitioning {
-
-    let duration = 10.0
-
-    // MARK: - UIViewControllerAnimatedTransitioning
-
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return duration
-    }
-
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let container = transitionContext.containerView
-        guard let fromViewController = transitionContext.viewController(forKey: .from) as? CardDetailsViewController,
-            let toViewController = transitionContext.viewController(forKey: .to) as? WineDetailsViewController else {
-                transitionContext.completeTransition(true)
-                return
-        }
-
-        toViewController.view.frame = transitionContext.finalFrame(for: toViewController)
-        container.addSubview(toViewController.view)
-
-
-        transitionContext.completeTransition(true)
     }
 
 }

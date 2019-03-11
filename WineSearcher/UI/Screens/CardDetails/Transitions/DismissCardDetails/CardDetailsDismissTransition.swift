@@ -25,10 +25,6 @@ class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransition
                 return
         }
 
-        containerView.addSubview(toViewController.view)
-        toViewController.view.frame = fromViewController.view.frame
-        toViewController.view.layoutIfNeeded()
-
         let transitionView = createTransitionView(toViewController: toViewController,
                                                   fromViewController: fromViewController)
 

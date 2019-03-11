@@ -115,7 +115,7 @@ private extension WineDetailsScrollableView {
 
         private static var aboutWineDescription: NSAttributedString {
             let text = "Brilliant ruby red.  Lovely fragrances of ripe fruit and menthol hints invade the nose. " +
-            "Round, pleasant, nice freshness on the mouth.  Easy to drink."
+                       "Round, pleasant, nice freshness on the mouth.  Easy to drink."
             return NSAttributedString(string: text, attributes: aboutWineDescriptionAttributes)
         }
 

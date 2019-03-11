@@ -6,7 +6,7 @@ class CardDetailsWinesConfigurator: CardDetailsWinesConfiguring {
 
     func configure(wines: [CardDetailsWineViewModel],
                    stackView: UIStackView,
-                   action: ((CardDetailsWineViewModel) -> Void)?) {
+                   action: ((CardDetailsWineViewModel, CardDetailsWineView) -> Void)?) {
         wines.forEach { wine in
             let view = CardDetailsWineView()
             view.wineImageView.image = wine.wineImage
@@ -18,7 +18,7 @@ class CardDetailsWinesConfigurator: CardDetailsWinesConfiguring {
             ])
 
             view.touchUpInsideAction = {
-                action?(wine)
+                action?(wine, view)
             }
 
             stackView.addArrangedSubview(view)
