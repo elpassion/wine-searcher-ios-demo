@@ -11,7 +11,7 @@ class CardDetailsHeaderView: UIView {
     // MARK: - Subviews
 
     let topImageView = Subviews.imageView
-    let topTitleLabel = UILabel.cardTitleLabel
+    let topTitleLabel = UILabel.searchCardTitleLabel
     let topSubtitleLabel = UILabel.multilineLabel
     let navControl = UIControl(frame: .zero)
     let navIconImageView = UIImageView(image: #imageLiteral(resourceName: "black_arrow"))

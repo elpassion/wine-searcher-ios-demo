@@ -8,8 +8,6 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
 
     let duration = 0.5
 
-    private let inputs: CardDetailsInputs
-
     // MARK: - UIViewControllerAnimatedTransitioning
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -44,10 +42,12 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         }
     }
 
-    // MARK: - Transiton View
+    // MARK: - Private
 
-    func createTransitionView(toViewController: CardDetailsViewController,
-                              fromViewController: SearchViewController) -> CardDetailsTransitionView {
+    private let inputs: CardDetailsInputs
+
+    private func createTransitionView(toViewController: CardDetailsViewController,
+                                      fromViewController: SearchViewController) -> CardDetailsTransitionView {
         let transitionView = CardDetailsTransitionView()
 
         transitionView.firstCardView.backgroundImageView.image = inputs.topImage

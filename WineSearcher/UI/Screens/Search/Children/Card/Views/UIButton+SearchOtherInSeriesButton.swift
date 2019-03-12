@@ -2,7 +2,7 @@ import UIKit
 
 extension UIButton {
 
-    static var otherInSeriesButton: UIButton {
+    static var searchOtherInSeriesButton: UIButton {
         let button = UIButton(frame: .zero)
         button.setTitle("OTHER IN SERIES", for: .normal)
         button.titleLabel?.font = UIFont(font: .tungstenSemiBold, size: 14)

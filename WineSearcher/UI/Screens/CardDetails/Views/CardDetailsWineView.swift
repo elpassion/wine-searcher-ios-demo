@@ -10,10 +10,10 @@ class CardDetailsWineView: Control {
 
     // MARK: - Subviews
 
-    let wineImageView = UIView.wineImageView
-    let titleLabel = UIView.wineCardTitleLabel
-    let subtitleLabel = UIView.wineCardSubtitleLabel
-    let backgroundView = UIView.wineBackgroundView
+    let wineImageView = UIImageView.cardDetailsWineImageView
+    let titleLabel = UILabel.cardDetailsWineCardTitleLabel
+    let subtitleLabel = UILabel.cardDetailsWineCardSubtitleLabel
+    let backgroundView = UIView.cardDetailsWineBackgroundView
 
     private func addSubviews() {
         addSubview(backgroundView)
@@ -62,46 +62,6 @@ class CardDetailsWineView: Control {
 
     required init?(coder aDecoder: NSCoder) {
         return nil
-    }
-
-}
-
-extension UIView {
-
-    static var wineImageView: UIImageView {
-        let imageView = UIImageView(frame: .zero)
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }
-
-    static var wineBackgroundView: UIView {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 8
-        view.isUserInteractionEnabled = false
-        let shadow = SketchShadow(color: UIColor(hex: "422B0A")?.withAlphaComponent(0.05),
-                                  x: 0,
-                                  y: 12,
-                                  blur: 32,
-                                  spread: 0)
-        view.layer.apply(shadow)
-        return view
-    }
-
-    static var wineCardTitleLabel: UILabel {
-        let titleLabel = UILabel(frame: .zero)
-        titleLabel.font = UIFont(font: .nocturneSerifBold, size: 14)
-        titleLabel.textColor = .black
-        titleLabel.numberOfLines = 0
-        titleLabel.textAlignment = .center
-        return titleLabel
-    }
-
-    static var wineCardSubtitleLabel: UILabel {
-        let subtitleLabel = UILabel(frame: .zero)
-        subtitleLabel.font = UIFont(font: .tungstenMedium, size: 14)
-        subtitleLabel.textColor = UIColor(hex: "B7B7B7")
-        return subtitleLabel
     }
 
 }

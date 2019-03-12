@@ -72,7 +72,7 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
     }
 
     @objc
-    func dismissSelf() {
+    private func dismissSelf() {
         self.dismiss(animated: true)
     }
 

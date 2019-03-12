@@ -2,7 +2,7 @@ import UIKit
 
 extension UIButton {
 
-    static var learnMoreButton: UIButton {
+    static var searchLearnMoreButton: UIButton {
         let button = UIButton(frame: .zero)
         button.setTitle("LEARN MORE", for: .normal)
         button.titleLabel?.font = UIFont(font: .tungstenSemiBold, size: 14)

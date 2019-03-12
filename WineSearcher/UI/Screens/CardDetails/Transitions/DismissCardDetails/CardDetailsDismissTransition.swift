@@ -2,8 +2,6 @@ import UIKit
 
 class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
-    let inputs: CardDetailsInputs
-
     init(inputs: CardDetailsInputs) {
         self.inputs = inputs
     }
@@ -42,6 +40,8 @@ class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransition
     }
 
     // MARK: - Private
+
+    private let inputs: CardDetailsInputs
 
     private func createTransitionView(toViewController: SearchViewController,
                                       fromViewController: CardDetailsViewController) -> CardDetailsTransitionView {

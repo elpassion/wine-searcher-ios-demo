@@ -8,7 +8,7 @@ class CardDetailsTransitionView: UIView {
         addSubviews()
     }
 
-    let titleLabel = UILabel.cardTitleLabel
+    let titleLabel = UILabel.searchCardTitleLabel
     let subtitleLabel = UILabel.multilineLabel
     let firstCardView = CardParalaxView()
     let searchTopNavIconView = UIImageView(image: #imageLiteral(resourceName: "nav_image"))
@@ -19,8 +19,8 @@ class CardDetailsTransitionView: UIView {
     let flagImageView = UIImageView(image: #imageLiteral(resourceName: "card_details_icon"))
     let separator = UIView.coloredView(color: .white)
     let bottomSection = SearchBottomSectionView()
-    let learnMoreButton = UIButton.learnMoreButton
-    let otherInSeriesButton = UIButton.otherInSeriesButton
+    let learnMoreButton = UIButton.searchLearnMoreButton
+    let otherInSeriesButton = UIButton.searchOtherInSeriesButton
     let regionOverviewView = CardDetailsRegionOverviewView()
     let winesView = CardDetailsWinesView()
 

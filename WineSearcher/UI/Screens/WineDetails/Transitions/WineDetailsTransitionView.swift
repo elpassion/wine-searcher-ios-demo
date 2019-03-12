@@ -13,10 +13,10 @@ class WineDetailsTransitionView: UIView {
 
     // MARK: - Subviews
 
-    let cardDetailsTitleLabel = UIView.wineCardTitleLabel
-    let cardDetailsSubtitleLabel = UIView.wineCardSubtitleLabel
-    let cardDetailsWineImageView = UIView.wineImageView
-    let cardDetailsWineBackgroundView = UIView.wineBackgroundView
+    let cardDetailsTitleLabel = UILabel.cardDetailsWineCardTitleLabel
+    let cardDetailsSubtitleLabel = UILabel.cardDetailsWineCardSubtitleLabel
+    let cardDetailsWineImageView = UIImageView.cardDetailsWineImageView
+    let cardDetailsWineBackgroundView = UIView.cardDetailsWineBackgroundView
     let wineDetailsRatingImageView = UIImageView(image: #imageLiteral(resourceName: "rating"))
     let wineDetailsFlagImageView = UIImageView(image: #imageLiteral(resourceName: "flag_icon"))
     let wineDetailsDescriptionTitleLabel = UILabel.wineDetailsDescriptionTitleLabel

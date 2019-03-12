@@ -11,9 +11,9 @@ class CardView: UIView {
     // MARK: - Subviews
 
     let contentView = CardParalaxView()
-    let learnMoreButton = UIButton.learnMoreButton
-    let otherInSeriesButton = UIButton.otherInSeriesButton
-    let titleLabel = UILabel.cardTitleLabel
+    let learnMoreButton = UIButton.searchLearnMoreButton
+    let otherInSeriesButton = UIButton.searchOtherInSeriesButton
+    let titleLabel = UILabel.searchCardTitleLabel
     let subtitleLabel = UILabel.multilineLabel
 
     private func addSubviews() {
