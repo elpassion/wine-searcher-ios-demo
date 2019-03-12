@@ -290,9 +290,9 @@
 		470943FC22099B47008FECFA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				47A04502222FDA2B00C7C943 /* WineDetails */,
 				471987022225836300BDF30C /* CardDetails */,
 				470943FD22099B58008FECFA /* Search */,
+				47A04502222FDA2B00C7C943 /* WineDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -420,20 +420,20 @@
 			isa = PBXGroup;
 			children = (
 				47E8C5FB2237A4A10097DB79 /* DismissWineDetails */,
-				470CD2112237130700BAC44F /* WineDetailsTransitionView.swift */,
 				470CD210223712E600BAC44F /* PresentWineDetails */,
-				470CD2132237133900BAC44F /* WineDetailsViewController+Frames.swift */,
 				470CD2152237135B00BAC44F /* CardDetailsWineView+Frames.swift */,
+				470CD2112237130700BAC44F /* WineDetailsTransitionView.swift */,
+				470CD2132237133900BAC44F /* WineDetailsViewController+Frames.swift */,
 			);
 			name = Transitions;
-			path = "New Group";
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 		470CD210223712E600BAC44F /* PresentWineDetails */ = {
 			isa = PBXGroup;
 			children = (
-				470CD2172237140D00BAC44F /* WineDetailsPresentTransition.swift */,
 				470CD21922371CEE00BAC44F /* WineDetailsPresentTransition+Animators.swift */,
+				470CD2172237140D00BAC44F /* WineDetailsPresentTransition.swift */,
 			);
 			path = PresentWineDetails;
 			sourceTree = "<group>";
@@ -511,10 +511,10 @@
 				471987032225848200BDF30C /* CardDetailsViewController.swift */,
 				470C07752227D34600055F6F /* CardDetailsViewControllerFactory.swift */,
 				47CA9049222C660300A5C4F4 /* CardDetailsViewControllerFactoryProtocol.swift */,
+				470CD20D223712BE00BAC44F /* CardDetailsWineViewModel+WineDetailsInputs.swift */,
 				47895E49222D3BDB00CEE909 /* CardDetailsWineViewModel.swift */,
 				47895E4F222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift */,
 				47895E51222D4DBC00CEE909 /* CardDetailsWinesConfiguring.swift */,
-				470CD20D223712BE00BAC44F /* CardDetailsWineViewModel+WineDetailsInputs.swift */,
 			);
 			path = CardDetails;
 			sourceTree = "<group>";
@@ -610,9 +610,9 @@
 		476DF4AB221185F3005B82AF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				47A04507222FF1F900C7C943 /* WineDetails */,
 				471987072225852500BDF30C /* CardDetails */,
 				476DF4AC221185F8005B82AF /* Search */,
+				47A04507222FF1F900C7C943 /* WineDetails */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -701,11 +701,11 @@
 			isa = PBXGroup;
 			children = (
 				470CD20F223712D300BAC44F /* Transitions */,
-				47A04503222FF0A600C7C943 /* WineDetailsViewController.swift */,
-				47A04505222FF0CF00C7C943 /* WineDetailsView.swift */,
-				47A0450C222FF38A00C7C943 /* WineDetailsInputs.swift */,
 				470A566A22301A9E0002E943 /* WineDetailsDescriptionView.swift */,
+				47A0450C222FF38A00C7C943 /* WineDetailsInputs.swift */,
 				47E95EB82231DB9C00418A5E /* WineDetailsScrollableView.swift */,
+				47A04505222FF0CF00C7C943 /* WineDetailsView.swift */,
+				47A04503222FF0A600C7C943 /* WineDetailsViewController.swift */,
 			);
 			path = WineDetails;
 			sourceTree = "<group>";
