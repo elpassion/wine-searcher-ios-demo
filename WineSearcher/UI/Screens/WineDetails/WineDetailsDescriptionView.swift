@@ -10,8 +10,8 @@ class WineDetailsDescriptionView: UIView {
 
     // MARK: - Subviews
 
-    let titleLabel = UIView.wineDetailsDescriptionTitleLabel
-    let subtitleLabel = UIView.wineDetailsDescriptionSubtitleLabel
+    let titleLabel = UILabel.wineDetailsDescriptionTitleLabel
+    let subtitleLabel = UILabel.wineDetailsDescriptionSubtitleLabel
     let wineDetailsScrollableView = WineDetailsScrollableView()
 
     private func addSubviews() {
@@ -52,24 +52,6 @@ class WineDetailsDescriptionView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         return nil
-    }
-
-}
-
-extension UIView {
-
-    static var wineDetailsDescriptionTitleLabel: UILabel {
-        let label = UILabel(frame: .zero)
-        label.font = UIFont(font: .nocturnSerifExtraBold, size: 20)
-        return label
-    }
-
-    static var wineDetailsDescriptionSubtitleLabel: UILabel {
-        let label = UILabel(frame: .zero)
-        label.font = UIFont(font: .tungstenMedium, size: 16)
-        label.textColor = UIColor(hex: "B7B7B7")
-        label.text = "BARONE RICASOLI"
-        return label
     }
 
 }

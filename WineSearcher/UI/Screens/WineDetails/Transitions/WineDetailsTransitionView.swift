@@ -13,23 +13,24 @@ class WineDetailsTransitionView: UIView {
 
     // MARK: - Subviews
 
-    let wineCardTitleLabel = UIView.wineCardTitleLabel
-    let wineCardSubtitleLabel = UIView.wineCardSubtitleLabel
-    let wineCardImageView = UIView.wineImageView
-    let wineBackgroundView = UIView.wineBackgroundView
-    let ratingImageView = UIImageView(image: #imageLiteral(resourceName: "rating"))
-    let flagImageView = UIImageView(image: #imageLiteral(resourceName: "flag_icon"))
-    let wineDetailsDescriptionTitleLabel = UIView.wineDetailsDescriptionTitleLabel
-    let wineDetailsDescriptionSubtitleLabel = UIView.wineDetailsDescriptionSubtitleLabel
+    let cardDetailsTitleLabel = UIView.wineCardTitleLabel
+    let cardDetailsSubtitleLabel = UIView.wineCardSubtitleLabel
+    let cardDetailsWineImageView = UIView.wineImageView
+    let cardDetailsWineBackgroundView = UIView.wineBackgroundView
+    let wineDetailsRatingImageView = UIImageView(image: #imageLiteral(resourceName: "rating"))
+    let wineDetailsFlagImageView = UIImageView(image: #imageLiteral(resourceName: "flag_icon"))
+    let wineDetailsDescriptionTitleLabel = UILabel.wineDetailsDescriptionTitleLabel
+    let wineDetailsDescriptionSubtitleLabel = UILabel.wineDetailsDescriptionSubtitleLabel
     let wineDetailsScrollableView = WineDetailsScrollableView()
 
     private func addSubviews() {
-        addSubview(wineBackgroundView)
-        addSubview(wineCardSubtitleLabel)
-        addSubview(wineCardTitleLabel)
-        addSubview(wineCardImageView)
-        addSubview(ratingImageView)
-        addSubview(flagImageView)
+        addSubview(cardDetailsWineBackgroundView)
+        addSubview(cardDetailsWineImageView)
+        addSubview(cardDetailsSubtitleLabel)
+        addSubview(cardDetailsTitleLabel)
+        addSubview(cardDetailsSubtitleLabel)
+        addSubview(wineDetailsRatingImageView)
+        addSubview(wineDetailsFlagImageView)
         addSubview(wineDetailsDescriptionTitleLabel)
         addSubview(wineDetailsDescriptionSubtitleLabel)
         addSubview(wineDetailsScrollableView)

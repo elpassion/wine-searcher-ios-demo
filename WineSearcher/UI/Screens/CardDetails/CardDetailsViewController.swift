@@ -34,14 +34,14 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard let view = presentedView else { return nil }
-        let transition = WineDetailsPresentTransition(view: view)
+        let transition = WineDetailsPresentTransition(tappedView: view)
         lastTransition = transition
         return transition
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard let view = presentedView else { return nil }
-        let transition = WineDetailsDismissTransition(toView: view)
+        let transition = WineDetailsDismissTransition(tappedView: view)
         lastTransition = transition
         return transition
     }

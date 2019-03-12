@@ -2,11 +2,12 @@ import UIKit
 
 class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
-    init(view: CardDetailsWineView) {
+    init(tappedView view: CardDetailsWineView) {
         self.view = view
     }
 
     let duration = 0.7
+    let view: CardDetailsWineView
 
     // MARK: - UIViewControllerAnimatedTransitioning
 
@@ -41,38 +42,45 @@ class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         }
 
         animators.first?.addCompletion { [weak self] _ in
-            transitionContext.completeTransition(true)
-            transitionView.removeFromSuperview()
             self?.afterAnimation()
+            transitionView.removeFromSuperview()
             container.addSubview(toViewController.view)
+            transitionContext.completeTransition(true)
         }
     }
 
-    func createTransitionView(fromViewController: CardDetailsViewController,
-                              toViewController: WineDetailsViewController) -> WineDetailsTransitionView {
+    // MARK: - Private
+
+    private func createTransitionView(fromViewController: CardDetailsViewController,
+                                      toViewController: WineDetailsViewController) -> WineDetailsTransitionView {
 
         let transitionView = WineDetailsTransitionView()
 
-        transitionView.wineBackgroundView.frame = view.wineCardInitialFrame(fromView: fromViewController.view)
+        let cardDetailsBackgroundFrame = view.wineCardInitialFrame(in: fromViewController.view)
+        transitionView.cardDetailsWineBackgroundView.frame = cardDetailsBackgroundFrame
 
-        transitionView.wineCardTitleLabel.frame = view.wineCardTitleLabelFrame(fromView: fromViewController.view)
-        transitionView.wineCardTitleLabel.text = view.titleLabel.text
+        transitionView.cardDetailsTitleLabel.frame = view.wineCardTitleLabelFrame(in: fromViewController.view)
 
-        transitionView.wineCardSubtitleLabel.frame = view.wineCardSubtitleLabelFrame(fromView: fromViewController.view)
-        transitionView.wineCardSubtitleLabel.text = view.subtitleLabel.text
+        let cardDetailsSubtitleLabelFrame = view.wineCardSubtitleLabelFrame(in: fromViewController.view)
+        transitionView.cardDetailsSubtitleLabel.frame = cardDetailsSubtitleLabelFrame
 
-        transitionView.wineCardImageView.frame = view.wineCardImageViewFrame(fromView: fromViewController.view)
-        transitionView.wineCardImageView.image = view.wineImageView.image
+        transitionView.cardDetailsWineImageView.frame = view.wineCardImageViewFrame(in: fromViewController.view)
 
-        transitionView.ratingImageView.frame = toViewController.ratingImageViewFrame
+        transitionView.wineDetailsRatingImageView.frame = toViewController.ratingImageViewFrame
 
-        transitionView.flagImageView.frame = toViewController.flagImageViewFrame
+        transitionView.wineDetailsFlagImageView.frame = toViewController.flagImageViewFrame
 
         transitionView.wineDetailsDescriptionTitleLabel.frame = toViewController.titleLabelFrame
-        transitionView.wineDetailsDescriptionTitleLabel.text = view.titleLabel.text
+
         transitionView.wineDetailsDescriptionSubtitleLabel.frame = toViewController.subtitleLabelFrame
-        transitionView.wineDetailsDescriptionSubtitleLabel.text = view.subtitleLabel.text
+
         transitionView.wineDetailsScrollableView.frame = toViewController.scrollableViewFrame
+
+        transitionView.cardDetailsTitleLabel.text = view.titleLabel.text
+        transitionView.cardDetailsSubtitleLabel.text = view.subtitleLabel.text
+        transitionView.cardDetailsWineImageView.image = view.wineImageView.image
+        transitionView.wineDetailsDescriptionSubtitleLabel.text = view.subtitleLabel.text
+        transitionView.wineDetailsDescriptionTitleLabel.text = view.titleLabel.text
 
         return transitionView
     }
@@ -85,9 +93,5 @@ class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
     private func afterAnimation() {
         view.wineImageView.isHidden = false
     }
-
-    // MARK: - Private
-
-    let view: CardDetailsWineView
 
 }

@@ -25,16 +25,16 @@ extension WineDetailsPresentTransition {
 
     private func wineDetailsAnimators(transitionView: WineDetailsTransitionView) -> [UIViewPropertyAnimator] {
         return [
-            transitionView.ratingImageView.showAnimator(duration: duration,
-                                                        relativeStartTime: 0.36,
-                                                        relativeDuration: 0.64),
-            transitionView.ratingImageView.enterAnimator(duration: duration,
-                                                         enterY: -40,
-                                                         relativeStartTime: 0.36,
-                                                         relativeDuration: 0.64),
-            transitionView.flagImageView.showAnimator(duration: duration,
-                                                      relativeStartTime: 0.57,
-                                                      relativeDuration: 0.29),
+            transitionView.wineDetailsRatingImageView.showAnimator(duration: duration,
+                                                                   relativeStartTime: 0.36,
+                                                                   relativeDuration: 0.64),
+            transitionView.wineDetailsRatingImageView.enterAnimator(duration: duration,
+                                                                    enterY: -40,
+                                                                    relativeStartTime: 0.36,
+                                                                    relativeDuration: 0.64),
+            transitionView.wineDetailsFlagImageView.showAnimator(duration: duration,
+                                                                 relativeStartTime: 0.57,
+                                                                 relativeDuration: 0.29),
             transitionView.wineDetailsDescriptionTitleLabel.showAnimator(duration: duration,
                                                                          relativeStartTime: 0.16,
                                                                          relativeDuration: 0.47),
@@ -62,26 +62,27 @@ extension WineDetailsPresentTransition {
     private func cardAnimators(transitionView: WineDetailsTransitionView,
                                toViewController: WineDetailsViewController) -> [UIViewPropertyAnimator] {
         let contentCardView = toViewController.wineDetailsView.contentCardView
+        let contentCardCornerRadious = contentCardView.layer.cornerRadius
         return [
-            transitionView.wineBackgroundView.frameAnimator(duration: duration,
-                                                            toFrame: contentCardView.frame,
-                                                            relativeStartTime: 0.08,
-                                                            relativeDuration: 0.43),
-            transitionView.wineBackgroundView.cornerRadiousAnimator(duration: duration,
-                                                                    toValue: contentCardView.layer.cornerRadius,
-                                                                    relativeStartTime: 0.08,
-                                                                    relativeDuration: 0.43),
-            transitionView.wineCardImageView.frameAnimator(duration: duration,
-                                                           toFrame: toViewController.wineImageViewFrame,
-                                                           relativeDuration: 0.43),
-            transitionView.wineCardTitleLabel.movementAnimator(duration: duration,
-                                                               movementY: 200,
-                                                               relativeDuration: 0.21),
-            transitionView.wineCardSubtitleLabel.movementAnimator(duration: duration,
+            transitionView.cardDetailsWineBackgroundView.frameAnimator(duration: duration,
+                                                                       toFrame: contentCardView.frame,
+                                                                       relativeStartTime: 0.08,
+                                                                       relativeDuration: 0.43),
+            transitionView.cardDetailsWineBackgroundView.cornerRadiousAnimator(duration: duration,
+                                                                               toValue: contentCardCornerRadious,
+                                                                               relativeStartTime: 0.08,
+                                                                               relativeDuration: 0.43),
+            transitionView.cardDetailsWineImageView.frameAnimator(duration: duration,
+                                                                  toFrame: toViewController.wineImageViewFrame,
+                                                                  relativeDuration: 0.43),
+            transitionView.cardDetailsTitleLabel.movementAnimator(duration: duration,
                                                                   movementY: 200,
                                                                   relativeDuration: 0.21),
-            transitionView.wineCardTitleLabel.hideAnimator(duration: duration, relativeDuration: 0.21),
-            transitionView.wineCardSubtitleLabel.hideAnimator(duration: duration, relativeDuration: 0.21)
+            transitionView.cardDetailsSubtitleLabel.movementAnimator(duration: duration,
+                                                                     movementY: 200,
+                                                                     relativeDuration: 0.21),
+            transitionView.cardDetailsTitleLabel.hideAnimator(duration: duration, relativeDuration: 0.21),
+            transitionView.cardDetailsSubtitleLabel.hideAnimator(duration: duration, relativeDuration: 0.21)
         ]
     }
 
