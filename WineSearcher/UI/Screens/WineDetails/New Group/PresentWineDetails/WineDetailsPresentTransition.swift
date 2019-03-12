@@ -30,6 +30,8 @@ class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
 
         container.addSubview(transitionView)
 
+        beforeAnimation(fromViewController: fromViewController)
+
         let animators = self.animators(transitionView: transitionView,
                                        fromViewController: fromViewController,
                                        toViewController: toViewController)
@@ -38,9 +40,10 @@ class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
             $0.startAnimation()
         }
 
-        animators.first?.addCompletion { _ in
+        animators.first?.addCompletion { [weak self] _ in
             transitionContext.completeTransition(true)
             transitionView.removeFromSuperview()
+            self?.afterAnimation()
             container.addSubview(toViewController.view)
         }
     }
@@ -72,6 +75,15 @@ class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         transitionView.wineDetailsScrollableView.frame = toViewController.scrollableViewFrame
 
         return transitionView
+    }
+
+    private func beforeAnimation(fromViewController: CardDetailsViewController) {
+        fromViewController.cardDetailsView.headerView.ratingImageView.isHidden = true
+        view.wineImageView.isHidden = true
+    }
+
+    private func afterAnimation() {
+        view.wineImageView.isHidden = false
     }
 
     // MARK: - Private

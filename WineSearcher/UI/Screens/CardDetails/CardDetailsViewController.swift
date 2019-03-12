@@ -27,13 +27,23 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 
     // MARK: - UIViewControllerTransitioningDelegate
 
-    private var presentTransitionAnimator: UIViewControllerAnimatedTransitioning?
+    private var presentedView: CardDetailsWineView?
+    private var lastTransition: UIViewControllerAnimatedTransitioning?
 
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let animator = presentTransitionAnimator else { return nil }
-        return animator
+        guard let view = presentedView else { return nil }
+        let transition = WineDetailsPresentTransition(view: view)
+        lastTransition = transition
+        return transition
+    }
+
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        guard let view = presentedView else { return nil }
+        let transition = WineDetailsDismissTransition(toView: view)
+        lastTransition = transition
+        return transition
     }
 
     // MARK: - Private
@@ -68,7 +78,7 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 
     private func presentWineDetails(inputs: WineDetailsInputs, view: CardDetailsWineView) {
         let viewController = WineDetailsViewController(inputs: inputs)
-        presentTransitionAnimator = WineDetailsPresentTransition(view: view)
+        presentedView = view
         viewController.transitioningDelegate = self
         present(viewController, animated: true)
     }

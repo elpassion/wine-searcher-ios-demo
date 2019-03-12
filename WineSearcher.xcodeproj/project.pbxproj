@@ -117,6 +117,7 @@
 		47D9294F2207993300B7DAF5 /* SearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */; };
 		47D993672224381400B45F00 /* CGFloat+Normalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D993662224381400B45F00 /* CGFloat+Normalization.swift */; };
 		47D993692224425100B45F00 /* UIScrollView+VisibleRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D993682224425100B45F00 /* UIScrollView+VisibleRect.swift */; };
+		47E8C5FD2237A4C00097DB79 /* WineDetailsDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8C5FC2237A4C00097DB79 /* WineDetailsDismissTransition.swift */; };
 		47E95EB92231DB9C00418A5E /* WineDetailsScrollableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E95EB82231DB9C00418A5E /* WineDetailsScrollableView.swift */; };
 		6494C2372E78FFC3FC1E836C /* Pods_WineSearcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D84EC4E7C9EB2C49CD46CE2 /* Pods_WineSearcherTests.framework */; };
 		B883BC79369B9D04EC1C63E6 /* Pods_WineSearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */; };
@@ -249,6 +250,7 @@
 		47D9294E2207993300B7DAF5 /* SearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerSpec.swift; sourceTree = "<group>"; };
 		47D993662224381400B45F00 /* CGFloat+Normalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Normalization.swift"; sourceTree = "<group>"; };
 		47D993682224425100B45F00 /* UIScrollView+VisibleRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+VisibleRect.swift"; sourceTree = "<group>"; };
+		47E8C5FC2237A4C00097DB79 /* WineDetailsDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsDismissTransition.swift; sourceTree = "<group>"; };
 		47E95EB82231DB9C00418A5E /* WineDetailsScrollableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineDetailsScrollableView.swift; sourceTree = "<group>"; };
 		BD34E3011AD58AB07D284C2A /* Pods-WineSearcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WineSearcherTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WineSearcherTests/Pods-WineSearcherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDF5827F0DF68F8FBD93B8CC /* Pods_WineSearcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WineSearcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -417,6 +419,7 @@
 		470CD20F223712D300BAC44F /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				47E8C5FB2237A4A10097DB79 /* DismissWineDetails */,
 				470CD2112237130700BAC44F /* WineDetailsTransitionView.swift */,
 				470CD210223712E600BAC44F /* PresentWineDetails */,
 				470CD2132237133900BAC44F /* WineDetailsViewController+Frames.swift */,
@@ -817,6 +820,14 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		47E8C5FB2237A4A10097DB79 /* DismissWineDetails */ = {
+			isa = PBXGroup;
+			children = (
+				47E8C5FC2237A4C00097DB79 /* WineDetailsDismissTransition.swift */,
+			);
+			path = DismissWineDetails;
+			sourceTree = "<group>";
+		};
 		B75D6E1C156C0DEE59C3B0C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1058,6 +1069,7 @@
 				47CA9053222C677A00A5C4F4 /* CardDetailsPresentTransition.swift in Sources */,
 				4719870122255CF700BDF30C /* SearchBottomSectionRowView.swift in Sources */,
 				47109B4A221ADDF400B31774 /* UIColor+Hex.swift in Sources */,
+				47E8C5FD2237A4C00097DB79 /* WineDetailsDismissTransition.swift in Sources */,
 				47A04504222FF0A600C7C943 /* WineDetailsViewController.swift in Sources */,
 				47B66599222D26F1002D9151 /* CardDetailsRegionOverviewView.swift in Sources */,
 				470C07762227D34600055F6F /* CardDetailsViewControllerFactory.swift in Sources */,

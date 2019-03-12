@@ -17,7 +17,7 @@ extension WineDetailsPresentTransition {
         return [
             headerView.topTitleLabel.movementAnimator(duration: duration, movementX: -400, relativeDuration: 0.43),
             headerView.separator.hideAnimator(duration: duration, relativeDuration: 0.43),
-            headerView.separator.movementAnimator(duration: duration, movementY: 20, relativeDuration: 0.43),
+            headerView.separator.movementAnimator(duration: duration, movementY: 5, relativeDuration: 0.43),
             headerView.topSubtitleLabel.movementAnimator(duration: duration, movementY: -100, relativeDuration: 0.43),
             headerView.topSubtitleLabel.hideAnimator(duration: duration, relativeDuration: 0.43)
         ]
@@ -42,11 +42,11 @@ extension WineDetailsPresentTransition {
                                                                             relativeStartTime: 0.16,
                                                                             relativeDuration: 0.47),
             transitionView.wineDetailsDescriptionTitleLabel.enterAnimator(duration: duration,
-                                                                          enterY: -30,
+                                                                          enterY: 30,
                                                                           relativeStartTime: 0.16,
                                                                           relativeDuration: 0.47),
             transitionView.wineDetailsDescriptionSubtitleLabel.enterAnimator(duration: duration,
-                                                                             enterY: -30,
+                                                                             enterY: 30,
                                                                              relativeStartTime: 0.16,
                                                                              relativeDuration: 0.47),
             transitionView.wineDetailsScrollableView.enterAnimator(duration: duration,
