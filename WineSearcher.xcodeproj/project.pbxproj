@@ -340,7 +340,8 @@
 		47115251220C5174006FA2C4 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				47CA9062222C8B6100A5C4F4 /* Views */,
+				47CA9060222C8B2C00A5C4F4 /* CardParalaxView.swift */,
+				477E6A822209DCC100EDB2AB /* CardView.swift */,
 				471987212226A43800BDF30C /* CardViewController+Animations.swift */,
 				47115252220C51E5006FA2C4 /* CardViewController.swift */,
 				470A940722141FC000006564 /* CardViewControlling.swift */,
@@ -426,15 +427,6 @@
 				47CA904E222C672800A5C4F4 /* CardDetailsTransitionView.swift */,
 			);
 			path = Transitions;
-			sourceTree = "<group>";
-		};
-		47CA9062222C8B6100A5C4F4 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				47CA9060222C8B2C00A5C4F4 /* CardParalaxView.swift */,
-				477E6A822209DCC100EDB2AB /* CardView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		47D9291F2207984300B7DAF5 = {
