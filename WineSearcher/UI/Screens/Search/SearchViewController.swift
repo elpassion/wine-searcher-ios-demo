@@ -3,11 +3,9 @@ import UIKit
 class SearchViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     init(cardsViewControllerFactory: CardsViewControllerFactoryProtocol = CardsViewControllerFactory(),
-         viewControllerPresnter: ViewControllerPresenting = ViewControllerPresenter(),
          cardsDataSource: CardsDataSourceProtocol = CardsDataSource(),
          cardDetailsFactory: CardDetailsViewControllerFactoryProtocol = CardDetailsViewControllerFactory()) {
         self.cardsViewController = cardsViewControllerFactory.viewController(dataSource: cardsDataSource)
-        self.viewControllerPresnter = viewControllerPresnter
         self.cardsDataSource = cardsDataSource
         self.cardDetailsFactory = cardDetailsFactory
         super.init(nibName: nil, bundle: nil)
@@ -46,7 +44,6 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
 
     // MARK: - Private
 
-    private let viewControllerPresnter: ViewControllerPresenting
     private let cardsDataSource: CardsDataSourceProtocol
     private let cardDetailsFactory: CardDetailsViewControllerFactoryProtocol
 
@@ -64,7 +61,7 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
     private func presentCardDetailsViewController(inputs: CardDetailsInputs) {
         let viewController = cardDetailsFactory.viewController(inputs: inputs)
         viewController.transitioningDelegate = self
-        viewControllerPresnter.present(viewController: viewController, on: self)
+        present(viewController, animated: true)
     }
 
     // MARK: - Required

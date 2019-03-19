@@ -27,29 +27,23 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 
     // MARK: - UIViewControllerTransitioningDelegate
 
-    private var presentedView: CardDetailsWineView?
-    private var lastTransition: UIViewControllerAnimatedTransitioning?
-
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard let view = presentedView else { return nil }
-        let transition = WineDetailsPresentTransition(tappedView: view)
-        lastTransition = transition
-        return transition
+        return WineDetailsPresentTransition(tappedView: view)
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard let view = presentedView else { return nil }
-        let transition = WineDetailsDismissTransition(tappedView: view)
-        lastTransition = transition
-        return transition
+        return WineDetailsDismissTransition(tappedView: view)
     }
 
     // MARK: - Private
 
     private let inputs: CardDetailsInputs
     private let winesConfigurator: CardDetailsWinesConfiguring
+    private var presentedView: CardDetailsWineView?
 
     private func setupView() {
         cardDetailsView.headerView.topImageView.image = inputs.topImage
@@ -87,6 +81,14 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+}
+
+private extension CardDetailsWineViewModel {
+
+    var inputs: WineDetailsInputs {
+        return WineDetailsInputs(wineImage: wineImage, wineName: title)
     }
 
 }

@@ -74,7 +74,7 @@ class CardView: UIView {
 
 }
 
-extension CardView {
+private extension CardView {
 
     struct Factory {
         static var backgroundImageView: UIImageView {

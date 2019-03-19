@@ -13,6 +13,8 @@ extension CardViewController {
         animateBackground()
     }
 
+    // MARK: - Private
+
     private func animateBackground() {
         cardView.contentView.animationProgress = animationProgress
     }

@@ -112,3 +112,11 @@ class CardsViewController: UIViewController, UIScrollViewDelegate, CardsViewCont
     }
 
 }
+
+private extension CardViewModel {
+
+    var cardDetailsInput: CardDetailsInputs {
+        return CardDetailsInputs(title: title, subtitle: subtitle, topImage: backgroundImage)
+    }
+
+}

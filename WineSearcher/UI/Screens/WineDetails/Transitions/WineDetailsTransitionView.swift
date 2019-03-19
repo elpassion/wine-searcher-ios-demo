@@ -7,10 +7,6 @@ class WineDetailsTransitionView: UIView {
         addSubviews()
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        return nil
-    }
-
     // MARK: - Subviews
 
     let cardDetailsTitleLabel = UILabel.cardDetailsWineCardTitleLabel
@@ -34,6 +30,12 @@ class WineDetailsTransitionView: UIView {
         addSubview(wineDetailsDescriptionTitleLabel)
         addSubview(wineDetailsDescriptionSubtitleLabel)
         addSubview(wineDetailsScrollableView)
+    }
+
+    // MARK: - Required
+
+    required init?(coder aDecoder: NSCoder) {
+        return nil
     }
 
 }

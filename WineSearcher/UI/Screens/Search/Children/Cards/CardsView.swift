@@ -12,7 +12,7 @@ class CardsView: UIView {
         setupLayout()
     }
 
-    private let insets: UIEdgeInsets
+    let insets: UIEdgeInsets
 
     // MARK: - Subviews
 
@@ -45,7 +45,7 @@ class CardsView: UIView {
         ])
     }
 
-    // MARK: - Private
+    // MARK: - Required
 
     required init?(coder aDecoder: NSCoder) {
         return nil

@@ -61,7 +61,7 @@ class CardParalaxView: UIControl {
 
 }
 
-extension CardParalaxView {
+private extension CardParalaxView {
 
     struct Subviews {
         static var backgroundImageView: UIImageView {
