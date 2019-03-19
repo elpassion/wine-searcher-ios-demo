@@ -355,8 +355,12 @@
 			isa = PBXGroup;
 			children = (
 				47D993662224381400B45F00 /* CGFloat+Normalization.swift */,
+				47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */,
+				470CD2152237135B00BAC44F /* CardDetailsWineView+Frames.swift */,
 				47895E4B222D3C3900CEE909 /* CardDetailsWineViewModel+Wines.swift */,
+				4731215C224196AB001F7532 /* CardView+Frames.swift */,
 				47109B4E221AF53E00B31774 /* CardViewModel+Cards.swift */,
+				47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */,
 				473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */,
 				47109B49221ADDF400B31774 /* UIColor+Hex.swift */,
 				47109B47221ADD8000B31774 /* UIFont+Font.swift */,
@@ -368,6 +372,7 @@
 				47CA9073222C967E00A5C4F4 /* UIView+KeyframeAnimation.swift */,
 				470944092209BAA6008FECFA /* UIViewController+Embeding.swift */,
 				47895E59222D71AB00CEE909 /* UIViewPropertyAnimator+DefaultAnimator.swift */,
+				470CD2132237133900BAC44F /* WineDetailsViewController+Frames.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -431,9 +436,7 @@
 			children = (
 				47E8C5FB2237A4A10097DB79 /* DismissWineDetails */,
 				470CD210223712E600BAC44F /* PresentWineDetails */,
-				470CD2152237135B00BAC44F /* CardDetailsWineView+Frames.swift */,
 				470CD2112237130700BAC44F /* WineDetailsTransitionView.swift */,
-				470CD2132237133900BAC44F /* WineDetailsViewController+Frames.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -711,8 +714,8 @@
 		47A04502222FDA2B00C7C943 /* WineDetails */ = {
 			isa = PBXGroup;
 			children = (
-				47E8C6002237CEC20097DB79 /* Views */,
 				470CD20F223712D300BAC44F /* Transitions */,
+				47E8C6002237CEC20097DB79 /* Views */,
 				470A566A22301A9E0002E943 /* WineDetailsDescriptionView.swift */,
 				47A0450C222FF38A00C7C943 /* WineDetailsInputs.swift */,
 				47E95EB82231DB9C00418A5E /* WineDetailsScrollableView.swift */,
@@ -736,9 +739,6 @@
 				47284575222E99AF0086BB67 /* DismissCardDetails */,
 				47895E5C222D72CC00CEE909 /* PresentCardDetails */,
 				47CA904E222C672800A5C4F4 /* CardDetailsTransitionView.swift */,
-				47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */,
-				47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */,
-				4731215C224196AB001F7532 /* CardView+Frames.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -750,8 +750,8 @@
 				477E6A822209DCC100EDB2AB /* CardView.swift */,
 				47CA9067222C8BCF00A5C4F4 /* UIButton+SearchLearnMore.swift */,
 				47CA9069222C8BF700A5C4F4 /* UIButton+SearchOtherInSeriesButton.swift */,
-				47CA9063222C8B8000A5C4F4 /* UILabel+SearchCardTitleLabel.swift */,
 				47CA9065222C8BA300A5C4F4 /* UILabel+MultilineLabel.swift */,
+				47CA9063222C8B8000A5C4F4 /* UILabel+SearchCardTitleLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -836,8 +836,8 @@
 		47E8C5FB2237A4A10097DB79 /* DismissWineDetails */ = {
 			isa = PBXGroup;
 			children = (
-				47E8C5FC2237A4C00097DB79 /* WineDetailsDismissTransition.swift */,
 				47E8C5FE2237CD0B0097DB79 /* WineDetailsDismissTransition+Animators.swift */,
+				47E8C5FC2237A4C00097DB79 /* WineDetailsDismissTransition.swift */,
 			);
 			path = DismissWineDetails;
 			sourceTree = "<group>";
