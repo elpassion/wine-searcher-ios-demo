@@ -2,11 +2,12 @@ import UIKit
 
 class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
-    init(inputs: CardDetailsInputs) {
-        self.inputs = inputs
+    init(cardView: CardView) {
+        self.cardView = cardView
     }
 
     let duration = 0.3
+    let cardView: CardView
 
     // MARK: - UIViewControllerAnimatedTransitioning
 
@@ -41,22 +42,20 @@ class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransition
 
     // MARK: - Private
 
-    private let inputs: CardDetailsInputs
-
     private func createTransitionView(toViewController: SearchViewController,
                                       fromViewController: CardDetailsViewController) -> CardDetailsTransitionView {
         let transitionView = CardDetailsTransitionView()
 
-        transitionView.firstCardView.backgroundImageView.image = inputs.topImage
+        transitionView.cardView.backgroundImageView.image = cardView.contentView.backgroundImageView.image
 
-        transitionView.firstCardView.frame = fromViewController.headerFrame
-        transitionView.firstCardView.layer.cornerRadius = 0
+        transitionView.cardView.frame = fromViewController.headerFrame
+        transitionView.cardView.layer.cornerRadius = 0
 
-        transitionView.titleLabel.text = inputs.title
+        transitionView.titleLabel.text = cardView.titleLabel.text
         transitionView.titleLabel.frame = fromViewController.topTitleLabelFrame
         transitionView.titleLabel.sizeToFit()
 
-        transitionView.subtitleLabel.attributedText = inputs.subtitle
+        transitionView.subtitleLabel.attributedText = cardView.subtitleLabel.attributedText
         transitionView.subtitleLabel.frame = fromViewController.topSubtitleLabelFrame
         transitionView.subtitleLabel.sizeToFit()
 
@@ -76,9 +75,9 @@ class CardDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransition
 
         transitionView.bottomSection.frame = toViewController.bottomSectionFrame
 
-        transitionView.learnMoreButton.frame = toViewController.learnMoreButtonFrame
+        transitionView.learnMoreButton.frame = cardView.learnMoreButtonFrame(in: fromViewController.view)
 
-        transitionView.otherInSeriesButton.frame = toViewController.otherInSeriesButtonFrame
+        transitionView.otherInSeriesButton.frame = cardView.otherInSeriesButtonFrame(in: fromViewController.view)
 
         transitionView.regionOverviewView.frame = fromViewController.regionOverviewFrame
 

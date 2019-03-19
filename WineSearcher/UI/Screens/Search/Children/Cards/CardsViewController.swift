@@ -32,16 +32,7 @@ class CardsViewController: UIViewController, UIScrollViewDelegate, CardsViewCont
 
     // MARK: - CardsViewControlling
 
-    var currentViewController: (UIViewController & CardViewControlling)? {
-        return viewControllers.first {
-            let frame = $0.view.frame.applying(CGAffineTransform(translationX: sizesProvider.insets.left, y: 0))
-            return cardsView.scrollView.visibleRect.contains(frame)
-        }
-    }
-
-    var firstItemRect: CGRect? {
-        return cardsView.contentStackView.arrangedSubviews.first?.frame
-    }
+    var cardTapped: ((CardView, CardDetailsInputs) -> Void)?
 
     // MARK: - UIScrollViewDelegate
 
@@ -66,8 +57,16 @@ class CardsViewController: UIViewController, UIScrollViewDelegate, CardsViewCont
     private let sizesProvider: CardsSizesProviding
 
     private lazy var viewControllers: [CardViewController] = {
-        dataSource.items.map(CardViewController.init)
+        dataSource.items.map { cardViewController(for: $0) }
     }()
+
+    private func cardViewController(for viewModel: CardViewModel) -> CardViewController {
+        let viewController = CardViewController(viewModel: viewModel)
+        viewController.cardTapped = { [weak self] in
+            self?.cardTapped?(viewController.cardView, viewModel.cardDetailsInput)
+        }
+        return viewController
+    }
 
     private var pagesOffsets: [CGFloat] {
         return viewControllers.map { $0.view.frame.minX }

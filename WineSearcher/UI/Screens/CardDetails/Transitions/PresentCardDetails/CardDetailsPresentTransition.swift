@@ -2,11 +2,12 @@ import UIKit
 
 class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransitioning {
 
-    init(inputs: CardDetailsInputs) {
-        self.inputs = inputs
+    init(cardView: CardView) {
+        self.cardView = cardView
     }
 
     let duration = 0.5
+    let cardView: CardView
 
     // MARK: - UIViewControllerAnimatedTransitioning
 
@@ -44,20 +45,20 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
 
     // MARK: - Private
 
-    private let inputs: CardDetailsInputs
-
     private func createTransitionView(toViewController: CardDetailsViewController,
                                       fromViewController: SearchViewController) -> CardDetailsTransitionView {
         let transitionView = CardDetailsTransitionView()
 
-        transitionView.firstCardView.backgroundImageView.image = inputs.topImage
-        transitionView.firstCardView.frame = fromViewController.firstCardFrame
+        let image = toViewController.cardDetailsView.headerView.topImageView.image
+        transitionView.cardView.backgroundImageView.image = image
+        transitionView.cardView.frame = cardView.cardFrame(in: fromViewController.view)
 
-        transitionView.titleLabel.text = inputs.title
-        transitionView.titleLabel.frame = fromViewController.titleLabelFrame
+        transitionView.titleLabel.text = toViewController.cardDetailsView.headerView.topTitleLabel.text
+        transitionView.titleLabel.frame = cardView.titleLabelFrame(in: fromViewController.view)
 
-        transitionView.subtitleLabel.attributedText = inputs.subtitle
-        transitionView.subtitleLabel.frame = fromViewController.subtitleLabelFrame
+        let subtitle = toViewController.cardDetailsView.headerView.topSubtitleLabel.attributedText
+        transitionView.subtitleLabel.attributedText = subtitle
+        transitionView.subtitleLabel.frame = cardView.subtitleLabelFrame(in: fromViewController.view)
 
         transitionView.searchTopNavIconView.frame = fromViewController.topNavIconFrame
         transitionView.detailsTopNavIconView.frame = toViewController.topNavIconFrame
@@ -73,9 +74,9 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
 
         transitionView.bottomSection.frame = fromViewController.bottomSectionFrame
 
-        transitionView.learnMoreButton.frame = fromViewController.learnMoreButtonFrame
+        transitionView.learnMoreButton.frame = cardView.learnMoreButtonFrame(in: fromViewController.view)
 
-        transitionView.otherInSeriesButton.frame = fromViewController.otherInSeriesButtonFrame
+        transitionView.otherInSeriesButton.frame = cardView.otherInSeriesButtonFrame(in: fromViewController.view)
 
         transitionView.regionOverviewView.frame = toViewController.regionOverviewFrame
 

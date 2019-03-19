@@ -32,6 +32,8 @@ class CardViewController: UIViewController, CardViewControlling {
         didSet { view.setNeedsLayout() }
     }
 
+    var cardTapped: (() -> Void)?
+
     // MARK: - Private
 
     private let viewModel: CardViewModel
@@ -44,12 +46,12 @@ class CardViewController: UIViewController, CardViewControlling {
     }
 
     private func setupActions() {
-        cardView.contentView.addTarget(self, action: #selector(cardTapped), for: .touchUpInside)
+        cardView.contentView.addTarget(self, action: #selector(cardTappedAction), for: .touchUpInside)
     }
 
     @objc
-    private func cardTapped() {
-        viewModel.cardTapAction?()
+    private func cardTappedAction() {
+        cardTapped?()
     }
 
     // MARK: - Required

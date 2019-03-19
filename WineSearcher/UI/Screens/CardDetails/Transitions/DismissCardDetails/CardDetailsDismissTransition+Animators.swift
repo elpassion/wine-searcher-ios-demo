@@ -19,10 +19,11 @@ extension CardDetailsDismissTransition {
             transitionView.bottomSection.showAnimator(duration: duration),
             transitionView.bottomSection.enterAnimator(duration: duration, enterY: -150),
             transitionView.flagImageView.hideAnimator(duration: duration),
-            transitionView.titleLabel.frameAnimator(duration: duration, toFrame: toViewController.titleLabelFrame),
+            transitionView.titleLabel.frameAnimator(duration: duration,
+                                                    toFrame: cardView.titleLabelFrame(in: toViewController.view)),
             transitionView.subtitleLabel.frameAnimator(duration: duration,
-                                                       toFrame: toViewController.subtitleLabelFrame),
-            transitionView.firstCardView.cornerRadiousAnimator(duration: duration, toValue: 16, relativeDuration: 1),
+                                                       toFrame: cardView.subtitleLabelFrame(in: toViewController.view)),
+            transitionView.cardView.cornerRadiousAnimator(duration: duration, toValue: 16, relativeDuration: 1),
             cardAnimator(transitionView: transitionView, toViewController: toViewController),
             winesAnimator(transitionView: transitionView)
         ]
@@ -56,8 +57,8 @@ extension CardDetailsDismissTransition {
                               toViewController: SearchViewController) -> UIViewPropertyAnimator {
         let animator = defaultAnimator
         animator.addAnimations {
-            let cardView = transitionView.firstCardView
-            cardView.frame = toViewController.firstCardFrame
+            let cardView = transitionView.cardView
+            cardView.frame = self.cardView.cardFrame(in: toViewController.view)
         }
         return animator
     }

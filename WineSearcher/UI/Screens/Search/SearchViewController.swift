@@ -28,20 +28,20 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
 
     let cardsViewController: UIViewController & CardsViewControlling
-    var inputs: CardDetailsInputs?
+    var tappedView: CardView?
 
     // MARK: - UIViewControllerTransitioningDelegate
 
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let inputs = self.inputs else { return nil }
-        return CardDetailsPresentTransition(inputs: inputs)
+        guard let cardView = tappedView else { return nil }
+        return CardDetailsPresentTransition(cardView: cardView)
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        guard let inputs = self.inputs else { return nil }
-        return CardDetailsDismissTransition(inputs: inputs)
+        guard let cardView = tappedView else { return nil }
+        return CardDetailsDismissTransition(cardView: cardView)
     }
 
     // MARK: - Private
@@ -55,17 +55,13 @@ class SearchViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
 
     private func setupActions() {
-        cardsDataSource.items.forEach { card in
-            let inputs = card.cardDetailsInput
-            card.cardTapAction = { [weak self] in
-                self?.inputs = inputs
-                self?.presentCardDetailsViewController(viewModel: card)
-            }
+        cardsViewController.cardTapped = { [weak self] view, inputs in
+            self?.tappedView = view
+            self?.presentCardDetailsViewController(inputs: inputs)
         }
     }
 
-    private func presentCardDetailsViewController(viewModel: CardViewModel) {
-        let inputs = viewModel.cardDetailsInput
+    private func presentCardDetailsViewController(inputs: CardDetailsInputs) {
         let viewController = cardDetailsFactory.viewController(inputs: inputs)
         viewController.transitioningDelegate = self
         viewControllerPresnter.present(viewController: viewController, on: self)

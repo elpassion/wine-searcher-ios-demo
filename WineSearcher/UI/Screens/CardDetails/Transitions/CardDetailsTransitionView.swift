@@ -10,7 +10,7 @@ class CardDetailsTransitionView: UIView {
 
     let titleLabel = UILabel.searchCardTitleLabel
     let subtitleLabel = UILabel.multilineLabel
-    let firstCardView = CardParalaxView()
+    let cardView = CardParalaxView()
     let searchTopNavIconView = UIImageView(image: #imageLiteral(resourceName: "nav_image"))
     let detailsTopNavIconView = UIImageView(image: #imageLiteral(resourceName: "black_arrow"))
     let searchTopNavTitleLabel = UILabel.navTitleLable(title: "Learn Wine")
@@ -27,7 +27,7 @@ class CardDetailsTransitionView: UIView {
     // MARK: - Subviews
 
     private func addSubviews() {
-        addSubview(firstCardView)
+        addSubview(cardView)
         addSubview(titleLabel)
         addSubview(subtitleLabel)
         addSubview(searchTopNavIconView)

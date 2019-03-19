@@ -56,6 +56,7 @@
 		47284571222E8E830086BB67 /* UIView+Animators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284570222E8E830086BB67 /* UIView+Animators.swift */; };
 		47284577222EA2ED0086BB67 /* CardDetailsDismissTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284576222EA2ED0086BB67 /* CardDetailsDismissTransition.swift */; };
 		47284579222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47284578222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift */; };
+		4731215D224196AB001F7532 /* CardView+Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4731215C224196AB001F7532 /* CardView+Frames.swift */; };
 		473A3727220DC7EB00BE9C34 /* CardsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */; };
 		473A3729220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */; };
 		473A372B220DC85000BE9C34 /* Sequence+Nearest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */; };
@@ -96,7 +97,6 @@
 		47CA904F222C672800A5C4F4 /* CardDetailsTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA904E222C672800A5C4F4 /* CardDetailsTransitionView.swift */; };
 		47CA9053222C677A00A5C4F4 /* CardDetailsPresentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */; };
 		47CA9055222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9054222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift */; };
-		47CA9059222C684C00A5C4F4 /* CardViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA9058222C684C00A5C4F4 /* CardViewModelProtocol.swift */; };
 		47CA905B222C89BA00A5C4F4 /* CardDetailsPresentTransition+Animators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA905A222C89BA00A5C4F4 /* CardDetailsPresentTransition+Animators.swift */; };
 		47CA905D222C8AB100A5C4F4 /* SearchViewController+Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */; };
 		47CA905F222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */; };
@@ -190,6 +190,7 @@
 		47284570222E8E830086BB67 /* UIView+Animators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animators.swift"; sourceTree = "<group>"; };
 		47284576222EA2ED0086BB67 /* CardDetailsDismissTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsDismissTransition.swift; sourceTree = "<group>"; };
 		47284578222EAA390086BB67 /* CardDetailsDismissTransition+Animators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailsDismissTransition+Animators.swift"; sourceTree = "<group>"; };
+		4731215C224196AB001F7532 /* CardView+Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardView+Frames.swift"; sourceTree = "<group>"; };
 		473A3726220DC7EB00BE9C34 /* CardsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsConfiguration.swift; sourceTree = "<group>"; };
 		473A3728220DC82E00BE9C34 /* UIScrollView+TransformToCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+TransformToCenter.swift"; sourceTree = "<group>"; };
 		473A372A220DC85000BE9C34 /* Sequence+Nearest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Nearest.swift"; sourceTree = "<group>"; };
@@ -230,7 +231,6 @@
 		47CA904E222C672800A5C4F4 /* CardDetailsTransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsTransitionView.swift; sourceTree = "<group>"; };
 		47CA9052222C677A00A5C4F4 /* CardDetailsPresentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsPresentTransition.swift; sourceTree = "<group>"; };
 		47CA9054222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardViewModel+CardDetailsInputs.swift"; sourceTree = "<group>"; };
-		47CA9058222C684C00A5C4F4 /* CardViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModelProtocol.swift; sourceTree = "<group>"; };
 		47CA905A222C89BA00A5C4F4 /* CardDetailsPresentTransition+Animators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailsPresentTransition+Animators.swift"; sourceTree = "<group>"; };
 		47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Frames.swift"; sourceTree = "<group>"; };
 		47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDetailsViewController+Frames.swift"; sourceTree = "<group>"; };
@@ -495,7 +495,6 @@
 				470A940722141FC000006564 /* CardViewControlling.swift */,
 				47CA9054222C67ED00A5C4F4 /* CardViewModel+CardDetailsInputs.swift */,
 				47447625220B9DA700DEDBBB /* CardViewModel.swift */,
-				47CA9058222C684C00A5C4F4 /* CardViewModelProtocol.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -739,6 +738,7 @@
 				47CA904E222C672800A5C4F4 /* CardDetailsTransitionView.swift */,
 				47CA905E222C8AD900A5C4F4 /* CardDetailsViewController+Frames.swift */,
 				47CA905C222C8AB100A5C4F4 /* SearchViewController+Frames.swift */,
+				4731215C224196AB001F7532 /* CardView+Frames.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -1085,8 +1085,8 @@
 				470A566B22301A9E0002E943 /* WineDetailsDescriptionView.swift in Sources */,
 				47895E50222D4D8D00CEE909 /* CardDetailsWinesConfigurator.swift in Sources */,
 				47CA9074222C967E00A5C4F4 /* UIView+KeyframeAnimation.swift in Sources */,
-				47CA9059222C684C00A5C4F4 /* CardViewModelProtocol.swift in Sources */,
 				47895E4E222D4A3700CEE909 /* SketchShadow.swift in Sources */,
+				4731215D224196AB001F7532 /* CardView+Frames.swift in Sources */,
 				47A0450D222FF38A00C7C943 /* WineDetailsInputs.swift in Sources */,
 				47CA9053222C677A00A5C4F4 /* CardDetailsPresentTransition.swift in Sources */,
 				4719870122255CF700BDF30C /* SearchBottomSectionRowView.swift in Sources */,

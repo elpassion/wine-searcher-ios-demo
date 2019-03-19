@@ -23,7 +23,7 @@ extension CardDetailsPresentTransition {
             transitionView.bottomSection.movementAnimator(duration: duration, movementY: 300, relativeDuration: 0.6),
             transitionView.learnMoreButton.hideAnimator(duration: 0, relativeDuration: 0.3),
             transitionView.otherInSeriesButton.hideAnimator(duration: 0, relativeDuration: 0.3),
-            transitionView.firstCardView.cornerRadiousAnimator(duration: duration, relativeDuration: 0.6),
+            transitionView.cardView.cornerRadiousAnimator(duration: duration, relativeDuration: 0.6),
             transitionView.titleLabel.frameAnimator(duration: duration,
                                                     toFrame: toViewController.topTitleLabelFrame,
                                                     relativeDuration: 0.6),
@@ -68,7 +68,7 @@ extension CardDetailsPresentTransition {
     private func cardAnimator(transitionView: CardDetailsTransitionView,
                               toViewController: CardDetailsViewController) -> UIViewPropertyAnimator {
         return UIViewPropertyAnimator(duration: duration, dampingRatio: 0.62) {
-            let cardView = transitionView.firstCardView
+            let cardView = transitionView.cardView
             cardView.frame = toViewController.headerFrame
         }
     }
