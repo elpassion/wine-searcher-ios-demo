@@ -6,7 +6,7 @@ class WineDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         self.view = view
     }
 
-    let duration = 0.7
+    let duration = 0.8
     let view: CardDetailsWineView
 
     // MARK: - UIViewControllerAnimatedTransitioning

@@ -6,7 +6,7 @@ class CardDetailsPresentTransition: NSObject, UIViewControllerAnimatedTransition
         self.cardView = cardView
     }
 
-    let duration = 0.5
+    let duration = 0.8
     let cardView: CardView
 
     // MARK: - UIViewControllerAnimatedTransitioning
