@@ -63,6 +63,9 @@ class WineDetailsDismissTransition: NSObject, UIViewControllerAnimatedTransition
         transitionView.cardDetailsTitleLabel.frame = view.wineCardTitleLabelFrame(in: toViewController.view)
         transitionView.cardDetailsSubtitleLabel.frame = view.wineCardSubtitleLabelFrame(in: toViewController.view)
 
+        let cornerRadious = fromViewController.wineDetailsView.contentCardView.layer.cornerRadius
+        transitionView.cardDetailsWineBackgroundView.layer.cornerRadius = cornerRadious
+
         let wineDetailsTitleLabel = fromViewController.wineDetailsView.wineDetailsDescriptionView.titleLabel
         transitionView.cardDetailsTitleLabel.text = wineDetailsTitleLabel.text
 

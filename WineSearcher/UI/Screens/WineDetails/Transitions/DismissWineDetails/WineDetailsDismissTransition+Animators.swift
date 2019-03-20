@@ -34,11 +34,16 @@ extension WineDetailsDismissTransition {
                                          toViewController: CardDetailsViewController) -> [UIViewPropertyAnimator] {
         let wineCardInitialFrame = view.wineCardInitialFrame(in: toViewController.view)
         let wineCardImageViewFrame = view.wineCardImageViewFrame(in: toViewController.view)
+        let cornerRadious = view.backgroundView.layer.cornerRadius
         return [
             transitionView.cardDetailsWineBackgroundView.frameAnimator(duration: duration,
                                                                        toFrame: wineCardInitialFrame,
                                                                        relativeStartTime: 0.14,
                                                                        relativeDuration: 0.86),
+            transitionView.cardDetailsWineBackgroundView.cornerRadiousAnimator(duration: duration,
+                                                                               toValue: cornerRadious,
+                                                                               relativeStartTime: 0.14,
+                                                                               relativeDuration: 0.86),
             transitionView.cardDetailsWineImageView.frameAnimator(duration: duration,
                                                                   toFrame: wineCardImageViewFrame,
                                                                   relativeStartTime: 0.14,
