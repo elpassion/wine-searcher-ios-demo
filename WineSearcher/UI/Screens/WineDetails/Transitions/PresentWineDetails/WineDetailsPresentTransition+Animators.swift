@@ -6,8 +6,8 @@ extension WineDetailsPresentTransition {
                    fromViewController: CardDetailsViewController,
                    toViewController: WineDetailsViewController) -> [UIViewPropertyAnimator] {
         return headerAnimators(fromViewController: fromViewController) +
-            wineDetailsAnimators(transitionView: transitionView) +
-            cardAnimators(transitionView: transitionView, toViewController: toViewController)
+               wineDetailsAnimators(transitionView: transitionView) +
+               cardAnimators(transitionView: transitionView, toViewController: toViewController)
     }
 
     // MARK: - Private

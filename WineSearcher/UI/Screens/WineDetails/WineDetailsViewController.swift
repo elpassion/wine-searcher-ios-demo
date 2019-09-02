@@ -30,6 +30,7 @@ class WineDetailsViewController: UIViewController {
     private func setupView() {
         wineDetailsView.wineImageView.image = inputs.wineImage
         wineDetailsView.wineDetailsDescriptionView.titleLabel.text = inputs.wineName
+        wineDetailsView.wineDetailsDescriptionView.subtitleLabel.text = inputs.wineSubtitle
     }
 
     private func setupActions() {

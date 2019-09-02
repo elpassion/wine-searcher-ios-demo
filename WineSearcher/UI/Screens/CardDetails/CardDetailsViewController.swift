@@ -88,7 +88,7 @@ class CardDetailsViewController: UIViewController, UIViewControllerTransitioning
 private extension CardDetailsWineViewModel {
 
     var inputs: WineDetailsInputs {
-        return WineDetailsInputs(wineImage: wineImage, wineName: title)
+        return WineDetailsInputs(wineImage: wineImage, wineName: title, wineSubtitle: subtitle)
     }
 
 }
