@@ -10,16 +10,9 @@
 |:-:|:-:|
 |[![Shot](Gifs/wine_searcher_dribbble.gif)](https://dribbble.com/shots/3966958-Wine-Searcher-Animations?utm_source=Clipboard_Shot&utm_campaign=tomkoszyk&utm_content=Wine%20Searcher%20Animations&utm_medium=Social_Share)|![Preview](Gifs/wine_searcher_implementation.gif)|
 
-## Requirements
-
-* Xcode
-* Homebrew
-* swiftlint
-
 ## Run
 
 * Clone repository
-* Run setup.sh script in command line `sh setup.sh`
 * Open `WineSearcher.xcodeproj` in `Xcode`, choose simulator and click `Run`
 
 ## License
