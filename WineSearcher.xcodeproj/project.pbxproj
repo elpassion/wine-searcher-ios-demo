@@ -575,7 +575,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nif ! which swiftlint > /dev/null; then\n    echo \"error: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n    exit 1\nfi\n\ncd WineSearcher\nswiftlint\n";
+			shellScript = "set -e\n\nif ! which swiftlint > /dev/null; then\n    echo \"warning: SwiftLint is not installed. Visit http://github.com/realm/SwiftLint to learn more.\"\n    exit 0\nfi\n\ncd WineSearcher\nswiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
